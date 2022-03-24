@@ -1,0 +1,33 @@
+---
+title: Feed - arminmiau
+layout: 'base.njk'
+---
+
+<h1>My Feed</h1>
+
+<ul role="list" class="feed_list">
+    {%- for post in collections.post | reverse -%}
+    <li class="feed_item">
+        <p class="feed_author"><img src="/img/ppic.png"> arminmiau · <date class="feed_date">{{ post.data.date | postDate }} </date></p>
+        <p>{{ post.data.description | safe }}</p>
+        <img src="{{ post.data.image }}" class="feed_image">
+    </li>
+    {%- endfor -%}
+</ul>
+
+<script>
+    let feedImages = document.querySelector(".feed_image")
+    if (typeof feedImages == Array)
+        feedImages.forEach((feedImage) => {
+            if (feedImages.src.endsWith("/feed/"))
+                feedImage.classList.add("feed_noImage")
+        })
+    else if (feedImages.src.endsWith("/feed/"))
+                feedImages.classList.add("feed_noImage")
+</script>
+
+<style>
+    body {
+        font-family: "Arial", sans-serif;
+    }
+</style>
