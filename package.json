@@ -1,0 +1,20 @@
+{
+  "name": "arminmiauwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arminmiau/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arminmiau/website/issues"
+  },
+  "homepage": "https://github.com/arminmiau/website#readme"
+}
