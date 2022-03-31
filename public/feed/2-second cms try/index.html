@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/ppic.png" type="image/x-icon">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <nav class="nav">
+    <a href="/" title="home"><img src="/img/ppic.png" class="nav__brand" alt=""></a>
+    <a href="/" class="nav__link" data-link>Home</a>
+    <a href="/feed/" class="nav__link" data-link>Feed</a>
+    <a href="/gamers/" class="nav__link" data-link>Interesting for Gamers</a>
+    <a href="/devs/" class="nav__link" data-link>Interesting for Devs</a>
+    <a href="/contact/" class="nav__link last-element-row" data-link>Contact</a>
+</nav>
+<nav class="smallNav">
+    <a href="/" title="home"><img src="/img/ppic.png" class="nav__brand" alt=""></a>
+    <div onclick="toggleHamburger()" class="last-element-row"><img src="/img/hamburger.png" alt="" id="hamburger"></div>
+    <div class="smallNav_links hidden" id="smallNav_links">
+        <div onclick="toggleHamburger()" class="last-element-row"><img src="/img/hamburger.png" alt="" id="hamburger"></div>
+        <a href="/" class="nav__link" data-link>Home</a>
+        <a href="/feed/" class="nav__link" data-link>Feed</a>
+        <a href="/gamers/" class="nav__link" data-link>Interesting for Gamers</a>
+        <a href="/devs/" class="nav__link" data-link>Interesting for Devs</a>
+        <a href="/contact/" class="nav__link" data-link>Contact</a>
+    </div>
+</nav>
+<script>
+    var hamburger = false
+    function toggleHamburger() {
+        if (hamburger) {
+            document.querySelector("body").classList.add("overflow-hidden")
+            document.getElementById("hamburger").classList.add("hidden")
+            document.getElementById("smallNav_links").classList.remove("hidden")
+            hamburger = false
+        } else {
+            document.querySelector("body").classList.remove("overflow-hidden")
+            document.getElementById("smallNav_links").classList.add("hidden")
+            document.getElementById("hamburger").classList.remove("hidden")
+            hamburger = true
+        }
+    }
+</script>
+    <div id="app">
+        <p class="feed_author"><img src="/img/ppic.png"> arminmiau · <date class="feed_date">3/31/2022, 2:50 PM </date></p>
+        <p><p>Second try posting from cms.</p>
+</p>
+        <img src="" class="feed_image">
+    </div>
+  </body>
+</html>
