@@ -1,4 +1,33 @@
 ---
 label: Feed
 hide_body: false
-fields: []
+fields:
+- name: id
+  type: number
+  label: ID
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: description
+  type: text
+  config:
+    required: false
+  label: FeedText
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
