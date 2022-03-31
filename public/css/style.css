@@ -78,6 +78,7 @@ a {
     width: 70vw;
     border: black solid 1px;
     border-radius: 7px;
+    margin-bottom: 1em;
 }
 
 .feed_author {
@@ -98,6 +99,7 @@ a {
 }
 
 .feed_image {
+    max-width: 60vw;
 }
 
 .feed_noImage {

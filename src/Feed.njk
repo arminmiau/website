@@ -16,12 +16,10 @@ layout: 'base.njk'
 </ul>
 
 <script>
-    let feedImages = document.querySelector(".feed_image")
-    if (typeof feedImages == Array)
-        feedImages.forEach((feedImage) => {
-            if (feedImages.src.endsWith("/feed/"))
-                feedImage.classList.add("feed_noImage")
-        })
-    else if (feedImages.src.endsWith("/feed/"))
-                feedImages.classList.add("feed_noImage")
+    let feedImages = document.getElementsByClassName("feed_image")
+    for (let i = 0; i < feedImages.length; i++) {
+        let feedImage = feedImages.item(i)
+        if (feedImage.src.endsWith("/feed/"))
+            feedImage.classList.add("feed_noImage")
+    }
 </script>

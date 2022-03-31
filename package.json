@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": ".eleventy.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  },
   "scripts": {
     "build": "eleventy"
   },
