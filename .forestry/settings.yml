@@ -11,7 +11,7 @@ sections:
   match: "**/*"
   exclude: "*.json"
 upload_dir: src/img/feed
-public_path: "/public/img/feed"
+public_path: "/img/feed"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
