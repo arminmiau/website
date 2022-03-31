@@ -5,4 +5,4 @@ description: First try to post feed from cms
 image: public/img/feed/forestry-pos-full.png
 
 ---
-First try to post feed from cms
+First try to post feed from cms.
