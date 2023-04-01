@@ -5,52 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/ppic.png" type="image/x-icon">
     <title>arminmiau</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="index.js"></script>
   </head>
   <body>
-    <nav class="nav">
-    <a href="/" title="home"><img src="/img/ppic.png" class="nav__brand" alt=""></a>
-    <a href="/" class="nav__link" data-link>Home</a>
-    <a href="/feed/" class="nav__link" data-link>Feed</a>
-    <a href="/gamers/" class="nav__link" data-link>Interesting for Gamers</a>
-    <a href="/devs/" class="nav__link" data-link>Interesting for Devs</a>
-    <a href="/contact/" class="nav__link last-element-row" data-link>Contact</a>
-</nav>
-<nav class="smallNav">
-    <a href="/" title="home"><img src="/img/ppic.png" class="nav__brand" alt=""></a>
-    <div onclick="toggleHamburger()" class="last-element-row"><img src="/img/hamburger.png" alt="" id="hamburger"></div>
-    <div class="smallNav_links hidden" id="smallNav_links">
-        <div onclick="toggleHamburger()" class="last-element-row"><img src="/img/hamburger.png" alt="" id="hamburger"></div>
-        <a href="/" class="nav__link" data-link>Home</a>
-        <a href="/feed/" class="nav__link" data-link>Feed</a>
-        <a href="/gamers/" class="nav__link" data-link>Interesting for Gamers</a>
-        <a href="/devs/" class="nav__link" data-link>Interesting for Devs</a>
-        <a href="/contact/" class="nav__link" data-link>Contact</a>
-    </div>
-</nav>
-<script>
-    var hamburger = false
-    function toggleHamburger() {
-        if (hamburger) {
-            document.querySelector("body").classList.add("overflow-hidden")
-            document.getElementById("hamburger").classList.add("hidden")
-            document.getElementById("smallNav_links").classList.remove("hidden")
-            hamburger = false
-        } else {
-            document.querySelector("body").classList.remove("overflow-hidden")
-            document.getElementById("smallNav_links").classList.add("hidden")
-            document.getElementById("hamburger").classList.remove("hidden")
-            hamburger = true
-        }
-    }
-</script>
-    <div id="app">
-        
-<h1>Hello!</h1>
-<p>I'm Armin, I'm from Austria and I am 16 years old. I like to code and game. In fact I coded this site myself (with a bit help of online tutorials of course). :)</p>
-<p>Why I make this site? Just for fun, practice and isn't having your own site cool? :D</p>
-<p>For the gamer people arround here there is a subpage for gamers, for the devs arround here there is also a subpage, additionally there is a feed where I might post some stuff.</p>
-<p>(This site is beeing worked on still)</p>
-    </div>
+    <header id="home-banner">
+        <nav class="nav">
+            <a href="/" class="nav__link" data-link>Home</a>
+        </nav>
+        <nav class="smallNav">
+            <div onclick="toggleHamburger()" class="last-element-row"><img src="/img/hamburger.png" alt="" id="hamburger"></div>
+            <div class="smallNav_links hidden" id="smallNav_links">
+                <div onclick="toggleHamburger()" class="last-element-row"><img src="/img/hamburger.png" alt="" id="hamburger"></div>
+                <a href="/" class="nav__link" data-link>Home</a>
+            </div>
+            <script>
+                var hamburger = false
+                function toggleHamburger() {
+                    if (hamburger) {
+                        document.querySelector("body").classList.add("overflow-hidden")
+                        document.getElementById("hamburger").classList.add("hidden")
+                        document.getElementById("smallNav_links").classList.remove("hidden")
+                        hamburger = false
+                    } else {
+                        document.querySelector("body").classList.remove("overflow-hidden")
+                        document.getElementById("smallNav_links").classList.add("hidden")
+                        document.getElementById("hamburger").classList.remove("hidden")
+                        hamburger = true
+                    }
+                }
+            </script>
+        </nav>
+        <div id="aboutme">
+            <h2>I am...</h2>
+            <h1>Armin Bade</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, eaque exercitationem ipsum omnis nisi eius in quae consequatur ad quidem quas, maxime magni iusto voluptas provident tempore reiciendis ullam. Ducimus, reprehenderit excepturi delectus quam totam doloremque dolores tenetur libero sapiente, corrupti neque distinctio? Voluptate et libero quaerat, sit eveniet quo eos, beatae assumenda cumque similique sunt ducimus maiores ab officia a autem, earum harum. Magni id laborum mollitia voluptatibus cumque eius nesciunt suscipit dolore, sit beatae laboriosam quae doloribus ex dignissimos quia aut ab facilis officia porro velit. Ea quaerat architecto pariatur harum quasi aliquam, nesciunt tempora! Totam, dolor ut.</p>
+        </div>
+    </header>
+    <p>Lorem ipsum dolor sit amet.</p>
   </body>
 </html>

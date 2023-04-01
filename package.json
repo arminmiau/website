@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": ".eleventy.js",
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.0"
-  },
-  "scripts": {
-    "build": "eleventy"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arminmiau/website.git"

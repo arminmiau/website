@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "arminmiau",
+    "site": "arminmiau-website",
     "public": "public",
     "ignore": [
       "firebase.json",
