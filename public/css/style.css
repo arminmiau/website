@@ -1,25 +1,27 @@
 body {
-    font-family: "Consolas", sans-serif;
+    font-family: Inter;
     font-size: 22px;
     --nav-width: 50px;
     margin: 0;
-    background: url("/img/bg.png");
 }
 
 a {
     text-decoration: none;
 }
 
+#home-banner {
+    background-color: green;
+}
+
 .nav {
     display: flex;
     justify-content: flex-start !important;
-    position: fixed !important;
     z-index: 20 !important;
-    top: 0;
-    left: 0;
-    width: 100%;
+    margin-left: 20vw;
+    width: 60vw;
     height: var(--nav-width);
     background: #222222;
+    border-radius: 0 0 7px 7px;
 }
 
 .nav__brand {
@@ -62,8 +64,8 @@ a {
     font-size: 48px;
 }
 
-#app {
-    margin: 5em 3em 0 3em;
+#aboutme {
+    padding: 5em 25vw 3em 25vw;
     line-height: 1.5;
     font-weight: 500;
 }
