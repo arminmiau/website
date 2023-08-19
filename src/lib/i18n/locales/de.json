@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "technologies": "Technologien",
+    "projects": "Projekte",
+    "something": "Irgendwas",
+    "contact": "Kontakt"
+  },
+  "page": {
+    "home": {
+      "iam": "Ich bin...",
+      "aboutme1": {
+        "p": "oder auch bekannt oder unter dem Nicknamen \"arminmiau\". Ich bin {age} Jahre alt und komme aus Österreich. Computertechnologie, Softwareentwicklung und Computerspiele sind meine Leidenschaft."
+      },
+      "aboutme2": {
+        "h1": "Schüler",
+        "p1": "und besuche eine ",
+        "href": "https://de.wikipedia.org/wiki/H%C3%B6here_Technische_Lehranstalt",
+        "a": "Höhere Technische Lehranstalt",
+        "p2": "im Zweig Informatik. An dieser Schule lerne Ich programmieren in den Sprachen Java (als Command Line, Java Swing/FX und auf Android) und C#, Grundlagen von Web-Entwicklung mit HTML, CSS, JS und ein bisschen PHP, Netzwerktechnink, Datenbanktechnik, Systemplanung und Projektmanagment."
+      },
+      "aboutme3": {
+        "h1": "Feuerwehrmann.",
+        "p": "Damals als ich der Freiwillgen Feuerwehr beigetreten bin im Alter von 10, war es nur wegen meiner alten Freunde, jedoch seit dem ich von der Feuwerwehrjugend in den Aktiv-Stand gewechselt bin, bin ich noch dort um die Möglichkeit zu haben Menschen in Not zu helfen.",
+        "ul": "Meine Abzeichen:",
+        "li1": "Jugend Wissenstest in Gold",
+        "li2": "Jugend Leistungsabzeichen in Gold",
+        "li3": "Leistungsabzeichen in Funk/Komunnikation und Aufgaben in der Einsatzleitung in Bronze"
+      },
+      "aboutme4": {
+        "h1": "Hobby-Spieleentwickler",
+        "p": "und arbeite immer mal wieder an meinem eigenem Traum-Spiel."
+      }
+    }
+  },
+  "misc": {
+    "mobile": "Smartphones werden noch nicht untersützt."
+  },
+  "locales": {
+    "en-GB": "English",
+    "de-DE": "Deutsch"
+  }
+}
