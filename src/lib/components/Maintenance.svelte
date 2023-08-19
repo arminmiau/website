@@ -1,3 +1,7 @@
+<svelte:head>
+  <link rel="stylesheet" href="/css/maintenance.css" />
+</svelte:head>
+
 <div class="centered-container">
   <h2 id="titleText">arminmiau.vercel.app</h2>
   <div id="loadingWaves">
@@ -22,22 +26,6 @@
 </footer>
 
 <style>
-  @font-face {
-    font-family: 'Big Noodle';
-    src: url('/font/big_noodle_titling.ttf');
-  }
-
-  :global(html) {
-    font-family: 'Big Noodle', sans-serif;
-    letter-spacing: 1.5px;
-    font-size: 18px;
-    overflow: hidden;
-  }
-
-  :global(body) {
-    background-image: url('/img/Summer+Night+On+Sigma+957+-+1080p.jpg');
-  }
-
   .centered-container {
     height: 80vh;
     display: flex;
