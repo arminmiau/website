@@ -209,6 +209,7 @@
 <style>
   :global(body) {
     overflow: hidden;
+    z-index: -2;
   }
 
   .bg__video {
