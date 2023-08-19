@@ -24,7 +24,7 @@
 <style>
   @font-face {
     font-family: 'Big Noodle';
-    src: url('big_noodle_titling.ttf');
+    src: url('/font/big_noodle_titling.ttf');
   }
 
   :global(html) {
@@ -35,7 +35,7 @@
   }
 
   :global(body) {
-    background-image: url('Summer+Night+On+Sigma+957+-+1080p.jpg');
+    background-image: url('/img/Summer+Night+On+Sigma+957+-+1080p.jpg');
   }
 
   .centered-container {
