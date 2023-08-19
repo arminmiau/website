@@ -1,5 +1,6 @@
 <script lang="ts">
   import '$lib/i18n';
+  import Maintenance from '$lib/maintenance/Maintenance.svelte';
   import { locale, locales, _ } from 'svelte-i18n';
 
   let smallNav = false;
@@ -8,56 +9,61 @@
   }
   let innerWidth = 1920;
   $: desktop = innerWidth > 987 ? true : false;
+
+  let isPublic = false;
 </script>
 
 <svelte:window bind:innerWidth />
-
-{#if desktop}
-  <nav>
-    <ul class="nav__links">
-      <li><a href="/" class="nav__link">{$_('nav.home')}</a></li>
-      <li><a href="/" class="nav__link">{$_('nav.technologies')}</a></li>
-      <li><a href="/" class="nav__link">{$_('nav.projects')}</a></li>
-      <li><a href="/" class="nav__link">{$_('nav.something')}</a></li>
-      <li><a href="/" class="nav__link">{$_('nav.contact')}</a></li>
-    </ul>
-    <select class="nav__locale" bind:value={$locale}>
-      {#each $locales as loc}
-        <option value={loc} selected={loc === $locale}>
-          {$_('locales.' + loc)}
-        </option>
-      {/each}
-    </select>
-  </nav>
-{:else}
-  <nav>
-    {#if smallNav}
-      <ul class="nav__links--small">
+{#if isPublic}
+  {#if desktop}
+    <nav>
+      <ul class="nav__links">
         <li><a href="/" class="nav__link">{$_('nav.home')}</a></li>
         <li><a href="/" class="nav__link">{$_('nav.technologies')}</a></li>
         <li><a href="/" class="nav__link">{$_('nav.projects')}</a></li>
         <li><a href="/" class="nav__link">{$_('nav.something')}</a></li>
         <li><a href="/" class="nav__link">{$_('nav.contact')}</a></li>
-        <li>
-          <select class="nav__locale--small" bind:value={$locale}>
-            {#each $locales as loc}
-              <option value={loc} selected={loc === $locale}>
-                {$_('locales.' + loc)}
-              </option>
-            {/each}
-          </select>
-        </li>
       </ul>
-    {/if}
-    <button on:click={toggleSmallNav} class="hamburger last-element-row">
-      <img
-        src="/img/hamburger.png"
-        alt="Navigation menu"
-        class="hamburger__icon" />
-    </button>
-  </nav>
+      <select class="nav__locale" bind:value={$locale}>
+        {#each $locales as loc}
+          <option value={loc} selected={loc === $locale}>
+            {$_('locales.' + loc)}
+          </option>
+        {/each}
+      </select>
+    </nav>
+  {:else}
+    <nav>
+      {#if smallNav}
+        <ul class="nav__links--small">
+          <li><a href="/" class="nav__link">{$_('nav.home')}</a></li>
+          <li><a href="/" class="nav__link">{$_('nav.technologies')}</a></li>
+          <li><a href="/" class="nav__link">{$_('nav.projects')}</a></li>
+          <li><a href="/" class="nav__link">{$_('nav.something')}</a></li>
+          <li><a href="/" class="nav__link">{$_('nav.contact')}</a></li>
+          <li>
+            <select class="nav__locale--small" bind:value={$locale}>
+              {#each $locales as loc}
+                <option value={loc} selected={loc === $locale}>
+                  {$_('locales.' + loc)}
+                </option>
+              {/each}
+            </select>
+          </li>
+        </ul>
+      {/if}
+      <button on:click={toggleSmallNav} class="hamburger last-element-row">
+        <img
+          src="/img/hamburger.png"
+          alt="Navigation menu"
+          class="hamburger__icon" />
+      </button>
+    </nav>
+  {/if}
+  <slot />
+{:else}
+  <Maintenance />
 {/if}
-<slot />
 
 <style>
   :root {
