@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "technologies": "Technologies",
+    "projects": "Projects",
+    "something": "Something",
+    "contact": "Contact"
+  },
+  "page": {
+    "home": {
+      "iam": "I am...",
+      "aboutme1": {
+        "p": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria. Computertechnologies, software development and video games are my passion."
+      },
+      "aboutme2": {
+        "h1": "a pupil",
+        "p1": "and I attend a",
+        "href": "https://en.wikipedia.org/wiki/H%C3%B6here_Technische_Lehranstalt",
+        "a": "Higher Technical Institute",
+        "p2": "in the field of informatics. At this school I'm learning programming in languages Java (as Command Line, Java Swing/FX and on Android) and C#, basics of web development with HTML, CSS, JS, a bit  PHP, networking, database engineering, systems planing and project managment."
+      },
+      "aboutme3": {
+        "h1": "a firefighter.",
+        "p": "Back when I joined the voluntary firefighters at an age of 10, it was only because of my old friends, however since when I became an active firefighter instead of a youth firefighter my reason to stay has been to be able to help people in need.",
+        "ul": "My badges:",
+        "li1": "Youth knowledge test in gold",
+        "li2": "Youth achievement badge in gold",
+        "li3": "Bronze achievement badge in radio/communication and tasks in the operational control"
+      },
+      "aboutme4": {
+        "h1": "a hobby game dev",
+        "p": "and I'm working on my own dream game from time to time."
+      }
+    }
+  },
+  "misc": {
+    "mobile": "Mobile is not supported yet."
+  },
+  "locales": {
+    "en-GB": "English",
+    "de-DE": "Deutsch"
+  }
+}
