@@ -3,7 +3,7 @@
   import Maintenance from '$lib/components/Maintenance.svelte';
   import Navigation from '$lib/components/Navigation.svelte';
 
-  let isPublic = false;
+  let isPublic = true;
 </script>
 
 {#if isPublic}
