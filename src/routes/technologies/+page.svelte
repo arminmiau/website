@@ -1,4 +1,12 @@
 <script lang="ts">
 </script>
 
-<h1>Technologies that I use:</h1>
+<div class="container">
+  <h1>Technologies that I use:</h1>
+</div>
+
+<style>
+  .container {
+    margin: 10em 5em;
+  }
+</style>

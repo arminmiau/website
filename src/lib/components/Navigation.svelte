@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="/css/navigation.css" />
 </svelte:head>
 
+<video autoplay muted loop class="bg__video">
+  <source src="/video/cmatrix.mp4" type="video/mp4" />
+</video>
 {#if desktop}
   <nav>
     <ul class="nav__links">
@@ -22,7 +25,7 @@
       <li><a href="/" class="nav__link">{$_('nav.technologies')}</a></li>
       <li><a href="/" class="nav__link">{$_('nav.projects')}</a></li>
       <li><a href="/" class="nav__link">{$_('nav.something')}</a></li>
-      <li><a href="/" class="nav__link">{$_('nav.contact')}</a></li>
+      <li><a href="/contact" class="nav__link">{$_('nav.contact')}</a></li>
     </ul>
     <select class="nav__locale" bind:value={$locale}>
       {#each $locales as loc}
@@ -66,6 +69,19 @@
     --nav_height: 50px;
   }
 
+  :global(body) {
+    color: white;
+  }
+
+  .bg__video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
   .nav__links {
     --_gap: 2rem;
 
@@ -80,6 +96,7 @@
     left: 50%;
     translate: -50% 0;
     height: var(--nav_height);
+    top: 0;
 
     background: #222222;
     border-radius: 0 0 7px 7px;

@@ -13,11 +13,11 @@
         "p": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria. Computertechnologies, software development and video games are my passion."
       },
       "aboutme2": {
-        "h1": "a pupil",
-        "p1": "and I attend a",
+        "h1": "a student",
+        "p1": "and I attend a ",
         "href": "https://en.wikipedia.org/wiki/H%C3%B6here_Technische_Lehranstalt",
         "a": "Higher Technical Institute",
-        "p2": "in the field of informatics. At this school I'm learning programming in languages Java (as Command Line, Java Swing/FX and on Android) and C#, basics of web development with HTML, CSS, JS, a bit  PHP, networking, database engineering, systems planing and project managment."
+        "p2": "in the field of informatics. At this school I'm learning programming in languages Java (as Command Line, Java Swing/FX and on Android) and C# (WPF, LINQ, ASP.NET), web development with HTML, CSS, JS/TS and Svelte, networking, database engineering and project management."
       },
       "aboutme3": {
         "h1": "a firefighter.",
@@ -25,12 +25,16 @@
         "ul": "My badges:",
         "li1": "Youth knowledge test in gold",
         "li2": "Youth achievement badge in gold",
-        "li3": "Bronze achievement badge in radio/communication and tasks in the operational control"
+        "li3": "Radio/communication and tasks in operational control achievement badge in bronze",
+        "li4": "Fire service achievement badge in bronze"
       },
       "aboutme4": {
-        "h1": "a hobby game dev",
-        "p": "and I'm working on my own dream game from time to time."
+        "h1": "a hobby game designer",
+        "p": "and I have been planning my own game for a long time. However, I haven't made any mentionable progress in the development. I want to make a survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World."
       }
+    },
+    "contact": {
+      "h1": "Contact"
     }
   },
   "misc": {
