@@ -17,7 +17,7 @@
         "p1": "und besuche eine ",
         "href": "https://de.wikipedia.org/wiki/H%C3%B6here_Technische_Lehranstalt",
         "a": "Höhere Technische Lehranstalt",
-        "p2": "im Zweig Informatik. An dieser Schule lerne Ich programmieren in den Sprachen Java (als Command Line, Java Swing/FX und auf Android) und C#, Grundlagen von Web-Entwicklung mit HTML, CSS, JS und ein bisschen PHP, Netzwerktechnink, Datenbanktechnik, Systemplanung und Projektmanagment."
+        "p2": "im Zweig Informatik. An dieser Schule lerne Ich programmieren in den Sprachen Java (als Command Line, Java Swing/FX und auf Android) und C# (WPF, LINQ, ASP.NET), Web-Entwicklung mit HTML, CSS, JS/TS und Svelte, Netzwerktechnik, Datenbanksysteme und Projektmanagment."
       },
       "aboutme3": {
         "h1": "Feuerwehrmann.",
@@ -25,12 +25,16 @@
         "ul": "Meine Abzeichen:",
         "li1": "Jugend Wissenstest in Gold",
         "li2": "Jugend Leistungsabzeichen in Gold",
-        "li3": "Leistungsabzeichen in Funk/Komunnikation und Aufgaben in der Einsatzleitung in Bronze"
+        "li3": "Leistungsabzeichen in Funk/Kommunikation und Aufgaben in der Einsatzleitung in Bronze",
+        "li4": "Branddienstleistungsabzeichen in Bronze"
       },
       "aboutme4": {
-        "h1": "Hobby-Spieleentwickler",
-        "p": "und arbeite immer mal wieder an meinem eigenem Traum-Spiel."
+        "h1": "Hobby-Spieledesigner",
+        "p": "und plane mein eigenes Spiel seit einer langen Zeit. Jedoch habe ich bisher keinen erwähenswerten Fortschritt in der Entwicklung gemacht. Ich möchte ein Survival Craft Open World RPG machen, mit einem Klassensystem inspiriert von Spielen wie World of Warcraft, Guild Wars 2 und New World."
       }
+    },
+    "contact": {
+      "h1": "Kontakt"
     }
   },
   "misc": {
