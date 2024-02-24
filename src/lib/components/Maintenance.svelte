@@ -2,30 +2,36 @@
   <link rel="stylesheet" href="/css/maintenance.css" />
 </svelte:head>
 
-<div class="centered-container">
-  <h2 id="titleText">arminmiau.vercel.app</h2>
-  <div id="loadingWaves">
-    <div class="wave" />
-    <div class="wave" />
-    <div class="wave" />
-    <div class="wave" />
-    <div class="wave" />
-    <div class="wave" />
-    <div class="wave" />
-    <div class="wave" />
-    <div class="wave" />
-    <div class="wave" />
+<div id="maintenance">
+  <div class="centered-container">
+    <h2 id="titleText">arminmiau.vercel.app</h2>
+    <div id="loadingWaves">
+      <div class="wave" />
+      <div class="wave" />
+      <div class="wave" />
+      <div class="wave" />
+      <div class="wave" />
+      <div class="wave" />
+      <div class="wave" />
+      <div class="wave" />
+      <div class="wave" />
+      <div class="wave" />
+    </div>
+    <span id="maintenanceText"
+      ><span> This site is beeing worked on...</span></span>
+    <p>Discord: @arminmiau</p>
   </div>
-  <span id="maintenanceText"
-    ><span> This site is beeing worked on...</span></span>
-  <p>Discord: @arminmiau</p>
+  <footer>
+    Background image from
+    <a href="https://thiojoe.art" target="_blank"> https://thiojoe.art</a>
+  </footer>
 </div>
-<footer>
-  Background image from
-  <a href="https://thiojoe.art" target="_blank"> https://thiojoe.art</a>
-</footer>
 
 <style>
+  #maintenance {
+    color: black;
+  }
+
   .centered-container {
     height: 80vh;
     display: flex;
