@@ -16,8 +16,6 @@ if (browser) {
 
 const initialLocale = localeCookie
     ? localeCookie
-    : browser
-    ? window.navigator.language
     : defaultLocale;
 init({
     fallbackLocale: defaultLocale,

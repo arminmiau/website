@@ -10,7 +10,10 @@
 </script>
 
 <Select.Root
-  selected={{ value: $locale, label: $_('locales.' + $locale) }}
+  selected={{
+    value: $locale,
+    label: $_('locales.' + $locale),
+  }}
   items={selectLocales}
   onSelectedChange={(s) => ($locale = s?.value)}>
   <Select.Trigger class="w-[180px] bg-popover nav__locale">
