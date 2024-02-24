@@ -1,4 +1,4 @@
-# [arminmiau.web.app](https://arminmiau.web.app)
+# [arminmiau.vercel.app](https://arminmiau.vercel.app)
 
-My own website hosted on firebase.
-Switchting to vercel, new domain will come soon.
+My own website hosted on vercel.
+Work in Progress
