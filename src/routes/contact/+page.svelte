@@ -1,8 +1,10 @@
 <script lang="ts">
+  import { _ } from 'svelte-i18n';
 </script>
 
 <div class="container">
-  <h1>Technologies that I use:</h1>
+  <h1>{$_('page.contact.h1')}</h1>
+  <h4>Discord: arminmiau</h4>
 </div>
 
 <style>

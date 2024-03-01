@@ -1,7 +1,7 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n';
 
-  let age =
+  const age =
     new Date(Date.now() - new Date('2005-11-29').valueOf()).getFullYear() -
     1970;
 
@@ -22,7 +22,7 @@
 
   let innerWidth = 1920;
   $: desktop = innerWidth > 987 ? true : false;
-  let mobileEnabled = false;
+  const mobileEnabled = false;
 </script>
 
 <svelte:window bind:innerWidth />
@@ -30,6 +30,7 @@
 <video autoplay muted loop class="bg__video">
   <source src="/video/cmatrix.mp4" type="video/mp4" />
 </video>
+
 {#if desktop}
   <header id="banner">
     <div class="banner__bg">
@@ -79,7 +80,7 @@
       {#if openBanner === 1}
         <div class="aboutme">
           <h2>{$_('page.home.iam')}</h2>
-          <h1>
+          <h1 lang="de">
             Armin Bade
             <p class="phonetic-spelling" aria-hidden="true">[ˈarmiːn ˈbaːdə]</p>
           </h1>
@@ -94,8 +95,9 @@
           <h1>{$_('page.home.aboutme2.h1')}</h1>
           <p>
             {$_('page.home.aboutme2.p1')}
-            <a href={$_('page.home.aboutme2.href')}
-              >{$_('page.home.aboutme2.a')}</a>
+            <a href={$_('page.home.aboutme2.href')}>
+              {$_('page.home.aboutme2.a')}
+            </a>
             {$_('page.home.aboutme2.p2')}
           </p>
         </div>
@@ -110,10 +112,11 @@
           <p>
             {$_('page.home.aboutme3.ul')}
           </p>
-          <ul>
+          <ul class="list-disc list-inside">
             <li>{$_('page.home.aboutme3.li1')}</li>
             <li>{$_('page.home.aboutme3.li2')}</li>
             <li>{$_('page.home.aboutme3.li3')}</li>
+            <li>{$_('page.home.aboutme3.li4')}</li>
           </ul>
         </div>
       {/if}
@@ -214,11 +217,12 @@
 
   .bg__video {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    top: 0;
+    left: 0;
+    width: 101vw;
+    height: 101%;
     z-index: -1;
+    object-fit: cover;
   }
 
   #banner {
@@ -227,7 +231,7 @@
 
   .aboutme {
     color: white;
-    background-color: rgba(80, 80, 80, 0.5);
+    /* background-color: rgba(80, 80, 80, 0.5); */
     padding: 5px 10px;
   }
 
@@ -237,6 +241,7 @@
 
   .aboutme > p > a {
     color: white;
+    text-decoration: underline;
   }
 
   .phonetic-spelling {

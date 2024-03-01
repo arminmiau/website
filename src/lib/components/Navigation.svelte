@@ -1,36 +1,28 @@
 <script lang="ts">
   import { locale, locales, _ } from 'svelte-i18n';
+  import LanguageSelector from './LanguageSelector.svelte';
 
   let smallNav = false;
-  function toggleSmallNav() {
+  const toggleSmallNav = () => {
     smallNav ? (smallNav = false) : (smallNav = true);
-  }
+  };
+
   let innerWidth = 1920;
   $: desktop = innerWidth > 987 ? true : false;
 </script>
 
 <svelte:window bind:innerWidth />
 
-<svelte:head>
-  <link rel="stylesheet" href="/css/navigation.css" />
-</svelte:head>
-
 {#if desktop}
   <nav>
-    <ul class="nav__links">
+    <ul class="nav__links bg-primary-foreground border border-input">
       <li><a href="/" class="nav__link">{$_('nav.home')}</a></li>
       <li><a href="/" class="nav__link">{$_('nav.technologies')}</a></li>
       <li><a href="/" class="nav__link">{$_('nav.projects')}</a></li>
       <li><a href="/" class="nav__link">{$_('nav.something')}</a></li>
-      <li><a href="/" class="nav__link">{$_('nav.contact')}</a></li>
+      <li><a href="/contact" class="nav__link">{$_('nav.contact')}</a></li>
     </ul>
-    <select class="nav__locale" bind:value={$locale}>
-      {#each $locales as loc}
-        <option value={loc} selected={loc === $locale}>
-          {$_('locales.' + loc)}
-        </option>
-      {/each}
-    </select>
+    <LanguageSelector />
   </nav>
 {:else}
   <nav>
@@ -80,44 +72,11 @@
     left: 50%;
     translate: -50% 0;
     height: var(--nav_height);
+    top: 0;
 
-    background: #222222;
     border-radius: 0 0 7px 7px;
 
     z-index: 20;
-  }
-
-  .nav__locale {
-    position: fixed;
-    right: 0;
-    top: 0;
-    border-radius: 7px 0 7px 7px;
-    height: var(--nav_height);
-    color: #a1a1a1;
-    font-size: 18px;
-    border: none;
-
-    background-color: #222222;
-    background-image: url('/img/dropdown-darkened.svg');
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 20px;
-
-    padding: 0 20px 0 7px;
-    appearance: none;
-  }
-
-  .nav__locale:hover {
-    background-image: url('/img/dropdown.svg');
-    color: #fff;
-  }
-
-  .nav__locale:focus {
-    outline: none;
-  }
-
-  .nav__locale > option {
-    background: #222222;
   }
 
   .nav__locale--small {
@@ -174,7 +133,8 @@
 
     translate: var(--_translate, 0);
     scale: var(--_scale-width, 0) 1;
-    transition: scale 400ms var(--_scale-delay, 0ms),
+    transition:
+      scale 400ms var(--_scale-delay, 0ms),
       translate 250ms var(--_translate_delay, 0ms);
   }
 
