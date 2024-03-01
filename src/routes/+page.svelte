@@ -27,10 +27,6 @@
 
 <svelte:window bind:innerWidth />
 
-<video autoplay muted loop class="bg__video">
-  <source src="/video/cmatrix.mp4" type="video/mp4" />
-</video>
-
 {#if desktop}
   <header id="banner">
     <div class="banner__bg">
@@ -41,7 +37,7 @@
           : 'banner__bg--closed'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="/img/Schulfoto22-23.png"
+          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto22-23.png?alt=media"
           alt="" />
       </button>
       <button
@@ -51,7 +47,7 @@
           : 'banner__bg--closed'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="/img/Schulfoto21-22.png"
+          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto21-22.png?alt=media"
           alt="" />
       </button>
       <button
@@ -61,7 +57,7 @@
           : ''} {openBanner === 3 ? 'banner__bg--open' : 'banner__bg--closed'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="/img/IMG_0989-scaled.png"
+          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_0989-scaled.png?alt=media"
           id="banner__bg__img3"
           alt="" />
       </button>
@@ -72,7 +68,7 @@
           : 'banner__bg--closed'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="/img/IMG_20230818_182533.png"
+          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_20230818_182533.png?alt=media"
           alt="" />
       </button>
     </div>
@@ -144,7 +140,7 @@
         </p>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="/img/Schulfoto22-23.png"
+          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto22-23.png?alt=media"
           alt="" />
       </div>
     {/if}
@@ -160,7 +156,7 @@
         </p>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="/img/Schulfoto21-22.png"
+          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto21-22.png?alt=media"
           class="banner__bg__img--adapt"
           alt="" />
       </div>
@@ -182,7 +178,7 @@
         </ul>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="/img/IMG_0989-scaled.png"
+          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_0989-scaled.png?alt=media"
           class="banner__bg__img--adapt"
           alt="" />
       </div>
@@ -194,7 +190,7 @@
         <p>{$_('page.home.aboutme4.p')}</p>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="/img/Schulfoto21-22.png"
+          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_20230818_182533.png?alt=media"
           class="banner__bg__img--adapt"
           alt="" />
       </div>

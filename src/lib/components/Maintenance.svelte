@@ -33,7 +33,8 @@
   }
 
   .centered-container {
-    height: 80vh;
+    height: 90vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,11 +134,9 @@
   }
 
   footer {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 15vh;
-    margin-right: 20px;
-    align-items: flex-end;
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
   }
 
   a {

@@ -4,10 +4,12 @@
 }
 
 body {
-  font-family: 'Big Noodle', sans-serif;
+  font-family: 'Big Noodle', sans-serif !important;
   letter-spacing: 1.5px;
   font-size: 18px;
   overflow: hidden;
-  background-image: url('/img/Summer+Night+On+Sigma+957+-+1080p.jpg');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Summer%2BNight%2BOn%2BSigma%2B957%2B-%2B1080p.jpg?alt=media');
   position: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
