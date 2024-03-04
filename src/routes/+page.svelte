@@ -1,9 +1,27 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n';
+  import {
+    FeuerwehrmannFoto,
+    KaligraphieFoto,
+    Schulfoto21_22,
+    Schulfoto22_23,
+  } from '$lib/assetUrls';
+  import { locale, _, json } from 'svelte-i18n';
 
   const age =
     new Date(Date.now() - new Date('2005-11-29').valueOf()).getFullYear() -
     1970;
+
+  let aboutme2items: string[];
+  let aboutme3_1items: string[];
+  let aboutme3_2items: string[];
+
+  const translateLists = () => {
+    aboutme2items = $json('page.home.aboutme2.ul_items') as string[];
+    aboutme3_1items = $json('page.home.aboutme3.ul1_items') as string[];
+    aboutme3_2items = $json('page.home.aboutme3.ul2_items') as string[];
+  };
+
+  locale.subscribe(translateLists);
 
   let openBanner = 1;
   const setOpen = (id: number) => {
@@ -37,7 +55,7 @@
           : 'banner__bg--closed'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto22-23.png?alt=media"
+          src={Schulfoto22_23}
           alt="" />
       </button>
       <button
@@ -47,7 +65,7 @@
           : 'banner__bg--closed'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto21-22.png?alt=media"
+          src={Schulfoto21_22}
           alt="" />
       </button>
       <button
@@ -57,7 +75,7 @@
           : ''} {openBanner === 3 ? 'banner__bg--open' : 'banner__bg--closed'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_0989-scaled.png?alt=media"
+          src={FeuerwehrmannFoto}
           id="banner__bg__img3"
           alt="" />
       </button>
@@ -68,60 +86,75 @@
           : 'banner__bg--closed'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_20230818_182533.png?alt=media"
+          src={KaligraphieFoto}
           alt="" />
       </button>
     </div>
-    <div>
+    <div class="aboutme">
       {#if openBanner === 1}
-        <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1 lang="de">
-            Armin Bade
-            <p class="phonetic-spelling" aria-hidden="true">[ˈarmiːn ˈbaːdə]</p>
-          </h1>
-          <p>
-            {$_({ id: 'page.home.aboutme1.p', values: { age: age } })}
-          </p>
-        </div>
+        <h2>{$_('page.home.iam')}</h2>
+        <h1 lang="de">
+          Armin Bade
+          <p class="phonetic-spelling" aria-hidden="true">[ˈarmiːn ˈbaːdə]</p>
+        </h1>
+        <p>
+          {$_({ id: 'page.home.aboutme1.p1', values: { age: age } })}
+        </p>
+        <p>{$_('page.home.aboutme1.p2')}</p>
+        <p>{$_('page.home.aboutme1.p3')}</p>
       {/if}
       {#if openBanner === 2}
-        <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1>{$_('page.home.aboutme2.h1')}</h1>
-          <p>
-            {$_('page.home.aboutme2.p1')}
-            <a href={$_('page.home.aboutme2.href')}>
-              {$_('page.home.aboutme2.a')}
-            </a>
-            {$_('page.home.aboutme2.p2')}
-          </p>
-        </div>
+        <h2>{$_('page.home.iam')}</h2>
+        <h1>{$_('page.home.aboutme2.h1')}</h1>
+        <p>
+          {$_('page.home.aboutme2.p1_1')}
+          <a href={$_('page.home.aboutme2.href')}
+            >{$_('page.home.aboutme2.a')}</a>
+          {$_('page.home.aboutme2.p1_2')}
+        </p>
+        <h2 class="ul__heading">
+          {$_('page.home.aboutme2.ul_heading')}
+        </h2>
+        <ul class="list-disc list-inside">
+          {#each aboutme2items as item}
+            <li>{@html item}</li>
+          {/each}
+        </ul>
       {/if}
       {#if openBanner === 3}
-        <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1>{$_('page.home.aboutme3.h1')}</h1>
-          <p>
-            {$_('page.home.aboutme3.p')}
-          </p>
-          <p>
-            {$_('page.home.aboutme3.ul')}
-          </p>
-          <ul class="list-disc list-inside">
-            <li>{$_('page.home.aboutme3.li1')}</li>
-            <li>{$_('page.home.aboutme3.li2')}</li>
-            <li>{$_('page.home.aboutme3.li3')}</li>
-            <li>{$_('page.home.aboutme3.li4')}</li>
-          </ul>
+        <h2>{$_('page.home.iam')}</h2>
+        <h1>{$_('page.home.aboutme3.h1')}</h1>
+        <p>
+          {$_('page.home.aboutme3.p')}
+        </p>
+        <div class="flex">
+          <div class="w-1/2">
+            <h2 class="ul__heading">
+              {$_('page.home.aboutme3.ul1_heading')}
+            </h2>
+            <ul class="list-disc list-inside">
+              {#each aboutme3_1items as item}
+                <li>{item}</li>
+              {/each}
+            </ul>
+          </div>
+          <div class="w-1/2 ml-10">
+            <h2 class="ul__heading">
+              {$_('page.home.aboutme3.ul2_heading')}
+            </h2>
+            <ul class="list-disc list-inside">
+              {#each aboutme3_2items as item}
+                <li>{item}</li>
+              {/each}
+            </ul>
+          </div>
         </div>
       {/if}
       {#if openBanner === 4}
-        <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1>{$_('page.home.aboutme4.h1')}</h1>
-          <p>{$_('page.home.aboutme4.p')}</p>
-        </div>
+        <h2>{$_('page.home.iam')}</h2>
+        <h1>{$_('page.home.aboutme4.h1')}</h1>
+        <p>{$_('page.home.aboutme4.p1')}</p>
+        <p>{$_('page.home.aboutme4.p2')}</p>
       {/if}
     </div>
   </header>
@@ -140,7 +173,7 @@
         </p>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto22-23.png?alt=media"
+          src={Schulfoto22_23}
           alt="" />
       </div>
     {/if}
@@ -149,14 +182,17 @@
         <h2>{$_('page.home.iam')}</h2>
         <h1>{$_('page.home.aboutme2.h1')}</h1>
         <p>
-          {$_('page.home.aboutme2.p1')}
+          {$_('page.home.aboutme2.p1_1')}
           <a href={$_('page.home.aboutme2.href')}
             >{$_('page.home.aboutme2.a')}</a>
+          {$_('page.home.aboutme2.p1_2')}
+        </p>
+        <p>
           {$_('page.home.aboutme2.p2')}
         </p>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto21-22.png?alt=media"
+          src={Schulfoto21_22}
           class="banner__bg__img--adapt"
           alt="" />
       </div>
@@ -178,7 +214,7 @@
         </ul>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_0989-scaled.png?alt=media"
+          src={FeuerwehrmannFoto}
           class="banner__bg__img--adapt"
           alt="" />
       </div>
@@ -190,7 +226,7 @@
         <p>{$_('page.home.aboutme4.p')}</p>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_20230818_182533.png?alt=media"
+          src={KaligraphieFoto}
           class="banner__bg__img--adapt"
           alt="" />
       </div>
@@ -211,28 +247,25 @@
     z-index: -2;
   }
 
-  .bg__video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 101vw;
-    height: 101%;
-    z-index: -1;
-    object-fit: cover;
-  }
-
   #banner {
     margin: 35vh 25vw 0 25vw;
   }
 
   .aboutme {
     color: white;
-    /* background-color: rgba(80, 80, 80, 0.5); */
     padding: 5px 10px;
+
+    width: 1000px;
   }
 
   .aboutme > p {
     font-size: 24px;
+    max-width: 80ch;
+  }
+
+  .aboutme > .ul__heading {
+    margin-block: 0;
+    margin-top: 20px;
   }
 
   .aboutme > p > a {
@@ -302,6 +335,7 @@
   .banner__bg > .button--img > img {
     transition: object-fit 400ms;
     height: 100vh;
+    user-select: none;
   }
 
   .border__right {

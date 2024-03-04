@@ -14,23 +14,38 @@
       },
       "aboutme2": {
         "h1": "Schüler",
-        "p1": "und besuche eine ",
+        "p1_1": "und besuche eine ",
+        "p1_2": "im Zweig Informatik.",
         "href": "https://de.wikipedia.org/wiki/H%C3%B6here_Technische_Lehranstalt",
         "a": "Höhere Technische Lehranstalt",
-        "p2": "im Zweig Informatik. An dieser Schule lerne Ich programmieren in den Sprachen Java (als Command Line, Java Swing/FX und auf Android) und C# (WPF, LINQ, ASP.NET), Web-Entwicklung mit HTML, CSS, JS/TS und Svelte, Netzwerktechnik, Datenbanksysteme und Projektmanagment."
+        "ul_heading": "An dieser Schule lerne ich...",
+        "ul_items": [
+          "Java <i>(Command Line, Java Swing/FX, Android)<i>,",
+          "C# <i>(WPF, LINQ, ASP.NET)</i>,",
+          "HTML, CSS, JS/TS, Svelte,",
+          "Netzwerktechnik, Datenbanksysteme und Projektmanagment."
+        ]
       },
       "aboutme3": {
         "h1": "Feuerwehrmann.",
         "p": "Damals als ich der Freiwillgen Feuerwehr beigetreten bin im Alter von 10, war es nur wegen meiner alten Freunde, jedoch seit dem ich von der Feuwerwehrjugend in den Aktiv-Stand gewechselt bin, bin ich noch dort um die Möglichkeit zu haben Menschen in Not zu helfen.",
-        "ul": "Meine Abzeichen:",
-        "li1": "Jugend Wissenstest in Gold",
-        "li2": "Jugend Leistungsabzeichen in Gold",
-        "li3": "Leistungsabzeichen in Funk/Kommunikation und Aufgaben in der Einsatzleitung in Bronze",
-        "li4": "Branddienstleistungsabzeichen in Bronze"
+        "ul1_heading": "Meine Abzeichen:",
+        "ul1_items": [
+          "Jugend Wissenstest in Gold",
+          "Jugend Leistungsabzeichen in Gold",
+          "Leistungsabzeichen in Funk/Kommunikation und Aufgaben in der Einsatzleitung in Bronze",
+          "Branddienstleistungsabzeichen in Bronze"
+        ],
+        "ul2_heading": "Besuchte Lehrgänge:",
+        "ul2_items": [
+          "Grundlehrgang",
+          "Funklehrgang"
+        ]
       },
       "aboutme4": {
         "h1": "Hobby-Spieledesigner",
-        "p": "und plane mein eigenes Spiel seit einer langen Zeit. Jedoch habe ich bisher keinen erwähenswerten Fortschritt in der Entwicklung gemacht. Ich möchte ein Survival Craft Open World RPG machen, mit einem Klassensystem inspiriert von Spielen wie World of Warcraft, Guild Wars 2 und New World."
+        "p1": "und plane mein eigenes Spiel seit einer langen Zeit.",
+        "p2": "Jedoch habe ich bisher keinen erwähenswerten Fortschritt in der Entwicklung gemacht. Ich möchte ein Survival Craft Open World RPG machen, mit einem Klassensystem inspiriert von Spielen wie World of Warcraft, Guild Wars 2 und New World."
       }
     },
     "contact": {
