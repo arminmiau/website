@@ -14,7 +14,7 @@
 <svelte:window bind:innerWidth />
 
 {#if desktop}
-  <nav>
+  <nav class="fixed z-50">
     <ul class="nav__links bg-primary-foreground border border-input">
       <li><a href="/" class="nav__link">{$_('nav.home')}</a></li>
       <li>
@@ -77,8 +77,6 @@
     top: 0;
 
     border-radius: 0 0 7px 7px;
-
-    z-index: 20;
   }
 
   .nav__locale--small {
