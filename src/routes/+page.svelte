@@ -28,7 +28,7 @@
 <svelte:window bind:innerWidth />
 
 {#if desktop}
-  <header id="banner">
+  <header>
     <div class="banner__bg">
       <button
         on:click={() => setOpen(1)}
@@ -72,13 +72,14 @@
           alt="" />
       </button>
     </div>
-    <div>
+    <div
+      class="mx-[25vw] my-[35vh] w-[1000px] py-[5px] px-[10px] bg-primary-foreground bg-opacity-70">
       {#if openBanner === 1}
         <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1 lang="de">
+          <h2 class="text-2xl">{$_('page.home.iam')}</h2>
+          <h1 lang="de" class="text-5xl">
             Armin Bade
-            <p class="phonetic-spelling" aria-hidden="true">[ˈarmiːn ˈbaːdə]</p>
+            <p class="inline text-xs" aria-hidden="true">[ˈarmiːn ˈbaːdə]</p>
           </h1>
           <p>
             {$_({ id: 'page.home.aboutme1.p', values: { age: age } })}
@@ -87,11 +88,11 @@
       {/if}
       {#if openBanner === 2}
         <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1>{$_('page.home.aboutme2.h1')}</h1>
+          <h2 class="text-2xl">{$_('page.home.iam')}</h2>
+          <h1 class="text-5xl">{$_('page.home.aboutme2.h1')}</h1>
           <p>
             {$_('page.home.aboutme2.p1')}
-            <a href={$_('page.home.aboutme2.href')}>
+            <a href={$_('page.home.aboutme2.href')} class="underline">
               {$_('page.home.aboutme2.a')}
             </a>
             {$_('page.home.aboutme2.p2')}
@@ -100,8 +101,8 @@
       {/if}
       {#if openBanner === 3}
         <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1>{$_('page.home.aboutme3.h1')}</h1>
+          <h2 class="text-2xl">{$_('page.home.iam')}</h2>
+          <h1 class="text-5xl">{$_('page.home.aboutme3.h1')}</h1>
           <p>
             {$_('page.home.aboutme3.p')}
           </p>
@@ -118,8 +119,8 @@
       {/if}
       {#if openBanner === 4}
         <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1>{$_('page.home.aboutme4.h1')}</h1>
+          <h2 class="text-2xl">{$_('page.home.iam')}</h2>
+          <h1 class="text-5xl">{$_('page.home.aboutme4.h1')}</h1>
           <p>{$_('page.home.aboutme4.p')}</p>
         </div>
       {/if}
@@ -206,45 +207,6 @@
 </svelte:head>
 
 <style>
-  :global(body) {
-    overflow: hidden;
-    z-index: -2;
-  }
-
-  .bg__video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 101vw;
-    height: 101%;
-    z-index: -1;
-    object-fit: cover;
-  }
-
-  #banner {
-    margin: 35vh 25vw 0 25vw;
-  }
-
-  .aboutme {
-    color: white;
-    /* background-color: rgba(80, 80, 80, 0.5); */
-    padding: 5px 10px;
-  }
-
-  .aboutme > p {
-    font-size: 24px;
-  }
-
-  .aboutme > p > a {
-    color: white;
-    text-decoration: underline;
-  }
-
-  .phonetic-spelling {
-    font-size: 20px;
-    display: inline;
-  }
-
   .aboutme--small {
     margin-top: 30vh;
     padding: 5px 100px;

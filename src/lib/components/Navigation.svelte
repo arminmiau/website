@@ -17,7 +17,9 @@
   <nav>
     <ul class="nav__links bg-primary-foreground border border-input">
       <li><a href="/" class="nav__link">{$_('nav.home')}</a></li>
-      <li><a href="/" class="nav__link">{$_('nav.technologies')}</a></li>
+      <li>
+        <a href="/technologies" class="nav__link">{$_('nav.technologies')}</a>
+      </li>
       <li><a href="/" class="nav__link">{$_('nav.projects')}</a></li>
       <li><a href="/" class="nav__link">{$_('nav.something')}</a></li>
       <li><a href="/contact" class="nav__link">{$_('nav.contact')}</a></li>

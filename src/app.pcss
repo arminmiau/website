@@ -40,11 +40,16 @@
     box-sizing: border-box;
   }
 
-  body {
-    position: absolute;
-
+  html {
     font-family: Inter;
     font-size: 22px;
+  }
+
+  body {
+    position: absolute;
+    z-index: -2;
+
+    overflow: hidden;
   }
 
   h1 {
@@ -80,14 +85,5 @@
 @layer base {
   body {
     @apply bg-secondary-foreground text-primary;
-  }
-  h1 {
-    @apply text-5xl;
-  }
-  h2 {
-    @apply text-3xl;
-  }
-  .aboutme {
-    @apply bg-primary-foreground bg-opacity-70;
   }
 }
