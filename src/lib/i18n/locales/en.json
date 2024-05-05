@@ -10,9 +10,7 @@
     "home": {
       "iam": "I am...",
       "aboutme1": {
-        "p1": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria.",
-        "p2": "Computertechnologies, software development and video games are my passion.",
-        "p3": "I create this website to build experience and to have an online portfolio of my skills."
+        "p": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria. Computertechnologies, software development and video games are my passion. I create this website to build experience and to have an online portfolio of my skills."
       },
       "aboutme2": {
         "h1": "a student",

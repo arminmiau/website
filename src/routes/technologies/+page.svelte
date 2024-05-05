@@ -6,11 +6,11 @@
   <title>Technologies - arminmiau</title>
 </svelte:head>
 
-<div class="flex w-[90vw] mt-[10vh] ml-[5vw]">
+<div class="flex w-[90vw] mt-[10vh] ml-[5vw] gap-10">
   <div>
     <h1 class="text-3xl">Technologies that I have used:</h1>
     <h2 class="mb-4">(bars indicate self estimate of usage)</h2>
-    <ul class="list-inside mb-4 w-[25vw]">
+    <ul class="list-inside mb-4">
       <li>
         <div class="flex items-center">
           <p class="w-[200px]">.NET C#</p>

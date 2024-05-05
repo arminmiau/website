@@ -78,8 +78,7 @@
     lastTimeout = setTimeout(timeout1, 500);
     setTimeout(() => {
       progressInterval = setInterval(() => {
-        if (timeoutProgress >= 1) timeoutProgress -= 0.2;
-        else timeoutProgress = 100;
+        timeoutProgress -= 0.2;
       }, carouselTime / 500);
     }, 520);
   });
@@ -87,21 +86,25 @@
   const timeout1 = () => {
     setOpen(1);
     lastTimeout = setTimeout(timeout2, carouselTime);
+    timeoutProgress = 100;
   };
 
   const timeout2 = () => {
     setOpen(2);
     lastTimeout = setTimeout(timeout3, carouselTime);
+    timeoutProgress = 100;
   };
 
   const timeout3 = () => {
     setOpen(3);
     lastTimeout = setTimeout(timeout4, carouselTime);
+    timeoutProgress = 100;
   };
 
   const timeout4 = () => {
     setOpen(4);
     lastTimeout = setTimeout(timeout1, carouselTime);
+    timeoutProgress = 100;
   };
 </script>
 
@@ -196,10 +199,8 @@
             <p class="inline text-xs" aria-hidden="true">[ˈarmiːn ˈbaːdə]</p>
           </h1>
           <p>
-            {$_({ id: 'page.home.aboutme1.p1', values: { age: age } })}
+            {$_({ id: 'page.home.aboutme1.p', values: { age: age } })}
           </p>
-          <p>{$_('page.home.aboutme1.p2')}</p>
-          <p>{$_('page.home.aboutme1.p3')}</p>
         {/if}
         {#if openBanner === 2}
           <h2 class="text-2xl mt-5 mb-1">{$_('page.home.iam')}</h2>
