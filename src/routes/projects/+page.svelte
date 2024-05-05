@@ -1,4 +1,5 @@
 <script>
+  import { HometabThumbnail, WebsiteThumbnail } from '$lib/assetUrls';
   import * as Card from '$lib/components/ui/card';
 </script>
 
@@ -15,7 +16,7 @@
         <Card.Title>
           <img
             class="w-[500px] border border-gray-500 rounded"
-            src="/img/website-thumbnail.png"
+            src={WebsiteThumbnail}
             alt="" />
           <p class="mt-[5px]">arminmiau website</p>
         </Card.Title>
@@ -46,7 +47,7 @@
         <Card.Title>
           <img
             class="w-[500px] border border-gray-500 rounded"
-            src="/img/hometab-thumbnail.png"
+            src={HometabThumbnail}
             alt="" />
           <p class="mt-[5px]">svelte-hometab</p>
         </Card.Title>
@@ -75,7 +76,7 @@
             alt="" />
           <p class="mt-[5px]">Unannounced game</p>
         </Card.Title>
-        <Card.Description>using Unity</Card.Description>
+        <Card.Description>using Unity or Godot</Card.Description>
       </Card.Header>
       <Card.Content>
         <p>

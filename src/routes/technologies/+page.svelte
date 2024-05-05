@@ -6,7 +6,7 @@
   <title>Technologies - arminmiau</title>
 </svelte:head>
 
-<div class="flex justify-between w-[90vw] mt-[10vh] ml-[5vw]">
+<div class="flex w-[90vw] mt-[10vh] ml-[5vw]">
   <div>
     <h1 class="text-3xl">Technologies that I have used:</h1>
     <h2 class="mb-4">(bars indicate self estimate of usage)</h2>
