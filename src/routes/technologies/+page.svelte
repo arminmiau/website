@@ -2,6 +2,10 @@
   import { Progress } from '$lib/components/ui/progress';
 </script>
 
+<svelte:head>
+  <title>Technologies - arminmiau</title>
+</svelte:head>
+
 <div class="flex justify-between w-[90vw] mt-[10vh] ml-[5vw]">
   <div>
     <h1 class="text-3xl">Technologies that I have used:</h1>

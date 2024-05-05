@@ -105,6 +105,9 @@
   };
 </script>
 
+<svelte:head>
+  <title>Armin Bade - arminmiau</title>
+</svelte:head>
 <svelte:window bind:innerWidth />
 
 {#if desktop}
@@ -335,10 +338,6 @@
 {:else}
   <h1 style="color: white;">{$_('misc.mobile')}</h1>
 {/if}
-
-<svelte:head>
-  <title>arminmiau</title>
-</svelte:head>
 
 <style>
   .aboutme--small {
