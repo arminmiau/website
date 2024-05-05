@@ -48,20 +48,10 @@
   body {
     position: absolute;
     z-index: -20;
-
-    overflow: hidden;
   }
 
   .last-element-row {
     margin-left: auto;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .overflow-hidden {
-    overflow: hidden;
   }
 
   .transition-width {
@@ -80,6 +70,6 @@
 
 @layer base {
   body {
-    @apply bg-secondary-foreground text-primary;
+    @apply bg-secondary-foreground text-primary min-[1720px]:overflow-hidden;
   }
 }

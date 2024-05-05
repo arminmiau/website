@@ -4,7 +4,7 @@
 
   let smallNav = false;
   const toggleSmallNav = () => {
-    smallNav ? (smallNav = false) : (smallNav = true);
+    smallNav = !smallNav;
   };
 
   let innerWidth = 1920;
@@ -20,8 +20,8 @@
       <li>
         <a href="/technologies" class="nav__link">{$_('nav.technologies')}</a>
       </li>
-      <li><a href="/" class="nav__link">{$_('nav.projects')}</a></li>
-      <li><a href="/" class="nav__link">{$_('nav.something')}</a></li>
+      <li><a href="/projects" class="nav__link">{$_('nav.projects')}</a></li>
+      <!-- <li><a href="/" class="nav__link">{$_('nav.something')}</a></li> -->
       <li><a href="/contact" class="nav__link">{$_('nav.contact')}</a></li>
     </ul>
     <LanguageSelector />
