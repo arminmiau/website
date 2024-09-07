@@ -67,10 +67,6 @@
     else openBanner = 1;
   };
 
-  let innerWidth = 1920;
-  $: desktop = innerWidth > 987 ? true : false;
-  const mobileEnabled = false;
-
   const carouselTime = 10000;
   let lastTimeout: NodeJS.Timeout;
   let timeoutProgress = 100;
@@ -112,6 +108,9 @@
     clearInterval(progressInterval);
     clearTimeout(lastTimeout);
   });
+
+  let innerWidth = 1920;
+  $: desktop = innerWidth > 987 ? true : false;
 </script>
 
 <svelte:head>
@@ -267,7 +266,7 @@
       <Progress value={timeoutProgress} class="fixed rounded-none h-[5px]" />
     {/if}
   </header>
-{:else if mobileEnabled}
+{:else}
   <div id="aboutme">
     <button class="button--decrement" on:click={decrementBanner}>&lt;</button>
     {#if openBanner === 1}
@@ -342,8 +341,6 @@
     {/if}
     <button class="button--increment" on:click={incrementBanner}>&gt;</button>
   </div>
-{:else}
-  <h1 style="color: white;">{$_('misc.mobile')}</h1>
 {/if}
 
 <style>
