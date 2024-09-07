@@ -84,6 +84,11 @@
         }
       }
     },
+    "technologies": {
+      "pl": "Programmiersprachen",
+      "frm": "Frameworks",
+      "inf": "Infrastruktur"
+    },
     "contact": {
       "h1": "Kontakt"
     }

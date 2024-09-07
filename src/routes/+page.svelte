@@ -7,7 +7,7 @@
     Schulfoto22_23,
   } from '$lib/assetUrls';
   import { Progress } from '$lib/components/ui/progress';
-  import { onMount } from 'svelte';
+  import { onDestroy, onMount } from 'svelte';
   import { locale, _, json } from 'svelte-i18n';
 
   const age =
@@ -107,6 +107,11 @@
     lastTimeout = setTimeout(timeout1, carouselTime);
     timeoutProgress = 100;
   };
+
+  onDestroy(() => {
+    clearInterval(progressInterval);
+    clearTimeout(lastTimeout);
+  });
 </script>
 
 <svelte:head>
