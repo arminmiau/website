@@ -108,6 +108,9 @@
     clearInterval(progressInterval);
     clearTimeout(lastTimeout);
   });
+
+  let innerWidth = 1920;
+  $: desktop = innerWidth > 987 ? true : false;
 </script>
 
 <svelte:head>
@@ -115,7 +118,7 @@
 </svelte:head>
 <svelte:window bind:innerWidth />
 
-
+{#if desktop}
   <header class="flex justify-center items-end w-screen h-screen">
     <div class="flex w-screen absolute top-0 left-0 banner__bg">
       <button
@@ -263,7 +266,7 @@
       <Progress value={timeoutProgress} class="fixed rounded-none h-[5px]" />
     {/if}
   </header>
-{:else if mobileEnabled}
+{:else}
   <div id="aboutme">
     <button class="button--decrement" on:click={decrementBanner}>&lt;</button>
     {#if openBanner === 1}
@@ -338,7 +341,7 @@
     {/if}
     <button class="button--increment" on:click={incrementBanner}>&gt;</button>
   </div>
-
+{/if}
 
 <style>
   .aboutme--small {
