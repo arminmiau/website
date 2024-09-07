@@ -31,10 +31,9 @@
     {#if smallNav}
       <ul class="nav__links--small">
         <li><a href="/" class="nav__link">{$_('nav.home')}</a></li>
-        <li><a href="/" class="nav__link">{$_('nav.technologies')}</a></li>
-        <li><a href="/" class="nav__link">{$_('nav.projects')}</a></li>
-        <li><a href="/" class="nav__link">{$_('nav.something')}</a></li>
-        <li><a href="/" class="nav__link">{$_('nav.contact')}</a></li>
+        <li><a href="/technologies" class="nav__link">{$_('nav.technologies')}</a></li>
+        <li><a href="/projects" class="nav__link">{$_('nav.projects')}</a></li>
+        <li><a href="/contact" class="nav__link">{$_('nav.contact')}</a></li>
         <li>
           <select class="nav__locale--small" bind:value={$locale}>
             {#each $locales as loc}

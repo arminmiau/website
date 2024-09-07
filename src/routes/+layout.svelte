@@ -5,10 +5,17 @@
   import Navigation from '$lib/components/Navigation.svelte';
   import { assetUrls } from '$lib/assetUrls';
   import { app } from '$lib/firebase';
+  import { _ } from 'svelte-i18n';
+
+  let innerWidth = 1920;
+  $: desktop = innerWidth > 987 ? true : false;
+  const mobileEnabled = false;
 
   app();
   const isPublic = true;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <svelte:head>
   {#each assetUrls as assetUrl}
@@ -16,9 +23,13 @@
   {/each}
 </svelte:head>
 
-{#if isPublic}
-  <Navigation />
-  <slot />
+{#if desktop || mobileEnabled}
+  {#if isPublic}
+    <Navigation />
+    <slot />
+  {:else}
+    <Maintenance />
+  {/if}
 {:else}
-  <Maintenance />
+  <h1 style="color: white;">{$_('misc.mobile')}</h1>
 {/if}

@@ -67,10 +67,6 @@
     else openBanner = 1;
   };
 
-  let innerWidth = 1920;
-  $: desktop = innerWidth > 987 ? true : false;
-  const mobileEnabled = false;
-
   const carouselTime = 10000;
   let lastTimeout: NodeJS.Timeout;
   let timeoutProgress = 100;
@@ -119,7 +115,7 @@
 </svelte:head>
 <svelte:window bind:innerWidth />
 
-{#if desktop}
+
   <header class="flex justify-center items-end w-screen h-screen">
     <div class="flex w-screen absolute top-0 left-0 banner__bg">
       <button
@@ -342,9 +338,7 @@
     {/if}
     <button class="button--increment" on:click={incrementBanner}>&gt;</button>
   </div>
-{:else}
-  <h1 style="color: white;">{$_('misc.mobile')}</h1>
-{/if}
+
 
 <style>
   .aboutme--small {
