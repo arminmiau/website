@@ -48,6 +48,42 @@
         "p2": "Jedoch habe ich bisher keinen erwähenswerten Fortschritt in der Entwicklung gemacht. Ich möchte ein Survival Craft Open World RPG machen, mit einem Klassensystem inspiriert von Spielen wie World of Warcraft, Guild Wars 2 und New World."
       }
     },
+    "projects": {
+      "webdev": {
+        "h2": "Web Entwicklung",
+        "website": {
+          "title": "arminmiau Webseite",
+          "desc1": "Meine Webseite auf der Sie sich gerade befinden. Erstellt mit ",
+          "desc2": "und gehostet auf ",
+          "desc3": "Komponenten von ",
+          "date": "veröffentlicht am 69.99.1948"
+        },
+        "hometab": {
+          "subtitle": "lokal gehostet",
+          "desc": "Mein hometab für Verlinkungen und E-Mail Postfächer. Zuvor erstellt als eine einfache JS SPA, nun neu-gemacht in Svelte.",
+          "date": "auf GitHub seit 22.7.2023"
+        }
+      },
+      "images": {
+        "h2": "Benutzerdefinierte Images",
+        "dev": {
+          "subtitle": "verfügbar als OCI Image und ISO Datei",
+          "desc1": "Ein angepasstes ",
+          "desc2": "Image mit mehr Entwickler-Tools wie z.B. Rider und nodejs. OCI Image erstellt mit ",
+          "desc3": ", ISO erstelllt mit JasonN3’s ",
+          "date": "auf GitHub seit 6.9.2024"
+        }
+      },
+      "gamedev": {
+        "h2": "Spieleentwicklung",
+        "game1": {
+          "title": "Unangekündigtes Spiel",
+          "subtitle": "in Godot",
+          "desc": "Ein Survival Craft Open World RPG, mit einem Klassensystem inspiriert von Spielen wie World of Warcraft, Guild Wars 2 und New World, das ich bisher am Planen bin.",
+          "date": "mehr zu Ankündigen"
+        }
+      }
+    },
     "contact": {
       "h1": "Kontakt"
     }

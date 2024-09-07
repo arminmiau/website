@@ -2,6 +2,7 @@
   import {
     FeuerwehrmannFoto,
     KaligraphieFoto,
+    MaturaballFoto,
     Schulfoto21_22,
     Schulfoto22_23,
   } from '$lib/assetUrls';
@@ -126,7 +127,7 @@
             : 'w-[7vw] cursor-grab brightness-50'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src={Schulfoto22_23}
+          src={MaturaballFoto}
           class="object-cover transition-[object-cover] delay-500 select-none h-screen {openBanner ===
           1
             ? 'object-center w-[70%] h-[90%]'
@@ -143,7 +144,7 @@
             : 'w-[7vw] cursor-grab brightness-50'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src={Schulfoto21_22}
+          src={Schulfoto22_23}
           class="object-cover transition-[object-cover] delay-500 select-none h-screen {openBanner ===
           2
             ? 'object-center w-[70%] h-[90%]'

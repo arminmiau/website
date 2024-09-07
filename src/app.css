@@ -66,6 +66,6 @@
 
 @layer base {
   body {
-    @apply bg-secondary-foreground text-primary min-[1720px]:overflow-hidden;
+    @apply bg-secondary-foreground text-primary;
   }
 }

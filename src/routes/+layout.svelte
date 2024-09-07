@@ -1,5 +1,5 @@
 <script lang="ts">
-  import '../app.pcss';
+  import '../app.css';
   import '$lib/i18n';
   import Maintenance from '$lib/components/Maintenance.svelte';
   import Navigation from '$lib/components/Navigation.svelte';

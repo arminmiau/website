@@ -48,6 +48,42 @@
         "p2": "However, I haven't made any mentionable progress in the development. I want to make a survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World."
       }
     },
+    "projects": {
+      "webdev": {
+        "h2": "Web dev",
+        "website": {
+          "title": "arminmiau website",
+          "desc1": "My website that you are currently on right now. Built with ",
+          "desc2": "and deployed to ",
+          "desc3": "Components from ",
+          "date": "published 69th Quacktember, 1948"
+        },
+        "hometab": {
+          "subtitle": "locally hosted",
+          "desc": "My hometab for shortcuts and email inboxes. Previously written as a plain JS SPA, now rewritten in Svelte.",
+          "date": "on GitHub since 22nd July, 2023"
+        }
+      },
+      "images": {
+        "h2": "Custom images",
+        "dev": {
+          "subtitle": "available as OCI image and ISO file",
+          "desc1": "A custom ",
+          "desc2": "image with more dev tools like Rider and nodejs preinstalled. OCI image built using ",
+          "desc3": ", ISO built using JasonN3’s ",
+          "date": "on GitHub since 6th September, 2024"
+        }
+      },
+      "gamedev": {
+        "h2": "Game dev",
+        "game1": {
+          "title": "Unannounced game",
+          "subtitle": "using Godot",
+          "desc": "A survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World, that I have been planning to develop.",
+          "date": "more TBA"
+        }
+      }
+    },
     "contact": {
       "h1": "Contact"
     }

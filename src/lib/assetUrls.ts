@@ -4,5 +4,7 @@ export const FeuerwehrmannFoto = "https://firebasestorage.googleapis.com/v0/b/ar
 export const KaligraphieFoto = "https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_20230818_182533.png?alt=media";
 export const HometabThumbnail = "https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/hometab-thumbnail.png?alt=media";
 export const WebsiteThumbnail = "https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/website-thumbnail.png?alt=media";
+export const MaturaballFoto = "https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/maturaballfoto.png?alt=media";
+export const DevImageThumbnail = "https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/dev-image-thumbnail.png?alt=media";
 
-export const assetUrls = [Schulfoto22_23, Schulfoto21_22, FeuerwehrmannFoto, KaligraphieFoto, HometabThumbnail, WebsiteThumbnail];
+export const assetUrls = [Schulfoto22_23, Schulfoto21_22, FeuerwehrmannFoto, KaligraphieFoto, HometabThumbnail, WebsiteThumbnail, MaturaballFoto, DevImageThumbnail];
