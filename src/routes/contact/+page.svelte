@@ -2,13 +2,12 @@
   import { _ } from 'svelte-i18n';
 </script>
 
-<div class="container">
-  <h1>{$_('page.contact.h1')}</h1>
-  <h4>Discord: arminmiau</h4>
-</div>
+<svelte:head>
+  <title>Contact - arminmiau</title>
+</svelte:head>
 
-<style>
-  .container {
-    margin: 10em 5em;
-  }
-</style>
+<div class="mt-[10vh] ml-[5vw]">
+  <h1 class="text-5xl mb-4">{$_('page.contact.h1')}</h1>
+  <p>Discord: arminmiau</p>
+  <p>E-mail: arminmiau.dev@gmail.com</p>
+</div>

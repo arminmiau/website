@@ -10,28 +10,84 @@
     "home": {
       "iam": "I am...",
       "aboutme1": {
-        "p": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria. Computertechnologies, software development and video games are my passion."
+        "p": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria. Computertechnologies, software development and video games are my passion. I create this website to build experience and to have an online portfolio of my skills."
       },
       "aboutme2": {
         "h1": "a student",
-        "p1": "and I attend a ",
+        "p1_1": " and I attend a ",
+        "p1_2": "in the field of informatics.",
         "href": "https://en.wikipedia.org/wiki/H%C3%B6here_Technische_Lehranstalt",
         "a": "Higher Technical Institute",
-        "p2": "in the field of informatics. At this school I'm learning programming in languages Java (as Command Line, Java Swing/FX and on Android) and C# (WPF, LINQ, ASP.NET), web development with HTML, CSS, JS/TS and Svelte, networking, database engineering and project management."
+        "ul_heading": "At this school I'm learning...",
+        "ul_items": [
+          "Java <i>(Command Line, Java Swing/FX, Android)</i>,",
+          "C# <i>(WPF, LINQ, ASP.NET)</i>,",
+          "HTML, CSS, JS/TS, Svelte,",
+          "networking, database engineering and project management."
+        ]
       },
       "aboutme3": {
         "h1": "a firefighter.",
-        "p": "Back when I joined the voluntary firefighters at an age of 10, it was only because of my old friends, however since when I became an active firefighter instead of a youth firefighter my reason to stay has been to be able to help people in need.",
-        "ul": "My badges:",
-        "li1": "Youth knowledge test in gold",
-        "li2": "Youth achievement badge in gold",
-        "li3": "Radio/communication and tasks in operational control achievement badge in bronze",
-        "li4": "Fire service achievement badge in bronze"
+        "p": "Back when I joined the voluntary firefighters at an age of 10, it was only because of my old friends, however since when I became an active firefighter (instead of a youth firefighter) my reason to stay has been to be able to help people in need.",
+        "ul1_heading": "My badges:",
+        "ul1_items": [
+          "Youth knowledge test in gold",
+          "Youth achievement badge in gold",
+          "Radio/communication and tasks in operational control achievement badge in bronze",
+          "Fire service achievement badge in bronze"
+        ],
+        "ul2_heading": "Courses I've taken:",
+        "ul2_items": [
+          "Basics course",
+          "Radio communication course"
+        ]
       },
       "aboutme4": {
         "h1": "a hobby game designer",
-        "p": "and I have been planning my own game for a long time. However, I haven't made any mentionable progress in the development. I want to make a survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World."
+        "p1": "and I have been planning my own game for a long time.",
+        "p2": "However, I haven't made any mentionable progress in the development. I want to make a survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World."
       }
+    },
+    "projects": {
+      "webdev": {
+        "h2": "Web dev",
+        "website": {
+          "title": "arminmiau website",
+          "desc1": "My website that you are currently on right now. Built with ",
+          "desc2": "and deployed to ",
+          "desc3": "Components from ",
+          "date": "published 7th September, 2024"
+        },
+        "hometab": {
+          "subtitle": "locally hosted",
+          "desc": "My hometab for shortcuts and email inboxes. Previously written as a plain JS SPA, now rewritten in Svelte.",
+          "date": "on GitHub since 22nd July, 2023"
+        }
+      },
+      "images": {
+        "h2": "Custom images",
+        "dev": {
+          "subtitle": "available as OCI image and ISO file",
+          "desc1": "A custom ",
+          "desc2": "image with more dev tools like Rider and nodejs preinstalled. OCI image built using ",
+          "desc3": ", ISO built using JasonN3’s ",
+          "date": "on GitHub since 6th September, 2024"
+        }
+      },
+      "gamedev": {
+        "h2": "Game dev",
+        "game1": {
+          "title": "Unannounced game",
+          "subtitle": "using Godot",
+          "desc": "A survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World, that I have been planning to develop.",
+          "date": "more TBA"
+        }
+      }
+    },
+    "technologies": {
+      "pl": "Programming Languages",
+      "frm": "Frameworks",
+      "inf": "Infrastructure"
     },
     "contact": {
       "h1": "Contact"

@@ -1,13 +1,60 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n';
+  import {
+    FeuerwehrmannFoto,
+    KaligraphieFoto,
+    MaturaballFoto,
+    Schulfoto21_22,
+    Schulfoto22_23,
+  } from '$lib/assetUrls';
+  import { Progress } from '$lib/components/ui/progress';
+  import { onDestroy, onMount } from 'svelte';
+  import { locale, _, json } from 'svelte-i18n';
 
   const age =
     new Date(Date.now() - new Date('2005-11-29').valueOf()).getFullYear() -
     1970;
 
-  let openBanner = 1;
+  let aboutme2items: string[];
+  let aboutme3_1items: string[];
+  let aboutme3_2items: string[];
+
+  const translateLists = () => {
+    aboutme2items = $json('page.home.aboutme2.ul_items') as string[];
+    aboutme3_1items = $json('page.home.aboutme3.ul1_items') as string[];
+    aboutme3_2items = $json('page.home.aboutme3.ul2_items') as string[];
+  };
+
+  locale.subscribe(translateLists);
+
+  const clickBanner = (id: number) => {
+    clearTimeout(lastTimeout);
+    clearInterval(progressInterval);
+    progressInterval = undefined;
+    setOpen(id);
+  };
+
+  let openBanner = 0;
   const setOpen = (id: number) => {
+    if (id === openBanner) return;
+
     openBanner = id;
+
+    resizeDiv();
+  };
+
+  const defaultHeight = 0;
+  let div: HTMLDivElement;
+  let height = defaultHeight;
+  let children = false;
+
+  const resizeDiv = async () => {
+    height = defaultHeight;
+    children = false;
+
+    setTimeout(() => {
+      height = div.scrollHeight;
+      children = true;
+    }, 400);
   };
 
   const decrementBanner = () => {
@@ -23,107 +70,202 @@
   let innerWidth = 1920;
   $: desktop = innerWidth > 987 ? true : false;
   const mobileEnabled = false;
+
+  const carouselTime = 10000;
+  let lastTimeout: NodeJS.Timeout;
+  let timeoutProgress = 100;
+  let progressInterval: NodeJS.Timeout | undefined;
+  onMount(() => {
+    lastTimeout = setTimeout(timeout1, 500);
+    setTimeout(() => {
+      progressInterval = setInterval(() => {
+        timeoutProgress -= 0.2;
+      }, carouselTime / 500);
+    }, 520);
+  });
+
+  const timeout1 = () => {
+    setOpen(1);
+    lastTimeout = setTimeout(timeout2, carouselTime);
+    timeoutProgress = 100;
+  };
+
+  const timeout2 = () => {
+    setOpen(2);
+    lastTimeout = setTimeout(timeout3, carouselTime);
+    timeoutProgress = 100;
+  };
+
+  const timeout3 = () => {
+    setOpen(3);
+    lastTimeout = setTimeout(timeout4, carouselTime);
+    timeoutProgress = 100;
+  };
+
+  const timeout4 = () => {
+    setOpen(4);
+    lastTimeout = setTimeout(timeout1, carouselTime);
+    timeoutProgress = 100;
+  };
+
+  onDestroy(() => {
+    clearInterval(progressInterval);
+    clearTimeout(lastTimeout);
+  });
 </script>
 
+<svelte:head>
+  <title>Armin Bade - arminmiau</title>
+</svelte:head>
 <svelte:window bind:innerWidth />
 
 {#if desktop}
-  <header id="banner">
-    <div class="banner__bg">
+  <header class="flex justify-center items-end w-screen h-screen">
+    <div class="flex w-screen absolute top-0 left-0 banner__bg">
       <button
-        on:click={() => setOpen(1)}
-        class="button--img border__right {openBanner === 1
-          ? 'banner__bg--open'
-          : 'banner__bg--closed'}">
+        on:click={() => clickBanner(1)}
+        class="flex justify-center transition-width border-r-2 border-white {openBanner ===
+        0
+          ? 'w-[25vw]'
+          : openBanner === 1
+            ? 'w-[79vw] cursor-default'
+            : 'w-[7vw] cursor-grab brightness-50'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto22-23.png?alt=media"
+          src={MaturaballFoto}
+          class="object-cover transition-[object-cover] delay-500 select-none h-screen {openBanner ===
+          1
+            ? 'object-center w-[70%] h-[90%]'
+            : ''}"
           alt="" />
       </button>
       <button
-        on:click={() => setOpen(2)}
-        class="button--img border__right {openBanner === 2
-          ? 'banner__bg--open'
-          : 'banner__bg--closed'}">
+        on:click={() => clickBanner(2)}
+        class="flex justify-center transition-width border-r-2 border-white {openBanner ===
+        0
+          ? 'w-[25vw]'
+          : openBanner === 2
+            ? 'w-[79vw] cursor-default'
+            : 'w-[7vw] cursor-grab brightness-50'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto21-22.png?alt=media"
+          src={Schulfoto22_23}
+          class="object-cover transition-[object-cover] delay-500 select-none h-screen {openBanner ===
+          2
+            ? 'object-center w-[70%] h-[90%]'
+            : ''}"
           alt="" />
       </button>
       <button
-        on:click={() => setOpen(3)}
-        class="button--img {openBanner !== 4
-          ? 'border__right'
-          : ''} {openBanner === 3 ? 'banner__bg--open' : 'banner__bg--closed'}">
+        on:click={() => clickBanner(3)}
+        class="flex justify-center transition-width border-white {openBanner !==
+        4
+          ? 'border-r-2'
+          : ''} {openBanner === 0
+          ? 'w-[25vw]'
+          : openBanner === 3
+            ? 'w-[79vw] cursor-default'
+            : 'w-[7vw] cursor-grab brightness-50'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_0989-scaled.png?alt=media"
-          id="banner__bg__img3"
+          src={FeuerwehrmannFoto}
+          class="object-cover transition-[object-cover] delay-500 select-none h-screen {openBanner ===
+          3
+            ? 'object-center w-[50%] h-[90%]'
+            : ''}"
           alt="" />
       </button>
       <button
-        on:click={() => setOpen(4)}
-        class="button--img {openBanner === 4
-          ? 'banner__bg--open border__left'
-          : 'banner__bg--closed'}">
+        on:click={() => clickBanner(4)}
+        class="flex justify-center transition-width border-white {openBanner ===
+        0
+          ? 'w-[25vw]'
+          : openBanner === 4
+            ? 'w-[79vw] cursor-default border-l-2'
+            : 'w-[7vw] cursor-grab brightness-50'}">
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_20230818_182533.png?alt=media"
+          src={KaligraphieFoto}
+          class="object-cover transition-[object-cover] delay-500 select-none h-screen {openBanner ===
+          4
+            ? 'object-center w-[70%] h-[100%]'
+            : ''}"
           alt="" />
       </button>
     </div>
-    <div>
-      {#if openBanner === 1}
-        <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1 lang="de">
+    <div
+      bind:this={div}
+      class="w-[1000px] z-10 mb-16 py-[5px] px-[10px] transition-[height] duration-300 overflow-y-hidden bg-primary-foreground bg-opacity-90 rounded-sm"
+      style="height: {height}px;">
+      <div class={children ? 'opacity-100' : 'opacity-0'}>
+        {#if openBanner === 1}
+          <h2 class="text-2xl mt-5 mb-1">{$_('page.home.iam')}</h2>
+          <h1 lang="de" class="text-4xl mb-5">
             Armin Bade
-            <p class="phonetic-spelling" aria-hidden="true">[ˈarmiːn ˈbaːdə]</p>
+            <p class="inline text-xs" aria-hidden="true">[ˈarmiːn ˈbaːdə]</p>
           </h1>
           <p>
             {$_({ id: 'page.home.aboutme1.p', values: { age: age } })}
           </p>
-        </div>
-      {/if}
-      {#if openBanner === 2}
-        <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1>{$_('page.home.aboutme2.h1')}</h1>
+        {/if}
+        {#if openBanner === 2}
+          <h2 class="text-2xl mt-5 mb-1">{$_('page.home.iam')}</h2>
+          <h1 class="text-4xl mb-5">{$_('page.home.aboutme2.h1')}</h1>
           <p>
-            {$_('page.home.aboutme2.p1')}
-            <a href={$_('page.home.aboutme2.href')}>
-              {$_('page.home.aboutme2.a')}
-            </a>
-            {$_('page.home.aboutme2.p2')}
+            {$_('page.home.aboutme2.p1_1')}
+            <a href={$_('page.home.aboutme2.href')} class="underline"
+              >{$_('page.home.aboutme2.a')}</a>
+            {$_('page.home.aboutme2.p1_2')}
           </p>
-        </div>
-      {/if}
-      {#if openBanner === 3}
-        <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1>{$_('page.home.aboutme3.h1')}</h1>
+          <h2 class="m-0 mt-3">
+            {$_('page.home.aboutme2.ul_heading')}
+          </h2>
+          <ul class="list-disc list-inside">
+            {#each aboutme2items as item}
+              <li>{@html item}</li>
+            {/each}
+          </ul>
+        {/if}
+        {#if openBanner === 3}
+          <h2 class="text-2xl mt-5 mb-1">{$_('page.home.iam')}</h2>
+          <h1 class="text-4xl mb-5">{$_('page.home.aboutme3.h1')}</h1>
           <p>
             {$_('page.home.aboutme3.p')}
           </p>
-          <p>
-            {$_('page.home.aboutme3.ul')}
-          </p>
-          <ul class="list-disc list-inside">
-            <li>{$_('page.home.aboutme3.li1')}</li>
-            <li>{$_('page.home.aboutme3.li2')}</li>
-            <li>{$_('page.home.aboutme3.li3')}</li>
-            <li>{$_('page.home.aboutme3.li4')}</li>
-          </ul>
-        </div>
-      {/if}
-      {#if openBanner === 4}
-        <div class="aboutme">
-          <h2>{$_('page.home.iam')}</h2>
-          <h1>{$_('page.home.aboutme4.h1')}</h1>
-          <p>{$_('page.home.aboutme4.p')}</p>
-        </div>
-      {/if}
+          <div class="flex">
+            <div class="w-1/2">
+              <h2 class="m-0 mt-3">
+                {$_('page.home.aboutme3.ul1_heading')}
+              </h2>
+              <ul class="list-disc list-inside">
+                {#each aboutme3_1items as item}
+                  <li>{item}</li>
+                {/each}
+              </ul>
+            </div>
+            <div class="w-1/2 ml-10">
+              <h2 class="m-0 mt-3">
+                {$_('page.home.aboutme3.ul2_heading')}
+              </h2>
+              <ul class="list-disc list-inside">
+                {#each aboutme3_2items as item}
+                  <li>{item}</li>
+                {/each}
+              </ul>
+            </div>
+          </div>
+        {/if}
+        {#if openBanner === 4}
+          <h2 class="text-2xl mt-5 mb-1">{$_('page.home.iam')}</h2>
+          <h1 class="text-4xl mb-5">{$_('page.home.aboutme4.h1')}</h1>
+          <p>{$_('page.home.aboutme4.p1')}</p>
+          <p>{$_('page.home.aboutme4.p2')}</p>
+        {/if}
+      </div>
     </div>
+    {#if progressInterval}
+      <Progress value={timeoutProgress} class="fixed rounded-none h-[5px]" />
+    {/if}
   </header>
 {:else if mobileEnabled}
   <div id="aboutme">
@@ -140,7 +282,7 @@
         </p>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto22-23.png?alt=media"
+          src={Schulfoto22_23}
           alt="" />
       </div>
     {/if}
@@ -149,14 +291,17 @@
         <h2>{$_('page.home.iam')}</h2>
         <h1>{$_('page.home.aboutme2.h1')}</h1>
         <p>
-          {$_('page.home.aboutme2.p1')}
+          {$_('page.home.aboutme2.p1_1')}
           <a href={$_('page.home.aboutme2.href')}
             >{$_('page.home.aboutme2.a')}</a>
+          {$_('page.home.aboutme2.p1_2')}
+        </p>
+        <p>
           {$_('page.home.aboutme2.p2')}
         </p>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/Schulfoto21-22.png?alt=media"
+          src={Schulfoto21_22}
           class="banner__bg__img--adapt"
           alt="" />
       </div>
@@ -178,7 +323,7 @@
         </ul>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_0989-scaled.png?alt=media"
+          src={FeuerwehrmannFoto}
           class="banner__bg__img--adapt"
           alt="" />
       </div>
@@ -190,7 +335,7 @@
         <p>{$_('page.home.aboutme4.p')}</p>
         <img
           on:dragstart={(e) => e.preventDefault()}
-          src="https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/IMG_20230818_182533.png?alt=media"
+          src={KaligraphieFoto}
           class="banner__bg__img--adapt"
           alt="" />
       </div>
@@ -201,50 +346,7 @@
   <h1 style="color: white;">{$_('misc.mobile')}</h1>
 {/if}
 
-<svelte:head>
-  <title>arminmiau</title>
-</svelte:head>
-
 <style>
-  :global(body) {
-    overflow: hidden;
-    z-index: -2;
-  }
-
-  .bg__video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 101vw;
-    height: 101%;
-    z-index: -1;
-    object-fit: cover;
-  }
-
-  #banner {
-    margin: 35vh 25vw 0 25vw;
-  }
-
-  .aboutme {
-    color: white;
-    /* background-color: rgba(80, 80, 80, 0.5); */
-    padding: 5px 10px;
-  }
-
-  .aboutme > p {
-    font-size: 24px;
-  }
-
-  .aboutme > p > a {
-    color: white;
-    text-decoration: underline;
-  }
-
-  .phonetic-spelling {
-    font-size: 20px;
-    display: inline;
-  }
-
   .aboutme--small {
     margin-top: 30vh;
     padding: 5px 100px;
@@ -277,70 +379,6 @@
     top: 0;
     right: 0;
     font-size: 6rem;
-  }
-
-  .banner__bg {
-    --_closed-size: 7vw;
-    display: flex;
-    width: 100vw;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .button--img {
-    all: unset;
-    display: flex;
-    justify-content: center;
-  }
-
-  .banner__bg > .button--img {
-    transition: width 400ms;
-  }
-
-  .banner__bg > .button--img > img {
-    transition: object-fit 400ms;
-    height: 100vh;
-  }
-
-  .border__right {
-    border-right: 2px white solid;
-  }
-
-  .border__left {
-    border-left: 2px white solid;
-  }
-
-  .banner__bg--closed img {
-    max-width: var(--_closed-size);
-    object-fit: cover;
-  }
-
-  .banner__bg--open {
-    width: calc(100vw - (var(--_closed-size) * 3));
-  }
-
-  .banner__bg--open > img {
-    object-position: center 10%;
-    object-fit: cover;
-    width: 70%;
-  }
-
-  .banner__bg--closed {
-    width: var(--_closed-size);
-    cursor: grab;
-    filter: brightness(50%);
-  }
-
-  .banner__bg--open > #banner__bg__img3 {
-    width: 50%;
-  }
-
-  @media screen and (max-width: 1430px) {
-    .banner__bg--open > img {
-      width: 90% !important;
-    }
   }
 
   @media screen and (min-width: 700px) {

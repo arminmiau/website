@@ -1,5 +1,5 @@
 {
-  "name": "arminmiau.website",
+  "name": "arminmiau-website",
   "description": "arminmiau.vercel.app",
   "version": "0.1.0",
   "author": "arminmiau",
@@ -15,10 +15,12 @@
   },
   "dependencies": {
     "@sveltejs/adapter-vercel": "^5.1.0",
-    "bits-ui": "^0.18.2",
+    "bits-ui": "^0.18.6",
     "clsx": "^2.1.0",
+    "firebase": "^10.8.1",
     "svelte-i18n": "^4.0.0",
     "svelte-radix": "^1.0.1",
+    "svelvet": "^10.0.2",
     "tailwind-merge": "^2.2.1",
     "tailwind-variants": "^0.2.0"
   },

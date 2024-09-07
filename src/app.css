@@ -40,31 +40,18 @@
     box-sizing: border-box;
   }
 
+  html {
+    font-family: Inter;
+    font-size: 100%;
+  }
+
   body {
     position: absolute;
-
-    font-family: Inter;
-    font-size: 22px;
+    z-index: -20;
   }
 
-  h1 {
-    margin-block: 30px;
-  }
-
-  h2 {
-    margin-block: 27px;
-  }
-
-  .last-element-row {
-    margin-left: auto;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .overflow-hidden {
-    overflow: hidden;
+  .transition-width {
+    transition: width 400ms;
   }
 }
 
@@ -80,14 +67,5 @@
 @layer base {
   body {
     @apply bg-secondary-foreground text-primary;
-  }
-  h1 {
-    @apply text-5xl;
-  }
-  h2 {
-    @apply text-3xl;
-  }
-  .aboutme {
-    @apply bg-primary-foreground bg-opacity-70;
   }
 }
