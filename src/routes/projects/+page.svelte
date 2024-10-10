@@ -91,7 +91,7 @@
           </a>
           <a class="underline" href="https://getaurora.dev/">Aurora</a>
           {$_('page.projects.images.dev.desc2')}
-          <a class="underline" href="blue-build.org">bluebuild</a>{$_(
+          <a class="underline" href="https://blue-build.org">bluebuild</a>{$_(
             'page.projects.images.dev.desc3'
           )}
           <a
