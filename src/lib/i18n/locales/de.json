@@ -21,7 +21,7 @@
         "ul_items": [
           "Java <i>(Command Line, Java Swing/FX, Android)<i>,",
           "C# <i>(WPF, LINQ, ASP.NET)</i>,",
-          "HTML, CSS, JS/TS, Svelte,",
+          "HTML, CSS, JS/TS, Svelte, Angular, Flutter,",
           "Netzwerktechnik, Datenbanksysteme und Projektmanagment."
         ]
       },
@@ -38,7 +38,8 @@
         "ul2_heading": "Besuchte Lehrgänge:",
         "ul2_items": [
           "Grundlehrgang",
-          "Funklehrgang"
+          "Funklehrgang",
+          "Truppführerprüfung"
         ]
       },
       "aboutme4": {

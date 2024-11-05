@@ -21,7 +21,7 @@
         "ul_items": [
           "Java <i>(Command Line, Java Swing/FX, Android)</i>,",
           "C# <i>(WPF, LINQ, ASP.NET)</i>,",
-          "HTML, CSS, JS/TS, Svelte,",
+          "HTML, CSS, JS/TS, Svelte, Angular, Flutter,",
           "networking, database engineering and project management."
         ]
       },
@@ -38,7 +38,8 @@
         "ul2_heading": "Courses I've taken:",
         "ul2_items": [
           "Basics course",
-          "Radio communication course"
+          "Radio communication course",
+          "Squad leader exam"
         ]
       },
       "aboutme4": {
