@@ -3,6 +3,7 @@
     "home": "Home",
     "technologies": "Technologien",
     "projects": "Projekte",
+    "docs": "Dokumente",
     "contact": "Kontakt"
   },
   "page": {
@@ -36,11 +37,7 @@
           "Branddienstleistungsabzeichen in Bronze"
         ],
         "ul2_heading": "Besuchte Lehrgänge:",
-        "ul2_items": [
-          "Grundlehrgang",
-          "Funklehrgang",
-          "Truppführerprüfung"
-        ]
+        "ul2_items": ["Grundlehrgang", "Funklehrgang", "Truppführerprüfung"]
       },
       "aboutme4": {
         "h1": "Hobby-Spieledesigner",
@@ -65,7 +62,7 @@
         }
       },
       "images": {
-        "h2": "Benutzerdefinierte Images",
+        "h2": "Custom Images",
         "dev": {
           "subtitle": "verfügbar als OCI Image und ISO Datei",
           "desc1": "Ein angepasstes ",
@@ -88,6 +85,18 @@
       "pl": "Programmiersprachen",
       "frm": "Frameworks",
       "inf": "Infrastruktur"
+    },
+    "docs": {
+      "open": "Öffnen",
+      "atomic": {
+        "h2": "Atomic Images",
+        "doc1": {
+          "title": "Elaboration on Atomic Images and BlueBuild",
+          "lang": "Nur auf Englisch",
+          "desc": "In diesem Dokument erkläre ich was Atomic Images (Linux) sind und wie man BlueBuild nutzt um sein eigenes Custom Image zu erstellen, inklusive einer demo. Ursprünglich für meinem Lighting Talk im Unterricht an der HTL Grieskirchen erstellt.",
+          "date": "veröffentlicht am 6.1.2025"
+        }
+      }
     },
     "contact": {
       "h1": "Kontakt"

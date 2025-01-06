@@ -3,7 +3,7 @@
   import '$lib/i18n';
   import Maintenance from '$lib/components/Maintenance.svelte';
   import Navigation from '$lib/components/Navigation.svelte';
-  import { assetUrls } from '$lib/assetUrls';
+  import { preloads } from '../assetUrls';
   import { app } from '$lib/firebase';
   import { _ } from 'svelte-i18n';
 
@@ -18,7 +18,7 @@
 <svelte:window bind:innerWidth />
 
 <svelte:head>
-  {#each assetUrls as assetUrl}
+  {#each preloads as assetUrl}
     <link rel="preload" as="image" href={assetUrl} />
   {/each}
 </svelte:head>

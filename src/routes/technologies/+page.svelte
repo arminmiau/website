@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Anchor, Background, Node, Svelvet } from 'svelvet';
   import { _ } from 'svelte-i18n';
-  import { CSharp, Fedora, Firebase, Git, Github, Godot, Java, Linux, Python, React, SQL, Svelte, TS, Ubuntu, Unity, Vercel } from '$lib/assetUrls';
+  import { CSharp, Fedora, Firebase, Git, Github, Godot, Java, Linux, Python, React, SQL, Svelte, TS, Ubuntu, Unity, Vercel } from '../../assetUrls';
 </script>
 
 <svelte:head>
