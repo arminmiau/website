@@ -3,6 +3,7 @@
     "home": "Home",
     "technologies": "Technologies",
     "projects": "Projects",
+    "docs": "Documents",
     "contact": "Contact"
   },
   "page": {
@@ -88,6 +89,18 @@
       "pl": "Programming Languages",
       "frm": "Frameworks",
       "inf": "Infrastructure"
+    },
+    "docs": {
+      "open": "Open",
+      "atomic": {
+        "h2": "Atomic Images",
+        "doc1": {
+          "title": "Elaboration on Atomic Images and BlueBuild",
+          "lang": "English only",
+          "desc": "In this document I explain what Atomic Images (Linux) are and how to use BlueBuild to create your own custom image, including a demo. Originally created for my Lighting Talk in class at HTL Grieskirchen.",
+          "date": "published 6th January, 2025"
+        }
+      }
     },
     "contact": {
       "h1": "Contact"

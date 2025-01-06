@@ -1,0 +1,1 @@
+export const ElaborationAtomicImagesBlueBuild = "https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/docs%2FElaboration-AtomicImages-BlueBuild_arminmiau.pdf?alt=media";

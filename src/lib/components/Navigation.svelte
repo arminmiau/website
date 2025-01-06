@@ -15,15 +15,14 @@
 
 {#if desktop}
   <nav class="fixed z-50">
-    <ul class="nav__links bg-primary-foreground border border-input">
-      <li><a href="/" class="nav__link">{$_('nav.home')}</a></li>
-      <li>
+    <div class="nav__links bg-primary-foreground border border-input">
+      <a href="/" class="nav__link">{$_('nav.home')}</a>
         <a href="/technologies" class="nav__link">{$_('nav.technologies')}</a>
-      </li>
-      <li><a href="/projects" class="nav__link">{$_('nav.projects')}</a></li>
-      <!-- <li><a href="/" class="nav__link">{$_('nav.something')}</a></li> -->
-      <li><a href="/contact" class="nav__link">{$_('nav.contact')}</a></li>
-    </ul>
+      
+      <a href="/projects" class="nav__link">{$_('nav.projects')}</a>
+      <a href="/docs" class="nav__link">{$_('nav.docs')}</a>
+      <a href="/contact" class="nav__link">{$_('nav.contact')}</a>
+    </div>
     <LanguageSelector />
   </nav>
 {:else}
@@ -64,7 +63,6 @@
 
     margin: 0;
     padding: 0 5px;
-    list-style: none;
 
     display: flex;
     justify-content: flex-start !important;
@@ -109,18 +107,18 @@
     opacity: 1;
   }
 
-  .nav__links li {
+  .nav__links a {
     overflow: hidden;
     padding: 12px calc(var(--_gap) / 2);
     position: relative;
   }
 
-  .nav__links li:hover {
+  .nav__links a:hover {
     background: rgba(255, 255, 255, 0.05);
     --_scale-width: 1;
   }
 
-  .nav__links li::after {
+  .nav__links a::after {
     content: '';
     position: absolute;
     left: 0;

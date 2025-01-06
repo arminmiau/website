@@ -5,7 +5,7 @@
     MaturaballFoto,
     Schulfoto21_22,
     Schulfoto22_23,
-  } from '$lib/assetUrls';
+  } from '../assetUrls';
   import { Progress } from '$lib/components/ui/progress';
   import { onDestroy, onMount } from 'svelte';
   import { locale, _, json } from 'svelte-i18n';

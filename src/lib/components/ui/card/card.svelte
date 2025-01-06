@@ -11,7 +11,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
   class={cn(
-    'rounded-xl border bg-card text-card-foreground shadow flex flex-col justify-between',
+    'rounded-xl bg-card text-card-foreground shadow flex flex-col justify-between',
     className
   )}
   {...$$restProps}
