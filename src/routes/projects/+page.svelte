@@ -1,5 +1,9 @@
 <script>
-  import { DevImageThumbnail, HometabThumbnail, WebsiteThumbnail } from '../../assetUrls';
+  import {
+    DevImageThumbnail,
+    HometabThumbnail,
+    WebsiteThumbnail,
+  } from '../../assetUrls';
   import * as Card from '$lib/components/ui/card';
   import { _ } from 'svelte-i18n';
 </script>
@@ -9,9 +13,14 @@
 </svelte:head>
 
 <div class="mt-[10vh] ml-[2vw]">
-  <h1 class="p-1 text-5xl mb-4 shadow-[rgba(0,0,0,0.5)_0px_5px] w-fit">{$_('nav.projects')}</h1>
+  <h1 class="p-1 text-5xl mb-4 shadow-[rgba(0,0,0,0.5)_0px_5px] w-fit">
+    {$_('nav.projects')}
+  </h1>
   <div class="w-fit">
-    <h2 class="p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">{$_('page.projects.webdev.h2')}</h2>
+    <h2
+      class="p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
+      {$_('page.projects.webdev.h2')}
+    </h2>
     <div class="p-5">
       <Card.Root
         class="inline-block align-top mr-4 mb-4 w-[550px] bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
@@ -72,7 +81,10 @@
     </div>
   </div>
   <div class="w-fit">
-    <h2 class="p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">{$_('page.projects.images.h2')}</h2>
+    <h2
+      class="p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
+      {$_('page.projects.images.h2')}
+    </h2>
     <div class="p-5">
       <Card.Root
         class="inline-block align-top mr-4 mb-4 w-[550px] bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
@@ -84,7 +96,8 @@
               alt="" />
             <p class="mt-[5px]">dev-image</p>
           </Card.Title>
-          <Card.Description>{$_('page.projects.images.dev.subtitle')}</Card.Description>
+          <Card.Description
+            >{$_('page.projects.images.dev.subtitle')}</Card.Description>
         </Card.Header>
         <Card.Content>
           <p>
@@ -114,7 +127,10 @@
     </div>
   </div>
   <div class="w-fit">
-    <h2 class="p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">{$_('page.projects.gamedev.h2')}</h2>
+    <h2
+      class="p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
+      {$_('page.projects.gamedev.h2')}
+    </h2>
     <div class="p-5">
       <Card.Root
         class="inline-block align-top mr-4 mb-4 w-[550px] bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
@@ -126,7 +142,8 @@
               alt="" />
             <p class="mt-[5px]">{$_('page.projects.gamedev.game1.title')}</p>
           </Card.Title>
-          <Card.Description>{$_('page.projects.gamedev.game1.subtitle')}</Card.Description>
+          <Card.Description
+            >{$_('page.projects.gamedev.game1.subtitle')}</Card.Description>
         </Card.Header>
         <Card.Content>
           <p>

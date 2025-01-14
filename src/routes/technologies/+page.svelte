@@ -1,7 +1,24 @@
 <script lang="ts">
   import { Anchor, Background, Node, Svelvet } from 'svelvet';
   import { _ } from 'svelte-i18n';
-  import { CSharp, Fedora, Firebase, Git, Github, Godot, Java, Linux, Python, React, SQL, Svelte, TS, Ubuntu, Unity, Vercel } from '../../assetUrls';
+  import {
+    CSharp,
+    Fedora,
+    Firebase,
+    Git,
+    Github,
+    Godot,
+    Java,
+    Linux,
+    Python,
+    React,
+    SQL,
+    Svelte,
+    TS,
+    Ubuntu,
+    Unity,
+    Vercel,
+  } from '../../assetUrls';
 </script>
 
 <svelte:head>
@@ -206,11 +223,7 @@
       id="firebase"
       dimensions={{ width: 100, height: 100 }}
       position={{ x: 1600, y: 250 }}>
-      <img
-        height="100"
-        src={Firebase}
-        alt="Firebase"
-        title="Firebase" />
+      <img height="100" src={Firebase} alt="Firebase" title="Firebase" />
       <div class="left-anchor">
         <Anchor direction="west" invisible />
       </div>
