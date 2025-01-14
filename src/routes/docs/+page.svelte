@@ -1,7 +1,7 @@
 <script lang="ts">
   import * as Card from '$lib/components/ui/card';
   import { _ } from 'svelte-i18n';
-  import { ElaborationAtomicImagesBlueBuild } from '../../assetUrls/docs';
+  import { ElaborationAtomicImagesBlueBuild } from '$lib/assetUrls/docs';
 </script>
 
 <div class="mt-[10vh] ml-[2vw]">

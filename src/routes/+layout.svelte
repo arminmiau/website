@@ -3,7 +3,7 @@
   import '$lib/i18n';
   import Maintenance from '$lib/components/Maintenance.svelte';
   import Navigation from '$lib/components/Navigation.svelte';
-  import { preloads } from '../assetUrls';
+  import { preloads } from '$lib/assetUrls';
   import { app } from '$lib/firebase';
   import { _ } from 'svelte-i18n';
 

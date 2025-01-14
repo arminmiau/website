@@ -18,7 +18,7 @@
     Ubuntu,
     Unity,
     Vercel,
-  } from '../../assetUrls';
+  } from '$lib/assetUrls';
 </script>
 
 <svelte:head>

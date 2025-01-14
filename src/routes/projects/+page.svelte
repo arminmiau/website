@@ -3,7 +3,7 @@
     DevImageThumbnail,
     HometabThumbnail,
     WebsiteThumbnail,
-  } from '../../assetUrls';
+  } from '$lib/assetUrls';
   import * as Card from '$lib/components/ui/card';
   import { _ } from 'svelte-i18n';
 </script>
