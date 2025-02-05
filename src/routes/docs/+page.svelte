@@ -2,7 +2,12 @@
   import * as Card from '$lib/components/ui/card';
   import { _ } from 'svelte-i18n';
   import { ElaborationAtomicImagesBlueBuild } from '$lib/assetUrls/docs';
+
+  let innerWidth = 1920;
+  $: desktop = innerWidth > 987 ? true : false;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <div class="mt-[10vh] ml-[2vw]">
   <h1 class="text-5xl mb-4 shadow-[rgba(0,0,0,0.5)_0px_5px] w-fit">
@@ -10,12 +15,15 @@
   </h1>
   <div class="w-fit">
     <h2
-      class="p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
+      class="{!desktop &&
+        'w-[95vw]'} p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
       {$_('page.docs.atomic.h2')}
     </h2>
     <div class="p-5">
       <Card.Root
-        class="w-[600px] bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
+        class="{desktop
+          ? 'w-[600px]'
+          : 'w-[90vw]'} bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
         <Card.Header>
           <Card.Title>
             <p class="mt-[5px] text-2xl">{$_('page.docs.atomic.doc1.title')}</p>

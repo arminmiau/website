@@ -18,6 +18,7 @@
     "bits-ui": "^0.18.6",
     "clsx": "^2.1.1",
     "firebase": "^10.11.1",
+    "lucide-svelte": "^0.474.0",
     "posthog-js": "^1.215.3",
     "svelte-i18n": "^4.0.0",
     "svelte-radix": "^1.1.0",

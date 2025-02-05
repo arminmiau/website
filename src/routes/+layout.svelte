@@ -8,14 +8,19 @@
   import { _ } from 'svelte-i18n';
   import { onMount } from 'svelte';
   import { initPosthog } from '$lib/posthog';
+  import posthog from 'posthog-js';
 
   let innerWidth = 1920;
   $: desktop = innerWidth > 987 ? true : false;
-  const mobileEnabled = false;
+  let mobileEnabled = false;
 
   onMount(() => {
     initFirebase();
     initPosthog();
+
+    posthog.onFeatureFlags(() => {
+      mobileEnabled = posthog.isFeatureEnabled('mobileEnabled') ?? false;
+    });
   });
 
   const isPublic = true;
@@ -29,7 +34,7 @@
   {/each}
 </svelte:head>
 
-{#if desktop || mobileEnabled}
+{#if desktop || true}
   {#if isPublic}
     <Navigation />
     <slot />

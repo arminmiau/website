@@ -1,6 +1,7 @@
 <script lang="ts">
   import { locale, locales, _ } from 'svelte-i18n';
   import LanguageSelector from './LanguageSelector.svelte';
+  import { SquareMenu } from 'lucide-svelte';
 
   let smallNav = false;
   const toggleSmallNav = () => {
@@ -17,8 +18,8 @@
   <nav class="fixed z-50">
     <div class="nav__links bg-primary-foreground border border-input">
       <a href="/" class="nav__link">{$_('nav.home')}</a>
-        <a href="/technologies" class="nav__link">{$_('nav.technologies')}</a>
-      
+      <a href="/technologies" class="nav__link">{$_('nav.technologies')}</a>
+
       <a href="/projects" class="nav__link">{$_('nav.projects')}</a>
       <a href="/docs" class="nav__link">{$_('nav.docs')}</a>
       <a href="/contact" class="nav__link">{$_('nav.contact')}</a>
@@ -28,11 +29,27 @@
 {:else}
   <nav>
     {#if smallNav}
-      <ul class="nav__links--small">
-        <li><a href="/" class="nav__link">{$_('nav.home')}</a></li>
-        <li><a href="/technologies" class="nav__link">{$_('nav.technologies')}</a></li>
-        <li><a href="/projects" class="nav__link">{$_('nav.projects')}</a></li>
-        <li><a href="/contact" class="nav__link">{$_('nav.contact')}</a></li>
+      <ul class="nav__links--small z-50">
+        <li>
+          <a href="/" on:click={toggleSmallNav} class="nav__link"
+            >{$_('nav.home')}</a>
+        </li>
+        <li>
+          <a href="/technologies" on:click={toggleSmallNav} class="nav__link"
+            >{$_('nav.technologies')}</a>
+        </li>
+        <li>
+          <a href="/projects" on:click={toggleSmallNav} class="nav__link"
+            >{$_('nav.projects')}</a>
+        </li>
+        <li>
+          <a href="/docs" on:click={toggleSmallNav} class="nav__link"
+            >{$_('nav.docs')}</a>
+        </li>
+        <li>
+          <a href="/contact" on:click={toggleSmallNav} class="nav__link"
+            >{$_('nav.contact')}</a>
+        </li>
         <li>
           <select class="nav__locale--small" bind:value={$locale}>
             {#each $locales as loc}
@@ -44,11 +61,10 @@
         </li>
       </ul>
     {/if}
-    <button on:click={toggleSmallNav} class="hamburger last-element-row">
-      <img
-        src="/img/hamburger.png"
-        alt="Navigation menu"
-        class="hamburger__icon" />
+    <button
+      on:click={toggleSmallNav}
+      class="fixed top-1 right-1 last-element-row z-50">
+      <SquareMenu size={64} />
     </button>
   </nav>
 {/if}
@@ -162,18 +178,6 @@
   .nav__links--small .nav__link {
     font-size: 48px;
     line-height: 1.5em;
-  }
-
-  .hamburger {
-    all: unset;
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-
-  .hamburger__icon {
-    height: 64px;
-    cursor: pointer;
   }
 
   @media screen and (max-width: 938px) {
