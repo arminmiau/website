@@ -6,14 +6,19 @@
   import { preloads } from '$lib/assetUrls';
   import { app } from '$lib/firebase';
   import { _ } from 'svelte-i18n';
-  import { initPosthog } from '$lib/posthog';
+  import posthog from 'posthog-js';
 
   let innerWidth = 1920;
   $: desktop = innerWidth > 987 ? true : false;
   const mobileEnabled = false;
 
   app();
-  initPosthog();
+
+  posthog.init('phc_eyCumDdoLZdouD2tZXcWddqnjYSiov2gFCP5pWVRix2', {
+    api_host: 'https://eu.i.posthog.com',
+    person_profiles: 'identified_only',
+  });
+
   const isPublic = true;
 </script>
 
