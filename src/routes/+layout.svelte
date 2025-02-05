@@ -4,19 +4,18 @@
   import Maintenance from '$lib/components/Maintenance.svelte';
   import Navigation from '$lib/components/Navigation.svelte';
   import { preloads } from '$lib/assetUrls';
-  import { app } from '$lib/firebase';
+  import { initFirebase } from '$lib/firebase';
   import { _ } from 'svelte-i18n';
-  import posthog from 'posthog-js';
+  import { onMount } from 'svelte';
+  import { initPosthog } from '$lib/posthog';
 
   let innerWidth = 1920;
   $: desktop = innerWidth > 987 ? true : false;
   const mobileEnabled = false;
 
-  app();
-
-  posthog.init('phc_eyCumDdoLZdouD2tZXcWddqnjYSiov2gFCP5pWVRix2', {
-    api_host: 'https://eu.i.posthog.com',
-    person_profiles: 'identified_only',
+  onMount(() => {
+    initFirebase();
+    initPosthog();
   });
 
   const isPublic = true;
@@ -38,5 +37,5 @@
     <Maintenance />
   {/if}
 {:else}
-  <h1 style="color: white;">{$_('misc.mobile')}</h1>
+  <h1 class="text-white">{$_('misc.mobile')}</h1>
 {/if}
