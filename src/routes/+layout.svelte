@@ -3,15 +3,21 @@
   import '$lib/i18n';
   import Maintenance from '$lib/components/Maintenance.svelte';
   import Navigation from '$lib/components/Navigation.svelte';
-  import { preloads } from '../assetUrls';
-  import { app } from '$lib/firebase';
+  import { preloads } from '$lib/assetUrls';
+  import { initFirebase } from '$lib/firebase';
   import { _ } from 'svelte-i18n';
+  import { onMount } from 'svelte';
+  import { initPosthog } from '$lib/posthog';
 
   let innerWidth = 1920;
   $: desktop = innerWidth > 987 ? true : false;
   const mobileEnabled = false;
 
-  app();
+  onMount(() => {
+    initFirebase();
+    initPosthog();
+  });
+
   const isPublic = true;
 </script>
 
@@ -31,5 +37,5 @@
     <Maintenance />
   {/if}
 {:else}
-  <h1 style="color: white;">{$_('misc.mobile')}</h1>
+  <h1 class="text-white">{$_('misc.mobile')}</h1>
 {/if}
