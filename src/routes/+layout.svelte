@@ -6,12 +6,14 @@
   import { preloads } from '$lib/assetUrls';
   import { app } from '$lib/firebase';
   import { _ } from 'svelte-i18n';
+  import { initPosthog } from '$lib/posthog';
 
   let innerWidth = 1920;
   $: desktop = innerWidth > 987 ? true : false;
   const mobileEnabled = false;
 
   app();
+  initPosthog();
   const isPublic = true;
 </script>
 
