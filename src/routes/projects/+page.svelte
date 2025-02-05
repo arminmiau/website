@@ -6,7 +6,12 @@
   } from '$lib/assetUrls';
   import * as Card from '$lib/components/ui/card';
   import { _ } from 'svelte-i18n';
+
+  let innerWidth = 1920;
+  $: desktop = innerWidth > 622 ? true : false;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <svelte:head>
   <title>{$_('nav.projects')} - arminmiau</title>
@@ -18,12 +23,15 @@
   </h1>
   <div class="w-fit">
     <h2
-      class="p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
+      class="{!desktop &&
+        'w-[95vw]'} p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
       {$_('page.projects.webdev.h2')}
     </h2>
-    <div class="p-5">
+    <div class="ml-5 mt-5">
       <Card.Root
-        class="inline-block align-top mr-4 mb-4 w-[550px] bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
+        class="inline-block align-top mr-4 mb-4 {desktop
+          ? 'w-[550px]'
+          : 'w-[90vw]'} bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
         <Card.Header>
           <Card.Title>
             <img
@@ -54,7 +62,9 @@
         </Card.Footer>
       </Card.Root>
       <Card.Root
-        class="inline-block align-top mr-4 mb-4 w-[550px] bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
+        class="inline-block align-top mr-4 mb-4 {desktop
+          ? 'w-[550px]'
+          : 'w-[90vw]'} bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
         <Card.Header>
           <Card.Title>
             <img
@@ -82,12 +92,15 @@
   </div>
   <div class="w-fit">
     <h2
-      class="p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
+      class="{!desktop &&
+        'w-[95vw]'} p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
       {$_('page.projects.images.h2')}
     </h2>
     <div class="p-5">
       <Card.Root
-        class="inline-block align-top mr-4 mb-4 w-[550px] bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
+        class="inline-block align-top mr-4 mb-4 {desktop
+          ? 'w-[550px]'
+          : 'w-[90vw]'} bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
         <Card.Header>
           <Card.Title>
             <img
@@ -128,12 +141,15 @@
   </div>
   <div class="w-fit">
     <h2
-      class="p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
+      class="{!desktop &&
+        'w-[95vw]'} p-1 mt-5 text-4xl shadow-[rgba(0,0,0,0.3)_-3px_-3px] border-2 border-[rgba(0,0,0,0.5)] rounded">
       {$_('page.projects.gamedev.h2')}
     </h2>
     <div class="p-5">
       <Card.Root
-        class="inline-block align-top mr-4 mb-4 w-[550px] bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
+        class="inline-block align-top mr-4 mb-4 {desktop
+          ? 'w-[550px]'
+          : 'w-[90vw]'} bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
         <Card.Header>
           <Card.Title>
             <img
