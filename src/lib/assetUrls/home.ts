@@ -6,3 +6,4 @@ export const HometabThumbnail = "https://firebasestorage.googleapis.com/v0/b/arm
 export const WebsiteThumbnail = "https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/website-thumbnail.png?alt=media";
 export const MaturaballFoto = "https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/maturaballfoto.png?alt=media";
 export const DevImageThumbnail = "https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/dev-image-thumbnail.png?alt=media";
+export const Forza1Thumbnail = "https://firebasestorage.googleapis.com/v0/b/arminmiau-website.appspot.com/o/forza1-thumbnail.png?alt=media";

@@ -12,4 +12,7 @@
   </h1>
   <p>Discord: arminmiau</p>
   <p>E-Mail: arminmiau.dev@gmail.com</p>
+  <hr class="my-5">
+  <p>Github: <a class="underline cursor-pointer" href="https://github.com/arminmiau/" target="_blank">arminmiau</a></p>
+  <p>LinkedIn: <a class="underline cursor-pointer" href="https://www.linkedin.com/in/armin-bade-985244257/" target="_blank">Armin Bade</a></p>
 </div>

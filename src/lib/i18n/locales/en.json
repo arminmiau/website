@@ -13,15 +13,15 @@
         "p": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria. Computertechnologies, software development and video games are my passion. I create this website to build experience and to have an online portfolio of my skills."
       },
       "aboutme2": {
-        "h1": "a student",
-        "p1_1": " and I attend a ",
+        "h1": "a graduate",
+        "p1_1": " and received my Matura degree from a ",
         "p1_2": "in the field of informatics.",
         "href": "https://en.wikipedia.org/wiki/H%C3%B6here_Technische_Lehranstalt",
         "a": "Higher Technical Institute",
-        "ul_heading": "At this school I'm learning...",
+        "ul_heading": "At this school I learned...",
         "ul_items": [
           "Java <i>(Command Line, Java Swing/FX, Android)</i>,",
-          "C# <i>(WPF, LINQ, ASP.NET)</i>,",
+          "C# <i>(WPF, LINQ, ASP.NET)</i>, Docker,",
           "HTML, CSS, JS/TS, Svelte, Angular, Flutter,",
           "networking, database engineering and project management."
         ]
@@ -34,7 +34,8 @@
           "Youth knowledge test in gold",
           "Youth achievement badge in gold",
           "Radio/communication and tasks in operational control achievement badge in bronze",
-          "Fire service achievement badge in bronze"
+          "Fire service achievement badge in bronze",
+          "Technical assistance achievement badge in bronze"
         ],
         "ul2_heading": "Courses I've taken:",
         "ul2_items": [
@@ -46,7 +47,7 @@
       "aboutme4": {
         "h1": "a hobby game designer",
         "p1": "and I have been planning my own game for a long time.",
-        "p2": "However, I haven't made any mentionable progress in the development. I want to make a survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World."
+        "p2": "However, I haven't made any mentionable progress in the development. I want to make a survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World. Also, I'm currently working on a new project, where I collect and process Forza Horizon 5's telemetry data to run a Formula 1™️ like racing series."
       }
     },
     "projects": {
@@ -82,6 +83,12 @@
           "subtitle": "using Godot",
           "desc": "A survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World, that I have been planning to develop.",
           "date": "more TBA"
+        },
+        "forza1": {
+          "title": "Forza 1",
+          "subtitle": "Pseudo professional racing, even when the game doesn't.",
+          "desc": "This is a personal project about collecting, processing and displaying data from Forza Horizon 5's telemetry data output. Linked with a racing series to have some fun with friends!",
+          "date": "running a testing season since 31st may"
         }
       }
     },

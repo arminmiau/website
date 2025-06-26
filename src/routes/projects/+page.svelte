@@ -4,7 +4,9 @@
     HometabThumbnail,
     WebsiteThumbnail,
   } from '$lib/assetUrls';
+  import { Forza1Thumbnail } from '$lib/assetUrls/home';
   import * as Card from '$lib/components/ui/card';
+  import { Globe } from 'lucide-svelte';
   import { _ } from 'svelte-i18n';
 
   let innerWidth = 1920;
@@ -168,6 +170,31 @@
         </Card.Content>
         <Card.Footer class="flex justify-between">
           <p>{$_('page.projects.gamedev.game1.date')}</p>
+        </Card.Footer>
+      </Card.Root>
+      <Card.Root
+        class="inline-block align-top mr-4 mb-4 {desktop
+          ? 'w-[550px]'
+          : 'w-[90vw]'} bg-primary-background shadow-[rgba(0,0,0,0.3)_-10px_-10px] border-2 border-[rgba(0,0,0,0.3)]">
+        <Card.Header>
+          <Card.Title>
+            <img
+              class="w-[500px] border border-gray-500 rounded"
+              src={Forza1Thumbnail}
+              alt="" />
+            <p class="mt-[5px]">{$_('page.projects.gamedev.forza1.title')}</p>
+          </Card.Title>
+          <Card.Description
+            >{$_('page.projects.gamedev.forza1.subtitle')}</Card.Description>
+        </Card.Header>
+        <Card.Content>
+          <p>
+            {$_('page.projects.gamedev.forza1.desc')}
+          </p>
+        </Card.Content>
+        <Card.Footer class="flex justify-between">
+          <p>{$_('page.projects.gamedev.forza1.date')}</p>
+          <a href="https://forza1.ayerin.de" target="_blank"><Globe /></a>
         </Card.Footer>
       </Card.Root>
     </div>
