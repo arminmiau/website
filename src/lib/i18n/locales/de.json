@@ -3,6 +3,7 @@
     "home": "Home",
     "technologies": "Technologien",
     "projects": "Projekte",
+    "docs": "Dokumente",
     "contact": "Kontakt"
   },
   "page": {
@@ -12,15 +13,15 @@
         "p": "oder auch bekannt oder unter dem Nicknamen \"arminmiau\". Ich bin {age} Jahre alt und komme aus Österreich. Computertechnologie, Softwareentwicklung und Computerspiele sind meine Leidenschaft."
       },
       "aboutme2": {
-        "h1": "Schüler",
-        "p1_1": "und besuche eine ",
+        "h1": "Absovlent",
+        "p1_1": "und erhielte meinen Abschluss mit Matura an einer ",
         "p1_2": "im Zweig Informatik.",
         "href": "https://de.wikipedia.org/wiki/H%C3%B6here_Technische_Lehranstalt",
-        "a": "Höhere Technische Lehranstalt",
-        "ul_heading": "An dieser Schule lerne ich...",
+        "a": "Höheren Technischen Lehranstalt",
+        "ul_heading": "An dieser Schule lernte ich...",
         "ul_items": [
           "Java <i>(Command Line, Java Swing/FX, Android)<i>,",
-          "C# <i>(WPF, LINQ, ASP.NET)</i>,",
+          "C# <i>(WPF, LINQ, ASP.NET)</i>, Docker,",
           "HTML, CSS, JS/TS, Svelte, Angular, Flutter,",
           "Netzwerktechnik, Datenbanksysteme und Projektmanagment."
         ]
@@ -33,19 +34,16 @@
           "Jugend Wissenstest in Gold",
           "Jugend Leistungsabzeichen in Gold",
           "Leistungsabzeichen in Funk/Kommunikation und Aufgaben in der Einsatzleitung in Bronze",
-          "Branddienstleistungsabzeichen in Bronze"
+          "Branddienstleistungsabzeichen in Bronze",
+          "Technisches Hilfeleistungsabzeichen in Bronze"
         ],
         "ul2_heading": "Besuchte Lehrgänge:",
-        "ul2_items": [
-          "Grundlehrgang",
-          "Funklehrgang",
-          "Truppführerprüfung"
-        ]
+        "ul2_items": ["Grundlehrgang", "Funklehrgang", "Truppführerprüfung"]
       },
       "aboutme4": {
         "h1": "Hobby-Spieledesigner",
         "p1": "und plane mein eigenes Spiel seit einer langen Zeit.",
-        "p2": "Jedoch habe ich bisher keinen erwähenswerten Fortschritt in der Entwicklung gemacht. Ich möchte ein Survival Craft Open World RPG machen, mit einem Klassensystem inspiriert von Spielen wie World of Warcraft, Guild Wars 2 und New World."
+        "p2": "Jedoch habe ich bisher keinen erwähenswerten Fortschritt in der Entwicklung gemacht. Ich möchte ein Survival Craft Open World RPG machen, mit einem Klassensystem inspiriert von Spielen wie World of Warcraft, Guild Wars 2 und New World. Außerdem arbeite ich derzeit an einem neuen Projekt, bei dem ich Telemetriedaten von Forza Horizon 5 sammle und verarbeite, um eine Rennserie im Stil der Formel 1™️ durchzuführen."
       }
     },
     "projects": {
@@ -65,7 +63,7 @@
         }
       },
       "images": {
-        "h2": "Benutzerdefinierte Images",
+        "h2": "Custom Images",
         "dev": {
           "subtitle": "verfügbar als OCI Image und ISO Datei",
           "desc1": "Ein angepasstes ",
@@ -81,6 +79,12 @@
           "subtitle": "in Godot",
           "desc": "Ein Survival Craft Open World RPG, mit einem Klassensystem inspiriert von Spielen wie World of Warcraft, Guild Wars 2 und New World, das ich bisher am Planen bin.",
           "date": "mehr zu Ankündigen"
+        },
+        "forza1": {
+          "title": "Forza 1",
+          "subtitle": "Pseudoprofessionelles Rennen, auch wenn das Spiel das nicht tut.",
+          "desc": "Dies ist ein persönliches Projekt übers Sammeln, Verarbeiten und Anzeigen von Daten aus der Telemetriedatenausgabe von Forza Horizon 5. Verknüpft mit einer Rennserie, um mit Freunden Spaß zu haben!",
+          "date": "seit dem 31. Mai läuft eine Testsaison"
         }
       }
     },
@@ -88,6 +92,18 @@
       "pl": "Programmiersprachen",
       "frm": "Frameworks",
       "inf": "Infrastruktur"
+    },
+    "docs": {
+      "open": "Öffnen",
+      "atomic": {
+        "h2": "Atomic Images",
+        "doc1": {
+          "title": "Elaboration on Atomic Images and BlueBuild",
+          "lang": "Nur auf Englisch",
+          "desc": "In diesem Dokument erkläre ich was Atomic Images (Linux) sind und wie man BlueBuild nutzt um sein eigenes Custom Image zu erstellen, inklusive einer demo. Ursprünglich für meinem Lighting Talk im Unterricht an der HTL Grieskirchen erstellt.",
+          "date": "veröffentlicht am 6.1.2025"
+        }
+      }
     },
     "contact": {
       "h1": "Kontakt"
