@@ -5,5 +5,5 @@
   <h1 class="text-5xl">An error occured.</h1>
   <button
     class="text-lg rounded p-1 mt-5 bg-primary-foreground"
-    onclick="history.back()">Return to previous page</button>
+    onclick={() => history.back()}>Return to previous page</button>
 </div>

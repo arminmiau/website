@@ -14,14 +14,14 @@
     new Date(Date.now() - new Date('2005-11-29').valueOf()).getFullYear() -
     1970;
 
-  let aboutme2items: string[];
-  let aboutme3_1items: string[];
-  let aboutme3_2items: string[];
+  let aboutme2Items: string[] = $state([]);
+  let aboutme3_1Items: string[] = $state([]);
+  let aboutme3_2Items: string[] = $state([]);
 
   const translateLists = () => {
-    aboutme2items = $json('page.home.aboutme2.ul_items') as string[];
-    aboutme3_1items = $json('page.home.aboutme3.ul1_items') as string[];
-    aboutme3_2items = $json('page.home.aboutme3.ul2_items') as string[];
+    aboutme2Items = $json('page.home.aboutme2.ul_items') as string[];
+    aboutme3_1Items = $json('page.home.aboutme3.ul1_items') as string[];
+    aboutme3_2Items = $json('page.home.aboutme3.ul2_items') as string[];
   };
 
   locale.subscribe(translateLists);
@@ -33,7 +33,7 @@
     setOpen(id);
   };
 
-  let openBanner = 0;
+  let openBanner = $state(0);
   const setOpen = (id: number) => {
     if (id === openBanner) return;
 
@@ -43,16 +43,16 @@
   };
 
   const defaultHeight = 0;
-  let div: HTMLDivElement;
-  let height = defaultHeight;
-  let children = false;
+  let div = $state<HTMLDivElement>();
+  let height = $state(defaultHeight);
+  let children = $state(false);
 
   const resizeDiv = async () => {
     height = defaultHeight;
     children = false;
 
     setTimeout(() => {
-      height = div.scrollHeight;
+      height = div?.scrollHeight ?? defaultHeight;
       children = true;
     }, 400);
   };
@@ -69,8 +69,8 @@
 
   const carouselTime = 10000;
   let lastTimeout: NodeJS.Timeout;
-  let timeoutProgress = 100;
-  let progressInterval: NodeJS.Timeout | undefined;
+  let timeoutProgress = $state(100);
+  let progressInterval: NodeJS.Timeout | undefined = $state();
   onMount(() => {
     lastTimeout = setTimeout(timeout1, 500);
     setTimeout(() => {
@@ -109,8 +109,8 @@
     clearTimeout(lastTimeout);
   });
 
-  let innerWidth = 1920;
-  $: desktop = innerWidth > 987 ? true : false;
+  let innerWidth = $state(1920);
+  let desktop = $derived(innerWidth > 987 ? true : false);
 </script>
 
 <svelte:head>
@@ -122,7 +122,7 @@
   <header class="flex justify-center items-end w-screen h-screen">
     <div class="flex w-screen absolute top-0 left-0 banner__bg">
       <button
-        on:click={() => clickBanner(1)}
+        onclick={() => clickBanner(1)}
         class="flex justify-center transition-width border-r-2 border-white {openBanner ===
         0
           ? 'w-[25vw]'
@@ -130,7 +130,7 @@
             ? 'w-[79vw] cursor-default'
             : 'w-[7vw] cursor-grab brightness-50'}">
         <img
-          on:dragstart={(e) => e.preventDefault()}
+          ondragstart={(e) => e.preventDefault()}
           src={MaturaballFoto}
           class="object-cover transition-[object-cover] delay-500 select-none h-screen {openBanner ===
           1
@@ -139,7 +139,7 @@
           alt="" />
       </button>
       <button
-        on:click={() => clickBanner(2)}
+        onclick={() => clickBanner(2)}
         class="flex justify-center transition-width border-r-2 border-white {openBanner ===
         0
           ? 'w-[25vw]'
@@ -147,7 +147,7 @@
             ? 'w-[79vw] cursor-default'
             : 'w-[7vw] cursor-grab brightness-50'}">
         <img
-          on:dragstart={(e) => e.preventDefault()}
+          ondragstart={(e) => e.preventDefault()}
           src={Schulfoto22_23}
           class="object-cover transition-[object-cover] delay-500 select-none h-screen {openBanner ===
           2
@@ -156,7 +156,7 @@
           alt="" />
       </button>
       <button
-        on:click={() => clickBanner(3)}
+        onclick={() => clickBanner(3)}
         class="flex justify-center transition-width border-white {openBanner !==
         4
           ? 'border-r-2'
@@ -166,7 +166,7 @@
             ? 'w-[79vw] cursor-default'
             : 'w-[7vw] cursor-grab brightness-50'}">
         <img
-          on:dragstart={(e) => e.preventDefault()}
+          ondragstart={(e) => e.preventDefault()}
           src={FeuerwehrmannFoto}
           class="object-cover transition-[object-cover] delay-500 select-none h-screen {openBanner ===
           3
@@ -175,7 +175,7 @@
           alt="" />
       </button>
       <button
-        on:click={() => clickBanner(4)}
+        onclick={() => clickBanner(4)}
         class="flex justify-center transition-width border-white {openBanner ===
         0
           ? 'w-[25vw]'
@@ -183,7 +183,7 @@
             ? 'w-[79vw] cursor-default border-l-2'
             : 'w-[7vw] cursor-grab brightness-50'}">
         <img
-          on:dragstart={(e) => e.preventDefault()}
+          ondragstart={(e) => e.preventDefault()}
           src={KaligraphieFoto}
           class="object-cover transition-[object-cover] delay-500 select-none h-screen {openBanner ===
           4
@@ -220,7 +220,7 @@
             {$_('page.home.aboutme2.ul_heading')}
           </h2>
           <ul class="list-disc list-inside">
-            {#each aboutme2items as item}
+            {#each aboutme2Items as item}
               <li>{@html item}</li>
             {/each}
           </ul>
@@ -237,7 +237,7 @@
                 {$_('page.home.aboutme3.ul1_heading')}
               </h2>
               <ul class="list-disc list-inside">
-                {#each aboutme3_1items as item}
+                {#each aboutme3_1Items as item}
                   <li>{item}</li>
                 {/each}
               </ul>
@@ -247,7 +247,7 @@
                 {$_('page.home.aboutme3.ul2_heading')}
               </h2>
               <ul class="list-disc list-inside">
-                {#each aboutme3_2items as item}
+                {#each aboutme3_2Items as item}
                   <li>{item}</li>
                 {/each}
               </ul>
@@ -268,7 +268,7 @@
   </header>
 {:else}
   <div id="aboutme">
-    <button class="button--decrement" on:click={decrementBanner}>&lt;</button>
+    <button class="button--decrement" onclick={decrementBanner}>&lt;</button>
     {#if openBanner === 1}
       <div class="aboutme aboutme--small">
         <h2>{$_('page.home.iam')}</h2>
@@ -280,7 +280,7 @@
           {$_({ id: 'page.home.aboutme1.p', values: { age: age } })}
         </p>
         <img
-          on:dragstart={(e) => e.preventDefault()}
+          ondragstart={(e) => e.preventDefault()}
           src={Schulfoto22_23}
           alt="" />
       </div>
@@ -299,7 +299,7 @@
           {$_('page.home.aboutme2.p2')}
         </p>
         <img
-          on:dragstart={(e) => e.preventDefault()}
+          ondragstart={(e) => e.preventDefault()}
           src={Schulfoto21_22}
           class="banner__bg__img--adapt"
           alt="" />
@@ -321,7 +321,7 @@
           <li>{$_('page.home.aboutme3.li3')}</li>
         </ul>
         <img
-          on:dragstart={(e) => e.preventDefault()}
+          ondragstart={(e) => e.preventDefault()}
           src={FeuerwehrmannFoto}
           class="banner__bg__img--adapt"
           alt="" />
@@ -333,13 +333,13 @@
         <h1>{$_('page.home.aboutme4.h1')}</h1>
         <p>{$_('page.home.aboutme4.p')}</p>
         <img
-          on:dragstart={(e) => e.preventDefault()}
+          ondragstart={(e) => e.preventDefault()}
           src={KaligraphieFoto}
           class="banner__bg__img--adapt"
           alt="" />
       </div>
     {/if}
-    <button class="button--increment" on:click={incrementBanner}>&gt;</button>
+    <button class="button--increment" onclick={incrementBanner}>&gt;</button>
   </div>
 {/if}
 

@@ -10,16 +10,16 @@
   import { locale, _, json } from 'svelte-i18n';
   import { navigating } from '$app/stores';
 
-  let innerWidth = 1920;
-  $: desktop = innerWidth > 987 ? true : false;
+  let innerWidth = $state(1920);
+  let desktop = $derived(innerWidth > 987 ? true : false);
 
   const age =
     new Date(Date.now() - new Date('2005-11-29').valueOf()).getFullYear() -
     1970;
 
-  let aboutme2items: string[];
-  let aboutme3_1items: string[];
-  let aboutme3_2items: string[];
+  let aboutme2items: string[] = $state();
+  let aboutme3_1items: string[] = $state();
+  let aboutme3_2items: string[] = $state();
 
   const translateLists = () => {
     aboutme2items = $json('page.home.aboutme2.ul_items') as string[];
@@ -42,7 +42,7 @@
   <header class="relative w-screen h-screen">
     <div class="flex justify-center {desktop && 'w-[60vw]'}">
       <img
-        on:dragstart={(e) => e.preventDefault()}
+        ondragstart={(e) => e.preventDefault()}
         src={MaturaballFoto}
         class="absolute select-none {desktop
           ? 'h-screen'
@@ -74,7 +74,7 @@
   <div class="relative w-screen h-screen bg-primary-foreground">
     <div class="flex justify-center {desktop && 'w-[120vw]'}">
       <img
-        on:dragstart={(e) => e.preventDefault()}
+        ondragstart={(e) => e.preventDefault()}
         src={Schulfoto22_23}
         class="absolute select-none {desktop
           ? 'h-screen'
@@ -112,7 +112,7 @@
   <div class="relative w-screen h-screen">
     <div class="flex justify-center {desktop && 'w-[60vw]'}">
       <img
-        on:dragstart={(e) => e.preventDefault()}
+        ondragstart={(e) => e.preventDefault()}
         src={FeuerwehrmannFoto}
         class="absolute select-none {desktop
           ? 'h-screen'
@@ -163,7 +163,7 @@
   <div class="relative w-screen h-screen bg-primary-foreground">
     <div class="flex justify-center {desktop && 'w-[120vw]'}">
       <img
-        on:dragstart={(e) => e.preventDefault()}
+        ondragstart={(e) => e.preventDefault()}
         src={KaligraphieFoto}
         class="absolute select-none {desktop
           ? 'h-screen'

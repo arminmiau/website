@@ -1,21 +1,21 @@
 <script lang="ts">
   import { locale, locales, _ } from 'svelte-i18n';
   import LanguageSelector from './LanguageSelector.svelte';
-  import { SquareMenu } from 'lucide-svelte';
+  import Menu from '@lucide/svelte/icons/menu';
 
-  let smallNav = false;
+  let smallNav = $state(false);
   const toggleSmallNav = () => {
     smallNav = !smallNav;
   };
 
-  let innerWidth = 1920;
-  $: desktop = innerWidth > 987 ? true : false;
+  let innerWidth = $state(1920);
+  let desktop = $derived(innerWidth > 987 ? true : false);
 </script>
 
 <svelte:window bind:innerWidth />
 
 {#if desktop}
-  <nav class="fixed z-50">
+  <nav class="sticky top-0 z-50">
     <div class="nav__links bg-primary-foreground border border-input">
       <a href="/" class="nav__link">{$_('nav.home')}</a>
       <a href="/technologies" class="nav__link">{$_('nav.technologies')}</a>
@@ -31,23 +31,23 @@
     {#if smallNav}
       <ul class="nav__links--small z-50">
         <li>
-          <a href="/" on:click={toggleSmallNav} class="nav__link"
+          <a href="/" onclick={toggleSmallNav} class="nav__link"
             >{$_('nav.home')}</a>
         </li>
         <li>
-          <a href="/technologies" on:click={toggleSmallNav} class="nav__link"
+          <a href="/technologies" onclick={toggleSmallNav} class="nav__link"
             >{$_('nav.technologies')}</a>
         </li>
         <li>
-          <a href="/projects" on:click={toggleSmallNav} class="nav__link"
+          <a href="/projects" onclick={toggleSmallNav} class="nav__link"
             >{$_('nav.projects')}</a>
         </li>
         <li>
-          <a href="/docs" on:click={toggleSmallNav} class="nav__link"
+          <a href="/docs" onclick={toggleSmallNav} class="nav__link"
             >{$_('nav.docs')}</a>
         </li>
         <li>
-          <a href="/contact" on:click={toggleSmallNav} class="nav__link"
+          <a href="/contact" onclick={toggleSmallNav} class="nav__link"
             >{$_('nav.contact')}</a>
         </li>
         <li>
@@ -62,9 +62,9 @@
       </ul>
     {/if}
     <button
-      on:click={toggleSmallNav}
+      onclick={toggleSmallNav}
       class="fixed top-1 right-1 last-element-row z-50">
-      <SquareMenu size={64} />
+      <Menu size={64} />
     </button>
   </nav>
 {/if}
@@ -178,6 +178,7 @@
   .nav__links--small .nav__link {
     font-size: 48px;
     line-height: 1.5em;
+    margin-left: 20px;
   }
 
   @media screen and (max-width: 938px) {

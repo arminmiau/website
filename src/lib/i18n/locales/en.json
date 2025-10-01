@@ -10,7 +10,7 @@
     "home": {
       "iam": "I am...",
       "aboutme1": {
-        "p": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria. Computertechnologies, software development and video games are my passion. I create this website to build experience and to have an online portfolio of my skills."
+        "p": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria. Computertechnologies, software development and video games are my passion. Currently I'm on job search and programming the Cross The Apex platform."
       },
       "aboutme2": {
         "h1": "a graduate",
@@ -47,23 +47,30 @@
       "aboutme4": {
         "h1": "a hobby game designer",
         "p1": "and I have been planning my own game for a long time.",
-        "p2": "However, I haven't made any mentionable progress in the development. I want to make a survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World. Also, I'm currently working on a new project, where I collect and process Forza Horizon 5's telemetry data to run a Formula 1™️ like racing series."
+        "p2": "However, I haven't made any mentionable progress in the development. I want to make a survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World."
       }
     },
     "projects": {
       "webdev": {
         "h2": "Web dev",
         "website": {
-          "title": "arminmiau website",
+          "subtitle": "personal website",
           "desc1": "My website that you are currently on right now. Built with ",
           "desc2": "and deployed to ",
           "desc3": "Components from ",
           "date": "published 7th September, 2024"
         },
-        "hometab": {
-          "subtitle": "locally hosted",
-          "desc": "My hometab for shortcuts and email inboxes. Previously written as a plain JS SPA, now rewritten in Svelte.",
-          "date": "on GitHub since 22nd July, 2023"
+        "forza1": {
+          "title": "Forza 1",
+          "subtitle": "Private driver's championship",
+          "desc": "This was the project around a private drivers' championship which ended in the idea of Cross The Apex.",
+          "date": "Awards ceremony on 30th Aug 2025"
+        },
+        "xapx": {
+          "title": "Cross The Apex",
+          "subtitle": "Race Tracking Platform",
+          "desc": "A platform for creating championships, races and other racing events. Integration with Forza Horizon 5 telemetry using the desktop app and Asseto Corsa using a server plugin.",
+          "date": "planned before 2026"
         }
       },
       "images": {
@@ -79,23 +86,20 @@
       "gamedev": {
         "h2": "Game dev",
         "game1": {
-          "title": "Unannounced game",
+          "title": "Game in concept phase",
           "subtitle": "using Godot",
           "desc": "A survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World, that I have been planning to develop.",
           "date": "more TBA"
-        },
-        "forza1": {
-          "title": "Forza 1",
-          "subtitle": "Pseudo professional racing, even when the game doesn't.",
-          "desc": "This is a personal project about collecting, processing and displaying data from Forza Horizon 5's telemetry data output. Linked with a racing series to have some fun with friends!",
-          "date": "running a testing season since 31st may"
         }
       }
     },
     "technologies": {
+      "h1": "Technologies",
       "pl": "Programming Languages",
       "frm": "Frameworks",
-      "inf": "Infrastructure"
+      "inf": "Infrastructure",
+      "db": "Databases",
+      "ge": "Game Engines"
     },
     "docs": {
       "open": "Open",

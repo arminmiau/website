@@ -9,9 +9,14 @@
   import { onMount } from 'svelte';
   import { initPosthog } from '$lib/posthog';
   import posthog from 'posthog-js';
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
 
-  let innerWidth = 1920;
-  $: desktop = innerWidth > 987 ? true : false;
+  let { children }: Props = $props();
+
+  let innerWidth = $state(1920);
+  let desktop = $derived(innerWidth > 987 ? true : false);
   let mobileEnabled = false;
 
   onMount(() => {
@@ -37,7 +42,7 @@
 {#if desktop || true}
   {#if isPublic}
     <Navigation />
-    <slot />
+    {@render children?.()}
   {:else}
     <Maintenance />
   {/if}

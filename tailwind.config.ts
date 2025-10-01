@@ -1,4 +1,5 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
+import tailwindcssAnimate from 'tailwindcss-animate';
 
 const config: import('tailwindcss').Config = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -56,6 +57,7 @@ const config: import('tailwindcss').Config = {
       },
     },
   },
+  plugins: [tailwindcssAnimate],
 };
 
 export default config;

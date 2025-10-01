@@ -3,10 +3,6 @@ import {
   Schulfoto21_22,
   FeuerwehrmannFoto,
   KaligraphieFoto,
-  HometabThumbnail,
-  WebsiteThumbnail,
-  MaturaballFoto,
-  DevImageThumbnail,
 } from './home';
 import {
   CSharp,
@@ -25,7 +21,26 @@ import {
   Ubuntu,
   Unity,
   Vercel,
+  NextJS,
+  Convex,
+  DotNet,
+  Rust,
+  Tauri,
+  Arch,
+  Clerk,
+  Postgres,
+  Spacetime,
+  Sqlite,
+  Portainer,
 } from './technologies';
+import {
+  HometabThumbnail,
+  WebsiteThumbnail,
+  MaturaballFoto,
+  DevImageThumbnail,
+  Forza1Thumbnail,
+  XAPXThumbnail,
+} from './projects';
 
 export const preloads = [
   Schulfoto22_23,
@@ -47,6 +62,8 @@ export {
   WebsiteThumbnail,
   MaturaballFoto,
   DevImageThumbnail,
+  Forza1Thumbnail,
+  XAPXThumbnail,
   CSharp,
   Fedora,
   Firebase,
@@ -63,4 +80,15 @@ export {
   Ubuntu,
   Unity,
   Vercel,
+  NextJS,
+  Convex,
+  DotNet,
+  Rust,
+  Tauri,
+  Arch,
+  Clerk,
+  Spacetime,
+  Postgres,
+  Sqlite,
+  Portainer,
 };

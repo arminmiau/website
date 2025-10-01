@@ -3,21 +3,25 @@
   import type { Selected } from 'bits-ui';
   import { locale, locales, _ } from 'svelte-i18n';
 
+  let value = $state($locale ?? '');
+
+  $effect(() => {
+    $locale = value;
+  });
+
   const selectLocales: Selected<string>[] = $locales.map((l) => ({
     value: l,
     label: $_('locales.' + l),
   }));
+
+  const triggerContent = $derived(
+    selectLocales.find((sL) => sL.value === value)?.label ?? 'Select a locale'
+  );
 </script>
 
-<Select.Root
-  selected={{
-    value: $locale,
-    label: $_('locales.' + $locale),
-  }}
-  items={selectLocales}
-  onSelectedChange={(s) => ($locale = s?.value)}>
+<Select.Root type="single" bind:value>
   <Select.Trigger class="w-[180px] bg-popover nav__locale">
-    <Select.Value />
+    {triggerContent}
   </Select.Trigger>
   <Select.Content>
     {#each $locales as loc}

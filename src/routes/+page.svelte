@@ -4,10 +4,10 @@
   import posthog from 'posthog-js';
   import { onMount } from 'svelte';
 
-  let innerWidth = 1920;
-  $: desktop = innerWidth > 987 ? true : false;
+  let innerWidth = $state(1920);
+  let desktop = $derived(innerWidth > 987 ? true : false);
 
-  let isScrollPageEnabled = true;
+  let isScrollPageEnabled = $state(true);
 
   onMount(() => {
     isScrollPageEnabled = posthog.isFeatureEnabled('scrollPage') ?? false;

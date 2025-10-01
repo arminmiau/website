@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Anchor, Background, Node, Svelvet } from 'svelvet';
   import { _ } from 'svelte-i18n';
   import {
     CSharp,
@@ -9,309 +8,343 @@
     Github,
     Godot,
     Java,
-    Linux,
     Python,
     React,
-    SQL,
     Svelte,
     TS,
     Ubuntu,
     Unity,
     Vercel,
+    DotNet,
+    NextJS,
+    Rust,
+    Convex,
+    Tauri,
+    Arch,
+    Clerk,
+    Spacetime,
+    Postgres,
+    Sqlite,
+    Portainer,
   } from '$lib/assetUrls';
+  import ChevronsUpDownIcon from '@lucide/svelte/icons/chevrons-up-down';
+  import * as Collapsible from '$lib/components/ui/collapsible/index.js';
+  import { buttonVariants } from '$lib/components/ui/button/index.js';
+
+  let innerHeight = $state(1920);
+  let largeScreen = $derived(innerHeight >= 1400 ? true : false);
+
+  let plOpen = $state(false);
+  let frmOpen = $state(false);
+  let infOpen = $state(false);
+  let dbOpen = $state(false);
+  let geOpen = $state(false);
+
+  $effect(() => {
+    if (largeScreen) {
+      if (!plOpen) plOpen = true;
+      if (!frmOpen) frmOpen = true;
+      if (!infOpen) infOpen = true;
+      if (!dbOpen) dbOpen = true;
+      if (!geOpen) geOpen = true;
+    }
+  });
 </script>
+
+<svelte:window bind:innerHeight />
 
 <svelte:head>
   <title>Technologies - arminmiau</title>
 </svelte:head>
 
-<div class="absolute top-0 left-0 h-screen w-screen">
-  <Svelvet edgeStyle="step" theme="dark" pannable locked>
-    <Node
-      id="pl"
-      dimensions={{ width: 250, height: 50 }}
-      position={{ x: 500, y: 540 }}>
-      <svg class="roundRect" height="100%" width="100%">
-        <rect
-          width="100%"
-          height="100%"
-          rx="30"
-          ry="30"
-          fill="slateblue"
-          stroke="black" />
-        <text
-          class="nodeText"
-          text-anchor="middle"
-          font-size={16}
-          fill="white"
-          x="50%"
-          y="60%">{$_('page.technologies.pl')}</text>
-      </svg>
-      <div class="top-anchor">
-        <Anchor direction="north" connections={['ts', 'c#']} invisible />
+<div class="mt-[10vh] ml-[2vw] w-full">
+  <h1 class="text-5xl mb-4 shadow-[rgba(0,0,0,0.5)_0px_5px] w-fit">
+    {$_('page.technologies.h1')}
+  </h1>
+  <div class="flex w-[95vw] min-h-[80vh] justify-center items-center">
+    <div
+      class="flex flex-col justify-center p-6 items-center w-full lg:w-[50vw] h-full">
+      <div class="flex justify-around w-full max-sm:flex-col">
+        <Collapsible.Root class="w-[350px] py-6 space-y-2" bind:open={plOpen}>
+          <div class="flex items-center justify-between space-x-4 px-4">
+            <h4 class="text-lg font-bold">{$_('page.technologies.pl')}</h4>
+            <Collapsible.Trigger
+              class={buttonVariants({
+                variant: 'ghost',
+                size: 'sm',
+                class: 'w-9 p-0',
+              })}>
+              <ChevronsUpDownIcon class={{ hidden: largeScreen }} />
+              <span class="sr-only">Toggle</span>
+            </Collapsible.Trigger>
+          </div>
+          <div class="flex gap-2 items-center">
+            <div class="px-4 py-3">
+              <img
+                src={CSharp}
+                alt=""
+                class="size-24 object-contain"
+                title="C#" />
+            </div>
+            <div class="px-4 py-3">
+              <img
+                src={TS}
+                alt=""
+                class="size-24 object-contain"
+                title="TypeScript" />
+            </div>
+          </div>
+          <Collapsible.Content class="space-y-2">
+            <div class="flex gap-2 items-center flex-wrap">
+              <div class="px-4 py-3">
+                <img
+                  src={Rust}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Rust" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={Java}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Java" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={Python}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Python" />
+              </div>
+            </div>
+          </Collapsible.Content>
+        </Collapsible.Root>
+        <Collapsible.Root class="w-[350px] py-6 space-y-2" bind:open={frmOpen}>
+          <div class="flex items-center justify-between space-x-4 px-4">
+            <h4 class="text-lg font-bold">{$_('page.technologies.frm')}</h4>
+            <Collapsible.Trigger
+              class={buttonVariants({
+                variant: 'ghost',
+                size: 'sm',
+                class: 'w-9 p-0',
+              })}>
+              <ChevronsUpDownIcon class={{ hidden: largeScreen }} />
+              <span class="sr-only">Toggle</span>
+            </Collapsible.Trigger>
+          </div>
+          <div class="flex gap-2 items-center">
+            <div class="px-4 py-3">
+              <img
+                src={DotNet}
+                alt=""
+                class="size-24 object-contain"
+                title=".NET/ASP.NET" />
+            </div>
+            <div class="px-4 py-3">
+              <img
+                src={Svelte}
+                alt=""
+                class="size-24 object-contain"
+                title="Svelte" />
+            </div>
+          </div>
+          <Collapsible.Content class="space-y-2">
+            <div class="flex gap-2 items-center flex-wrap">
+              <div class="px-4 py-3">
+                <img
+                  src={Tauri}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Tauri" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={React}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="React" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={NextJS}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Next.js" />
+              </div>
+            </div>
+          </Collapsible.Content>
+        </Collapsible.Root>
       </div>
-      <div class="left-anchor">
-        <Anchor direction="west" connections={['java', 'python']} invisible />
+      <div class="flex justify-around w-full max-sm:flex-col">
+        <Collapsible.Root class="w-[350px] py-6 space-y-2" bind:open={infOpen}>
+          <div class="flex items-center justify-between space-x-4 px-4">
+            <h4 class="text-lg font-bold">{$_('page.technologies.inf')}</h4>
+            <Collapsible.Trigger
+              class={buttonVariants({
+                variant: 'ghost',
+                size: 'sm',
+                class: 'w-9 p-0',
+              })}>
+              <ChevronsUpDownIcon class={{ hidden: largeScreen }} />
+              <span class="sr-only">Toggle</span>
+            </Collapsible.Trigger>
+          </div>
+          <div class="flex gap-2 items-center">
+            <div class="px-4 py-3">
+              <img
+                src={Vercel}
+                alt=""
+                class="size-24 object-contain"
+                title="Vercel" />
+            </div>
+            <div class="px-4 py-3">
+              <img
+                src={Clerk}
+                alt=""
+                class="size-24 object-contain"
+                title="Clerk" />
+            </div>
+          </div>
+          <Collapsible.Content class="space-y-2">
+            <div class="flex gap-2 items-center flex-wrap">
+              <div class="px-4 py-3">
+                <img
+                  src={Portainer}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Portainer" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={Firebase}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Firebase" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={Git}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Git" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={Github}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Github" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={Ubuntu}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Ubuntu" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={Fedora}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Fedora" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={Arch}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Arch" />
+              </div>
+            </div>
+          </Collapsible.Content>
+        </Collapsible.Root>
+        <Collapsible.Root class="w-[350px] py-6 space-y-2" bind:open={dbOpen}>
+          <div class="flex items-center justify-between space-x-4 px-4">
+            <h4 class="text-lg font-bold">{$_('page.technologies.db')}</h4>
+            <Collapsible.Trigger
+              class={buttonVariants({
+                variant: 'ghost',
+                size: 'sm',
+                class: 'w-9 p-0',
+              })}>
+              <ChevronsUpDownIcon class={{ hidden: largeScreen }} />
+              <span class="sr-only">Toggle</span>
+            </Collapsible.Trigger>
+          </div>
+          <div class="flex gap-2 items-center">
+            <div class="px-4 py-3">
+              <img
+                src={Convex}
+                alt=""
+                class="size-24 object-contain"
+                title="Convex" />
+            </div>
+            <div class="px-4 py-3">
+              <img
+                src={Spacetime}
+                alt=""
+                class="size-24 object-contain"
+                title="SpacetimeDB" />
+            </div>
+          </div>
+          <Collapsible.Content class="space-y-2">
+            <div class="flex gap-2 items-center flex-wrap">
+              <div class="px-4 py-3">
+                <img
+                  src={Postgres}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Postgres" />
+              </div>
+              <div class="px-4 py-3">
+                <img
+                  src={Sqlite}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Sqlite" />
+              </div>
+            </div>
+          </Collapsible.Content>
+        </Collapsible.Root>
       </div>
-      <div class="bottom-anchor">
-        <Anchor direction="south" connections={['sql']} invisible />
+      <div class="flex justify-around w-full max-sm:flex-col">
+        <Collapsible.Root class="w-[350px] py-6 space-y-2" bind:open={geOpen}>
+          <div class="flex items-center justify-between space-x-4 px-4">
+            <h4 class="text-lg font-bold">{$_('page.technologies.ge')}</h4>
+            <Collapsible.Trigger
+              class={buttonVariants({
+                variant: 'ghost',
+                size: 'sm',
+                class: 'w-9 p-0',
+              })}>
+              <ChevronsUpDownIcon class={{ hidden: largeScreen }} />
+              <span class="sr-only">Toggle</span>
+            </Collapsible.Trigger>
+          </div>
+          <div class="flex gap-2 items-center">
+            <div class="px-4 py-3">
+              <img
+                src={Godot}
+                alt=""
+                class="size-24 object-contain"
+                title="Godot" />
+            </div>
+          </div>
+          <Collapsible.Content class="space-y-2">
+            <div class="flex gap-2 items-center flex-wrap">
+              <div class="px-4 py-3">
+                <img
+                  src={Unity}
+                  alt=""
+                  class="size-16 object-contain"
+                  title="Unity" />
+              </div>
+            </div>
+          </Collapsible.Content>
+        </Collapsible.Root>
       </div>
-    </Node>
-    <Node
-      id="frm"
-      dimensions={{ width: 150, height: 50 }}
-      position={{ x: 900, y: 540 }}>
-      <svg class="roundRect" height="100%" width="100%">
-        <rect
-          width="100%"
-          height="100%"
-          rx="30"
-          ry="30"
-          fill="slateblue"
-          stroke="black" />
-        <text
-          class="nodeText"
-          text-anchor="middle"
-          font-size={16}
-          fill="white"
-          x="50%"
-          y="60%">{$_('page.technologies.frm')}</text>
-      </svg>
-      <div class="left-anchor">
-        <Anchor direction="west" connections={['asp']} invisible />
-      </div>
-      <div class="top-anchor">
-        <Anchor direction="north" connections={['svelte', 'react']} invisible />
-      </div>
-      <div class="bottom-anchor">
-        <Anchor direction="south" connections={['unity', 'godot']} invisible />
-      </div>
-    </Node>
-    <Node
-      id="inf"
-      dimensions={{ width: 150, height: 50 }}
-      position={{ x: 1200, y: 540 }}>
-      <svg class="roundRect" height="100%" width="100%">
-        <rect
-          width="100%"
-          height="100%"
-          rx="30"
-          ry="30"
-          fill="slateblue"
-          stroke="black" />
-        <text
-          class="nodeText"
-          text-anchor="middle"
-          font-size={16}
-          fill="white"
-          x="50%"
-          y="60%">{$_('page.technologies.inf')}</text>
-      </svg>
-      <div class="top-anchor">
-        <Anchor
-          direction="north"
-          connections={['vercel', 'firebase']}
-          invisible />
-      </div>
-      <div class="right-anchor">
-        <Anchor direction="east" connections={['git']} invisible />
-      </div>
-      <div class="bottom-anchor">
-        <Anchor direction="south" connections={['linux']} invisible />
-      </div>
-    </Node>
-    <Node
-      id="c#"
-      dimensions={{ width: 100, height: 100 }}
-      position={{ x: 500, y: 100 }}>
-      <img width="100" src={CSharp} alt="C#" title="C#" />
-      <div class="bottom-anchor">
-        <Anchor direction="south" invisible />
-      </div>
-    </Node>
-    <Node
-      id="ts"
-      dimensions={{ width: 80, height: 80 }}
-      position={{ x: 250, y: 200 }}>
-      <img width="80" src={TS} alt="TS" title="TypeScript" />
-      <div class="bottom-anchor">
-        <Anchor direction="south" invisible />
-      </div>
-    </Node>
-    <Node
-      id="java"
-      dimensions={{ width: 80, height: 150 }}
-      position={{ x: 150, y: 400 }}>
-      <img width="80" src={Java} alt="Java" title="Java" />
-      <div class="right-anchor">
-        <Anchor direction="east" invisible />
-      </div>
-    </Node>
-    <Node
-      id="python"
-      dimensions={{ width: 80, height: 80 }}
-      position={{ x: 150, y: 700 }}>
-      <img width="80" src={Python} alt="Python" title="Python" />
-      <div class="right-anchor">
-        <Anchor direction="east" invisible />
-      </div>
-    </Node>
-    <Node
-      id="sql"
-      dimensions={{ width: 80, height: 80 }}
-      position={{ x: 500, y: 900 }}>
-      <img width="80" src={SQL} alt="SQL" title="SQL" />
-      <div class="top-anchor">
-        <Anchor direction="north" invisible />
-      </div>
-    </Node>
-    <Node
-      id="asp"
-      dimensions={{ width: 100, height: 50 }}
-      position={{ x: 650, y: 170 }}>
-      <p class="text-2xl text-center leading-5">ASP.NET Core</p>
-      <div class="right-anchor">
-        <Anchor direction="east" invisible />
-      </div>
-    </Node>
-    <Node
-      id="svelte"
-      dimensions={{ width: 80, height: 80 }}
-      position={{ x: 850, y: 200 }}>
-      <img width="80" src={Svelte} alt="Svelte" title="Svelte" />
-      <div class="bottom-anchor">
-        <Anchor direction="south" invisible />
-      </div>
-    </Node>
-    <Node
-      id="react"
-      dimensions={{ width: 80, height: 80 }}
-      position={{ x: 1050, y: 200 }}>
-      <img width="80" src={React} alt="React" title="React" />
-      <div class="bottom-anchor">
-        <Anchor direction="south" invisible />
-      </div>
-    </Node>
-    <Node
-      id="unity"
-      dimensions={{ width: 80, height: 80 }}
-      position={{ x: 850, y: 850 }}>
-      <img width="80" src={Unity} alt="Unity" title="Unity" />
-      <div class="top-anchor">
-        <Anchor direction="north" invisible />
-      </div>
-    </Node>
-    <Node
-      id="godot"
-      dimensions={{ width: 80, height: 80 }}
-      position={{ x: 1050, y: 850 }}>
-      <img width="80" src={Godot} alt="Godot" title="Godot" />
-      <div class="top-anchor">
-        <Anchor direction="north" invisible />
-      </div>
-    </Node>
-    <Node
-      id="vercel"
-      dimensions={{ width: 250, height: 60 }}
-      position={{ x: 1250, y: 150 }}>
-      <img height="100" src={Vercel} alt="Vercel" title="Vercel" />
-      <div class="bottom-anchor">
-        <Anchor direction="south" invisible />
-      </div>
-    </Node>
-    <Node
-      id="firebase"
-      dimensions={{ width: 100, height: 100 }}
-      position={{ x: 1600, y: 250 }}>
-      <img height="100" src={Firebase} alt="Firebase" title="Firebase" />
-      <div class="left-anchor">
-        <Anchor direction="west" invisible />
-      </div>
-    </Node>
-    <Node
-      id="git"
-      dimensions={{ width: 100, height: 100 }}
-      position={{ x: 1500, y: 515 }}>
-      <img height="100" src={Git} alt="Git" title="Git" />
-      <div class="left-anchor">
-        <Anchor direction="west" invisible />
-      </div>
-      <div class="right-anchor">
-        <Anchor direction="east" connections={['github']} invisible />
-      </div>
-    </Node>
-    <Node
-      id="github"
-      dimensions={{ width: 100, height: 100 }}
-      position={{ x: 1650, y: 515 }}>
-      <img height="100" src={Github} alt="Github" title="Github" />
-      <div class="left-anchor">
-        <Anchor direction="west" invisible />
-      </div>
-    </Node>
-    <Node
-      id="linux"
-      dimensions={{ width: 100, height: 120 }}
-      position={{ x: 1300, y: 800 }}>
-      <img height="100" src={Linux} alt="Linux" title="Linux" />
-      <div class="top-anchor">
-        <Anchor direction="north" invisible />
-      </div>
-      <div class="right-anchor">
-        <Anchor direction="east" connections={['fedora']} invisible />
-      </div>
-      <div class="bottom-anchor">
-        <Anchor direction="south" connections={['ubuntu']} invisible />
-      </div>
-    </Node>
-    <Node
-      id="fedora"
-      dimensions={{ width: 100, height: 100 }}
-      position={{ x: 1450, y: 810 }}>
-      <img height="100" src={Fedora} alt="Fedora" title="Fedora" />
-      <div class="left-anchor">
-        <Anchor direction="west" invisible />
-      </div>
-    </Node>
-    <Node
-      id="ubuntu"
-      dimensions={{ width: 100, height: 100 }}
-      position={{ x: 1300, y: 950 }}>
-      <img height="100" src={Ubuntu} alt="Ubuntu" title="Ubuntu" />
-      <div class="top-anchor">
-        <Anchor direction="north" invisible />
-      </div>
-    </Node>
-    <Background dotSize={0} bgColor="#242424" slot="background" />
-  </Svelvet>
+    </div>
+  </div>
 </div>
-
-<style>
-  :global(.svelvet-node) {
-    box-shadow: none !important;
-  }
-  .bottom-anchor {
-    position: absolute;
-    bottom: 0;
-    left: 50%; /* Adjust the left value based on your design */
-    transform: translateX(-50%);
-  }
-  .top-anchor {
-    position: absolute;
-    top: 0;
-    left: 50%; /* Adjust the left value based on your design */
-    transform: translateX(-50%);
-  }
-  .left-anchor {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateX(-50%);
-  }
-  .right-anchor {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateX(-50%);
-  }
-</style>

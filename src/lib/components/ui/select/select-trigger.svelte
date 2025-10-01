@@ -1,23 +1,24 @@
 <script lang="ts">
-  import { Select as SelectPrimitive } from 'bits-ui';
-  import CaretSort from 'svelte-radix/CaretSort.svelte';
-  import { cn } from '$lib/utils';
+	import { Select as SelectPrimitive, type WithoutChild } from "bits-ui";
+	import ChevronDown from "@lucide/svelte/icons/chevron-down";
+	import { cn } from "$lib/utils.js";
 
-  type $$Props = SelectPrimitive.TriggerProps;
-  type $$Events = SelectPrimitive.TriggerEvents;
-
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+	let {
+		ref = $bindable(null),
+		class: className,
+		children,
+		...restProps
+	}: WithoutChild<SelectPrimitive.TriggerProps> = $props();
 </script>
 
 <SelectPrimitive.Trigger
-  class={cn(
-    'flex h-7 w-full items-center justify-between whitespace-nowrap rounded-md border border-input px-2 py-1 text-[14px] shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
-    className
-  )}
-  {...$$restProps}>
-  <slot />
-  <div>
-    <CaretSort class="h-3 w-3 opacity-50" />
-  </div>
+	bind:ref
+	class={cn(
+		"border-input bg-background ring-offset-background data-[placeholder]:text-muted-foreground focus:ring-ring flex h-10 w-full items-center justify-between rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+		className
+	)}
+	{...restProps}
+>
+	{@render children?.()}
+	<ChevronDown class="size-4 opacity-50" />
 </SelectPrimitive.Trigger>

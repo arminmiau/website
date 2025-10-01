@@ -1,24 +1,20 @@
 <script lang="ts">
-  import type { HTMLAttributes } from 'svelte/elements';
-  import { cn } from '$lib/utils.js';
+	import type { WithElementRef } from "bits-ui";
+	import type { HTMLAttributes } from "svelte/elements";
+	import { cn } from "$lib/utils.js";
 
-  type $$Props = HTMLAttributes<HTMLDivElement>;
-
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+	let {
+		ref = $bindable(null),
+		class: className,
+		children,
+		...restProps
+	}: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();
 </script>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-  class={cn(
-    'rounded-xl bg-card text-card-foreground shadow flex flex-col justify-between',
-    className
-  )}
-  {...$$restProps}
-  on:click
-  on:focusin
-  on:focusout
-  on:mouseenter
-  on:mouseleave>
-  <slot />
+	bind:this={ref}
+	class={cn("bg-card text-card-foreground rounded-lg border shadow-sm", className)}
+	{...restProps}
+>
+	{@render children?.()}
 </div>
