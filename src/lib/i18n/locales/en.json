@@ -35,13 +35,16 @@
           "Youth achievement badge in gold",
           "Radio/communication and tasks in operational control achievement badge in bronze",
           "Fire service achievement badge in bronze",
-          "Technical assistance achievement badge in bronze"
+          "Technical assistance achievement badge in bronze",
+          "Bavarian firefighter achievement badge"
         ],
         "ul2_heading": "Courses I've taken:",
         "ul2_items": [
           "Basics course",
           "Radio communication course",
-          "Squad leader exam"
+          "Squad leader exam",
+          "Portable fire pump operator course",
+          "Radiation protection course"
         ]
       },
       "aboutme4": {

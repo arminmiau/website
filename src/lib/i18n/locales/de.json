@@ -35,10 +35,17 @@
           "Jugend Leistungsabzeichen in Gold",
           "Leistungsabzeichen in Funk/Kommunikation und Aufgaben in der Einsatzleitung in Bronze",
           "Branddienstleistungsabzeichen in Bronze",
-          "Technisches Hilfeleistungsabzeichen in Bronze"
+          "Technisches Hilfeleistungsabzeichen in Bronze",
+          "Bayerisches Feuerwehrleistungsabzeichen"
         ],
         "ul2_heading": "Besuchte Lehrgänge:",
-        "ul2_items": ["Grundlehrgang", "Funklehrgang", "Truppführerprüfung"]
+        "ul2_items": [
+          "Grundlehrgang",
+          "Funklehrgang",
+          "Truppführerprüfung",
+          "TS-Maschinisten Lehrgang",
+          "Strahlenschutzlehrgang"
+        ]
       },
       "aboutme4": {
         "h1": "Hobby-Spieledesigner",
