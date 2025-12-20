@@ -1,2 +1,2 @@
 export const ElaborationAtomicImagesBlueBuild =
-  'https://lgjifyxfvazatzfgdjcz.supabase.co/storage/v1/object/public/website/docs/Elaboration-AtomicImages-BlueBuild_arminmiau.pdf';
+  'https://arminmiau.ayerin.de/assets/docs/Elaboration-AtomicImages-BlueBuild_arminmiau.pdf';
