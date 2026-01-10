@@ -67,56 +67,6 @@
           </a>
         </Card.Footer>
       </Card.Root>
-      <Card.Root
-        class="inline-block align-top mr-4 mb-4 {desktop
-          ? 'w-[550px]'
-          : 'w-[90vw]'} bg-primary-background  border-2 border-[rgba(0,0,0,0.3)]">
-        <Card.Header>
-          <Card.Title>
-            <img
-              class="w-[500px] border border-gray-500 rounded"
-              src={Forza1Thumbnail}
-              alt="" />
-            <p class="mt-[5px]">{$_('page.projects.webdev.forza1.title')}</p>
-          </Card.Title>
-          <Card.Description
-            >{$_('page.projects.webdev.forza1.subtitle')}</Card.Description>
-        </Card.Header>
-        <Card.Content>
-          <p>
-            {$_('page.projects.webdev.forza1.desc')}
-          </p>
-        </Card.Content>
-        <Card.Footer class="flex justify-between">
-          <p>{$_('page.projects.webdev.forza1.date')}</p>
-          <!-- <a href="https://forza1.ayerin.de" target="_blank"><Globe /></a> -->
-        </Card.Footer>
-      </Card.Root>
-      <Card.Root
-        class="inline-block align-top mr-4 mb-4 {desktop
-          ? 'w-[550px]'
-          : 'w-[90vw]'} bg-primary-background  border-2 border-[rgba(0,0,0,0.3)]">
-        <Card.Header>
-          <Card.Title>
-            <img
-              class="w-[500px] border border-gray-500 rounded"
-              src={XAPXThumbnail}
-              alt="" />
-            <p class="mt-[5px]">{$_('page.projects.webdev.xapx.title')}</p>
-          </Card.Title>
-          <Card.Description
-            >{$_('page.projects.webdev.xapx.subtitle')}</Card.Description>
-        </Card.Header>
-        <Card.Content>
-          <p>
-            {$_('page.projects.webdev.xapx.desc')}
-          </p>
-        </Card.Content>
-        <Card.Footer class="flex justify-between">
-          <p>{$_('page.projects.webdev.xapx.date')}</p>
-          <!-- <a href="https://xapx.ayerin.de" target="_blank"><Globe /></a> -->
-        </Card.Footer>
-      </Card.Root>
     </div>
   </div>
   <div class="w-fit">
@@ -197,6 +147,73 @@
         </Card.Content>
         <Card.Footer class="flex justify-between">
           <p>{$_('page.projects.gamedev.game1.date')}</p>
+        </Card.Footer>
+      </Card.Root>
+    </div>
+  </div>
+  <div class="w-fit">
+    <h2
+      class="{!desktop &&
+        'w-[95vw]'} p-2 mt-5 text-4xl border-2 border-[rgba(0,0,0,0.5)] rounded">
+      {$_('page.projects.race-telemetry.h2')}
+    </h2>
+    <div class="p-5">
+      <Card.Root
+        class="inline-block align-top mr-4 mb-4 {desktop
+          ? 'w-[550px]'
+          : 'w-[90vw]'} bg-primary-background  border-2 border-[rgba(0,0,0,0.3)]">
+        <Card.Header>
+          <Card.Title>
+            <img
+              class="w-[500px] border border-gray-500 rounded"
+              src={Forza1Thumbnail}
+              alt="" />
+            <p class="mt-[5px]">
+              {$_('page.projects.race-telemetry.forza1.title')}
+            </p>
+          </Card.Title>
+          <Card.Description
+            >{$_(
+              'page.projects.race-telemetry.forza1.subtitle'
+            )}</Card.Description>
+        </Card.Header>
+        <Card.Content>
+          <p>
+            {$_('page.projects.race-telemetry.forza1.desc')}
+          </p>
+        </Card.Content>
+        <Card.Footer class="flex justify-between">
+          <p>{$_('page.projects.race-telemetry.forza1.date')}</p>
+          <!-- <a href="https://forza1.ayerin.de" target="_blank"><Globe /></a> -->
+        </Card.Footer>
+      </Card.Root>
+      <Card.Root
+        class="inline-block align-top mr-4 mb-4 {desktop
+          ? 'w-[550px]'
+          : 'w-[90vw]'} bg-primary-background  border-2 border-[rgba(0,0,0,0.3)]">
+        <Card.Header>
+          <Card.Title>
+            <img
+              class="w-[500px] border border-gray-500 rounded"
+              src={XAPXThumbnail}
+              alt="" />
+            <p class="mt-[5px]">
+              {$_('page.projects.race-telemetry.xapx.title')}
+            </p>
+          </Card.Title>
+          <Card.Description
+            >{$_(
+              'page.projects.race-telemetry.xapx.subtitle'
+            )}</Card.Description>
+        </Card.Header>
+        <Card.Content>
+          <p>
+            {$_('page.projects.race-telemetry.xapx.desc')}
+          </p>
+        </Card.Content>
+        <Card.Footer class="flex justify-between">
+          <p>{$_('page.projects.race-telemetry.xapx.date')}</p>
+          <!-- <a href="https://xapx.ayerin.de" target="_blank"><Globe /></a> -->
         </Card.Footer>
       </Card.Root>
     </div>

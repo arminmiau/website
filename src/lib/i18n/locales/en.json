@@ -10,7 +10,7 @@
     "home": {
       "iam": "I am...",
       "aboutme1": {
-        "p": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria. Computertechnologies, software development and video games are my passion. Currently I'm on job search and programming the Cross The Apex platform."
+        "p": "or also known under the nickname \"arminmiau\". I am {age} years old and from Austria. Computertechnologies, software development, emergency assistance and video games are my passion."
       },
       "aboutme2": {
         "h1": "a graduate",
@@ -36,7 +36,8 @@
           "Radio/communication and tasks in operational control achievement badge in bronze",
           "Fire service achievement badge in bronze",
           "Technical assistance achievement badge in bronze",
-          "Bavarian firefighter achievement badge"
+          "Bavarian firefighter achievement badge in level 1",
+          "Medical achievement badge in bronze"
         ],
         "ul2_heading": "Courses I've taken:",
         "ul2_items": [
@@ -62,18 +63,6 @@
           "desc2": "and deployed to ",
           "desc3": "Components from ",
           "date": "published 7th September, 2024"
-        },
-        "forza1": {
-          "title": "Forza 1",
-          "subtitle": "Private driver's championship",
-          "desc": "This was the project around a private drivers' championship which ended in the idea of Cross The Apex.",
-          "date": "Awards ceremony on 30th Aug 2025"
-        },
-        "xapx": {
-          "title": "Cross The Apex",
-          "subtitle": "Race Tracking Platform",
-          "desc": "A platform for creating championships, races and other racing events. Integration with Forza Horizon 5 telemetry using the desktop app and Asseto Corsa using a server plugin.",
-          "date": "Development on hold"
         }
       },
       "images": {
@@ -93,6 +82,21 @@
           "subtitle": "using Godot",
           "desc": "A survival craft open world rpg, with a class system inspired by games like World of Warcraft, Guild Wars 2 and New World, that I have been planning to develop.",
           "date": "more TBA"
+        }
+      },
+      "race-telemetry": {
+        "h2": "Racing game telemetry",
+        "forza1": {
+          "title": "Forza 1",
+          "subtitle": "Private driver's championship",
+          "desc": "This was the project around a private drivers' championship which ended in the idea of Cross The Apex.",
+          "date": "Awards ceremony held on 30th Aug 2025"
+        },
+        "xapx": {
+          "title": "Cross The Apex",
+          "subtitle": "Race Tracking Platform",
+          "desc": "A platform for creating championships, races and other racing events. Integration with Forza Horizon 5 telemetry using the desktop app and Asseto Corsa using a server plugin.",
+          "date": "Development canceled"
         }
       }
     },
