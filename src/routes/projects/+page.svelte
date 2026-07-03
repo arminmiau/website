@@ -184,7 +184,7 @@
         </Card.Content>
         <Card.Footer class="flex justify-between">
           <p>{$_('page.projects.race-telemetry.forza1.date')}</p>
-          <!-- <a href="https://forza1.ayerin.de" target="_blank"><Globe /></a> -->
+          <!-- <a href="https://forza1.ayerin.at" target="_blank"><Globe /></a> -->
         </Card.Footer>
       </Card.Root>
       <Card.Root
@@ -213,7 +213,7 @@
         </Card.Content>
         <Card.Footer class="flex justify-between">
           <p>{$_('page.projects.race-telemetry.xapx.date')}</p>
-          <!-- <a href="https://xapx.ayerin.de" target="_blank"><Globe /></a> -->
+          <!-- <a href="https://xapx.ayerin.at" target="_blank"><Globe /></a> -->
         </Card.Footer>
       </Card.Root>
     </div>
