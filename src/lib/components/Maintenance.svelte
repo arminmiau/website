@@ -4,7 +4,7 @@
 
 <div id="maintenance">
   <div class="centered-container">
-    <h2 id="titleText">arminmiau.vercel.app</h2>
+    <h2 id="titleText">ayerin.at</h2>
     <div id="loadingWaves">
       <div class="wave"></div>
       <div class="wave"></div>
