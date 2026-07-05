@@ -28,7 +28,7 @@
     });
   });
 
-  const isPublic = true;
+  const isPublic = false;
 </script>
 
 <svelte:window bind:innerWidth />
