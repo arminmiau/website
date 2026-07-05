@@ -8,10 +8,7 @@ body {
   letter-spacing: 1.5px;
   font-size: 18px;
   overflow: hidden;
-  background-image: url('https://arminmiau.ayerin.at/assets/Summer%2BNight%2BOn%2BSigma%2B957%2B-%2B1080p.jpg');
   position: initial;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #maintenance {
@@ -19,7 +16,7 @@ body {
 }
 
 .centered-container {
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -117,12 +114,6 @@ body {
 
 p {
   font-size: 2rem;
-}
-
-footer {
-  position: fixed;
-  bottom: 1vh;
-  right: 1vw;
 }
 
 a {
