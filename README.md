@@ -1,4 +1,4 @@
-# [arminmiau.vercel.app](https://arminmiau.vercel.app)
+# [ayerin.at](https://ayerin.at)
 
 My own website hosted on vercel.
 Desktop released, mobile unsupported for now.

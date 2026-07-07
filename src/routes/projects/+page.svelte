@@ -17,7 +17,7 @@
 <svelte:window bind:innerWidth />
 
 <svelte:head>
-  <title>{$_('nav.projects')} - arminmiau</title>
+  <title>{$_('nav.projects')} - ayerin.at</title>
 </svelte:head>
 
 <div class="mt-[10vh] ml-[2vw]">
@@ -41,7 +41,7 @@
               class="w-[500px] border border-gray-500 rounded"
               src={WebsiteThumbnail}
               alt="" />
-            <p class="mt-[5px]">arminmiau.vercel.app</p>
+            <p class="mt-[5px]">ayerin.at</p>
           </Card.Title>
           <Card.Description
             ><p class="mt-[5px]">

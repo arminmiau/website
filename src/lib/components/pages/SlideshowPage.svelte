@@ -114,7 +114,7 @@
 </script>
 
 <svelte:head>
-  <title>Armin Bade - arminmiau</title>
+  <title>Armin Bade - ayerin.at</title>
 </svelte:head>
 <svelte:window bind:innerWidth />
 

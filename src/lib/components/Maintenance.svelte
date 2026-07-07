@@ -19,6 +19,6 @@
     </div>
     <span id="maintenanceText"
       ><span> This site is beeing worked on...</span></span>
-    <p>Discord: @arminmiau</p>
+    <p>Discord: @ayerin.at</p>
   </div>
 </div>

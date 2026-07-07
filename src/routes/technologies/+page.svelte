@@ -54,7 +54,7 @@
 <svelte:window bind:innerHeight />
 
 <svelte:head>
-  <title>Technologies - arminmiau</title>
+  <title>Technologies - ayerin.at</title>
 </svelte:head>
 
 <div class="mt-[10vh] ml-[2vw] w-full">

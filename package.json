@@ -1,8 +1,8 @@
 {
-  "name": "arminmiau-website",
-  "description": "arminmiau.vercel.app",
+  "name": "ayerin-website",
+  "description": "ayerin.at",
   "version": "0.1.0",
-  "author": "arminmiau",
+  "author": "Ayerin",
   "private": true,
   "scripts": {
     "dev": "vite dev",
