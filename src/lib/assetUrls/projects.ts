@@ -1,12 +1,9 @@
 export const HometabThumbnail =
-  'https://arminmiau.ayerin.at/assets/hometab-thumbnail.png';
+  'https://assets.ayerin.at/img/hometab-thumbnail.png';
 export const WebsiteThumbnail =
-  'https://arminmiau.ayerin.at/assets/website-thumbnail.png';
-export const MaturaballFoto =
-  'https://arminmiau.ayerin.at/assets/maturaballfoto.png';
+  'https://assets.ayerin.at/img/website-thumbnail.png';
 export const DevImageThumbnail =
-  'https://arminmiau.ayerin.at/assets/dev-image-thumbnail.png';
+  'https://assets.ayerin.at/img/dev-image-thumbnail.png';
 export const Forza1Thumbnail =
-  'https://arminmiau.ayerin.at/assets/forza1-thumbnail.png';
-export const XAPXThumbnail =
-  'https://arminmiau.ayerin.at/assets/xapx-thumbnail.png';
+  'https://assets.ayerin.at/img/forza1-thumbnail.png';
+export const XAPXThumbnail = 'https://assets.ayerin.at/img/xapx-thumbnail.png';
