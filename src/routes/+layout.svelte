@@ -4,7 +4,6 @@
   import Maintenance from '$lib/components/Maintenance.svelte';
   import Navigation from '$lib/components/Navigation.svelte';
   import { preloads } from '$lib/assetUrls';
-  import { initFirebase } from '$lib/firebase';
   import { _ } from 'svelte-i18n';
   import { onMount } from 'svelte';
   import { initPosthog } from '$lib/posthog';
@@ -20,7 +19,6 @@
   let mobileEnabled = false;
 
   onMount(() => {
-    initFirebase();
     initPosthog();
 
     posthog.onFeatureFlags(() => {

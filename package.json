@@ -16,7 +16,6 @@
   "dependencies": {
     "@sveltejs/adapter-vercel": "^5.7.2",
     "clsx": "^2.1.1",
-    "firebase": "^10.14.1",
     "posthog-js": "^1.256.1",
     "svelte-i18n": "^4.0.1",
     "tailwind-merge": "^2.6.0",

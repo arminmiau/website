@@ -1,11 +1,6 @@
 logs
 *.log
 npm-debug.log*
-firebase-debug.log*
-firebase-debug.*.log*
-.firebase/
-firebase.json
-.firebaserc
 node_modules/
 .npm
 .node_repl_history
