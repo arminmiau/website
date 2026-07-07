@@ -3,6 +3,7 @@ import {
   Schulfoto21_22,
   FeuerwehrmannFoto,
   KaligraphieFoto,
+  MaturaballFoto,
 } from './home';
 import {
   CSharp,
@@ -36,7 +37,6 @@ import {
 import {
   HometabThumbnail,
   WebsiteThumbnail,
-  MaturaballFoto,
   DevImageThumbnail,
   Forza1Thumbnail,
   XAPXThumbnail,

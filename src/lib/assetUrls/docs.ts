@@ -1,2 +1,2 @@
 export const ElaborationAtomicImagesBlueBuild =
-  'https://arminmiau.ayerin.at/assets/docs/Elaboration-AtomicImages-BlueBuild_arminmiau.pdf';
+  'https://assets.ayerin.at/docs/Elaboration-AtomicImages-BlueBuild_arminmiau.pdf';
