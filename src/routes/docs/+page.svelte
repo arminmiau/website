@@ -1,6 +1,5 @@
 <script lang="ts">
   import * as Card from '$lib/components/ui/card';
-  import { _ } from 'svelte-i18n';
   import { ElaborationAtomicImagesBlueBuild } from '$lib/assetUrls/docs';
 
   let innerWidth = $state(1920);
@@ -9,28 +8,28 @@
 
 <svelte:window bind:innerWidth />
 
-<div class="mt-[10vh] ml-[2vw]">
-  <h1 class="text-5xl mb-4 shadow-[rgba(0,0,0,0.5)_0px_5px] w-fit">
-    {$_('nav.docs')}
-  </h1>
+<div class="container flex flex-col gap-6 py-6 lg:gap-8 lg:py-8">
+  <h1 class="text-5xl shadow-[rgba(0,0,0,0.5)_0px_5px] w-fit">Documents</h1>
   <div class="w-fit">
     <h2
       class="{!desktop &&
-        'w-[95vw]'} p-2 mt-5 text-4xl border-2 border-[rgba(0,0,0,0.5)] rounded">
-      {$_('page.docs.atomic.h2')}
+        'w-[95vw]'} p-2 text-4xl border-2 border-[rgba(0,0,0,0.5)] rounded">
+      Atomic Images
     </h2>
     <div class="p-5">
       <Card.Root
         class="{desktop
-          ? 'w-[600px]'
+          ? 'w-150'
           : 'w-[90vw]'} bg-primary-background border-2 border-[rgba(0,0,0,0.3)]">
         <Card.Header>
           <Card.Title>
-            <p class="mt-[5px] text-2xl">{$_('page.docs.atomic.doc1.title')}</p>
+            <p class="mt-1.25 text-2xl">
+              Elaboration on Atomic Images and BlueBuild
+            </p>
           </Card.Title>
           <Card.Description>
             <a href={ElaborationAtomicImagesBlueBuild} target="_blank">
-              {$_('page.docs.open')}
+              Open
               <svg
                 class="inline"
                 width="16px"
@@ -56,12 +55,15 @@
         </Card.Header>
         <Card.Content>
           <p>
-            {$_('page.docs.atomic.doc1.desc')}
+            In this document I explain what Atomic Images (Linux) are and how to
+            use BlueBuild to create your own custom image, including a demo.
+            Originally created for my Lighting Talk in class at HTL
+            Grieskirchen.
           </p>
         </Card.Content>
         <Card.Footer class="flex justify-between">
-          <p>{$_('page.docs.atomic.doc1.date')}</p>
-          <p>{$_('page.docs.atomic.doc1.lang')}</p>
+          <p>published 6th January, 2025</p>
+          <p>English only</p>
         </Card.Footer>
       </Card.Root>
     </div>

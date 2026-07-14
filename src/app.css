@@ -1,71 +1,399 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(1.00902 0.084 1.619);
+  --foreground: oklch(0.1426 0.01 330.002);
+  --card: oklch(1.00902 0.084 1.619);
+  --card-foreground: oklch(0.1426 0.01 330.002);
+  --popover: oklch(1.00902 0.084 1.619);
+  --popover-foreground: oklch(0.1426 0.01 330.002);
+  --primary: oklch(0.21332 0.016 333.454);
+  --primary-foreground: oklch(0.99369 0.083 1.619);
+  --secondary: oklch(0.97654 0.08 0.394);
+  --secondary-foreground: oklch(0.21332 0.016 333.454);
+  --muted: oklch(0.97654 0.08 0.394);
+  --muted-foreground: oklch(0.5595 0.041 336.845);
+  --accent: oklch(0.97654 0.08 0.394);
+  --accent-foreground: oklch(0.21332 0.016 333.454);
+  --destructive: oklch(0.5412 0.879 2.754);
+  --border: oklch(0.92876 0.075 357.635);
+  --input: oklch(0.92876 0.075 357.635);
+  --ring: oklch(0.72069 0.054 344.056);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  --font-sans: 'Inter', sans-serif;
+  --date-input-width: 180px;
+}
+
+.dark {
+  --background: oklch(0.193 0.015 349.486);
+  --foreground: oklch(0.99369 0.083 1.619);
+  --card: oklch(0.1426 0.01 330.002);
+  --card-foreground: oklch(0.99369 0.083 1.619);
+  --popover: oklch(0.1426 0.01 330.002);
+  --popover-foreground: oklch(0.99369 0.083 1.619);
+  --primary: oklch(0.99369 0.083 1.619);
+  --primary-foreground: oklch(0.21332 0.016 333.454);
+  --secondary: oklch(0.27762 0.021 342.045);
+  --secondary-foreground: oklch(0.99369 0.083 1.619);
+  --muted: oklch(0.11623 0.012 1.615);
+  --muted-foreground: oklch(0.72069 0.054 344.056);
+  --accent: oklch(0.21538 0.016 348.313);
+  --accent-foreground: oklch(0.99369 0.083 1.619);
+  --destructive: oklch(0.42763 1.055 4.942);
+  --border: oklch(0.27762 0.021 342.045);
+  --input: oklch(0.27762 0.021 342.045);
+  --ring: oklch(0.27762 0.021 342.045);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+
+  --date-picker-background: var(--background);
+  --date-picker-foreground: var(--primary);
+  --date-picker-selected-color: var(--primary);
+  --date-picker-selected-background: var(--accent);
+  --date-picker-highlight-border: var(--border);
+  --date-picker-highlight-shadow: var(--border);
+  --date-picker-today-border: var(--accent);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
 
 @layer base {
-  :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 0 0% 8%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 0 0% 14%;
-
-    --accent: 100 100% 20%;
-    --accent-foreground: 100 100% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: hsl(212.7, 26.8%, 83.9);
-
-    --radius: 0.5rem;
-  }
-
   * {
-    box-sizing: border-box;
+    @apply border-border outline-ring/50;
   }
-
-  html {
-    font-family: Inter;
-    font-size: 100%;
-  }
-
   body {
-    position: absolute;
-    z-index: -20;
+    @apply bg-background text-foreground;
   }
 
-  .transition-width {
-    transition: width 400ms;
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+  }
+
+  .date-time-field input {
+    @apply border-input! rounded-md! px-3! py-2! text-sm;
+  }
+
+  option {
+    @apply bg-background;
   }
 }
 
-@layer components {
-  .nav__locale {
-    position: fixed;
-    right: 4px;
-    top: 4px;
-    height: var(--nav_height);
+.titillium-web-extralight {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.titillium-web-light {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.titillium-web-regular {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titillium-web-semibold {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.titillium-web-bold {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titillium-web-black {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.titillium-web-extralight-italic {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.titillium-web-light-italic {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.titillium-web-regular-italic {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.titillium-web-semibold-italic {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.titillium-web-bold-italic {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.inter-extralight {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.inter-light {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-semibold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.inter-bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inter-black {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.inter-extralight-italic {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.inter-light-italic {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.inter-regular-italic {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.inter-semibold-italic {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.inter-bold-italic {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@utility container {
+  margin-inline: 24px;
+  width: auto;
+  max-width: none;
+
+  @media (min-width: 735px) {
+    margin-inline: 32px;
+  }
+
+  @media (min-width: 1069px) {
+    margin-inline: 48px;
+  }
+
+  @media (min-width: 1696px) {
+    width: 1600px;
+    margin-inline: auto;
   }
 }
 
-@layer base {
-  body {
-    @apply bg-secondary-foreground text-primary;
+@utility -container {
+  margin-inline: -24px;
+
+  @media (min-width: 735px) {
+    margin-inline: -32px;
+  }
+
+  @media (min-width: 1069px) {
+    margin-inline: -48px;
+  }
+
+  @media (min-width: 1696px) {
+    margin-inline: calc((100vw - 1600px) / -2);
+  }
+}
+
+@utility row {
+  padding-inline: 24px;
+  scroll-padding-left: 24px;
+
+  @media (min-width: 735px) {
+    padding-inline: 32px;
+    scroll-padding-left: 32px;
+  }
+
+  @media (min-width: 1069px) {
+    padding-inline: 48px;
+    scroll-padding-left: 48px;
+  }
+
+  @media (min-width: 1696px) {
+    padding-inline: calc(((100% - 1600px) / 2) + 32px);
+    scroll-padding-left: calc(((100% - 1600px) / 2) + 32px);
+  }
+}
+
+@utility container-shade-l {
+  left: 0;
+  width: 24px;
+  position: absolute;
+  top: 0;
+  z-index: 40;
+  display: block;
+  height: 100%;
+  background-color: black;
+  opacity: 75%;
+
+  @media (min-width: 735px) {
+    width: 32px;
+  }
+
+  @media (min-width: 1069px) {
+    width: 48px;
+  }
+
+  @media (min-width: 1696px) {
+    width: calc(((100% - 1600px) / 2) + 32px);
+  }
+}
+
+@utility container-shade-r {
+  right: 0px;
+  width: 24px;
+  position: absolute;
+  top: 0;
+  z-index: 40;
+  display: block;
+  height: 100%;
+  background-color: black;
+  opacity: 75%;
+
+  @media (min-width: 735px) {
+    width: 32px;
+  }
+
+  @media (min-width: 1069px) {
+    width: 48px;
+  }
+
+  @media (min-width: 1696px) {
+    width: calc(((100% - 1600px) / 2) + 32px);
+  }
+}
+
+@utility container-shade {
+  @apply before:container-shade-l after:container-shade-r;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  .no-scrollbar {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
   }
 }

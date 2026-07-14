@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n';
   import {
     CSharp,
     Fedora,
@@ -57,17 +56,17 @@
   <title>Technologies - ayerin.at</title>
 </svelte:head>
 
-<div class="mt-[10vh] ml-[2vw] w-full">
+<div class="container flex flex-col gap-6 py-6 lg:gap-8 lg:py-8">
   <h1 class="text-5xl mb-4 shadow-[rgba(0,0,0,0.5)_0px_5px] w-fit">
-    {$_('page.technologies.h1')}
+    Technologies
   </h1>
-  <div class="flex w-[95vw] min-h-[80vh] justify-center items-center">
+  <div class="flex justify-center items-center">
     <div
       class="flex flex-col justify-center p-6 items-center w-full lg:w-[50vw] h-full">
       <div class="flex justify-around w-full max-sm:flex-col">
-        <Collapsible.Root class="w-[350px] py-6 space-y-2" bind:open={plOpen}>
+        <Collapsible.Root class="w-87.5 py-6 space-y-2" bind:open={plOpen}>
           <div class="flex items-center justify-between space-x-4 px-4">
-            <h4 class="text-lg font-bold">{$_('page.technologies.pl')}</h4>
+            <h4 class="text-lg font-bold">Programming Languages</h4>
             <Collapsible.Trigger
               class={buttonVariants({
                 variant: 'ghost',
@@ -120,9 +119,9 @@
             </div>
           </Collapsible.Content>
         </Collapsible.Root>
-        <Collapsible.Root class="w-[350px] py-6 space-y-2" bind:open={frmOpen}>
+        <Collapsible.Root class="w-87.5 py-6 space-y-2" bind:open={frmOpen}>
           <div class="flex items-center justify-between space-x-4 px-4">
-            <h4 class="text-lg font-bold">{$_('page.technologies.frm')}</h4>
+            <h4 class="text-lg font-bold">Frameworks</h4>
             <Collapsible.Trigger
               class={buttonVariants({
                 variant: 'ghost',
@@ -177,9 +176,9 @@
         </Collapsible.Root>
       </div>
       <div class="flex justify-around w-full max-sm:flex-col">
-        <Collapsible.Root class="w-[350px] py-6 space-y-2" bind:open={infOpen}>
+        <Collapsible.Root class="w-87.5 py-6 space-y-2" bind:open={infOpen}>
           <div class="flex items-center justify-between space-x-4 px-4">
-            <h4 class="text-lg font-bold">{$_('page.technologies.inf')}</h4>
+            <h4 class="text-lg font-bold">Infrastructure</h4>
             <Collapsible.Trigger
               class={buttonVariants({
                 variant: 'ghost',
@@ -260,9 +259,9 @@
             </div>
           </Collapsible.Content>
         </Collapsible.Root>
-        <Collapsible.Root class="w-[350px] py-6 space-y-2" bind:open={dbOpen}>
+        <Collapsible.Root class="w-87.5 py-6 space-y-2" bind:open={dbOpen}>
           <div class="flex items-center justify-between space-x-4 px-4">
-            <h4 class="text-lg font-bold">{$_('page.technologies.db')}</h4>
+            <h4 class="text-lg font-bold">Databases</h4>
             <Collapsible.Trigger
               class={buttonVariants({
                 variant: 'ghost',
@@ -310,9 +309,9 @@
         </Collapsible.Root>
       </div>
       <div class="flex justify-around w-full max-sm:flex-col">
-        <Collapsible.Root class="w-[350px] py-6 space-y-2" bind:open={geOpen}>
+        <Collapsible.Root class="w-87.5 py-6 space-y-2" bind:open={geOpen}>
           <div class="flex items-center justify-between space-x-4 px-4">
-            <h4 class="text-lg font-bold">{$_('page.technologies.ge')}</h4>
+            <h4 class="text-lg font-bold">Game Engines</h4>
             <Collapsible.Trigger
               class={buttonVariants({
                 variant: 'ghost',
