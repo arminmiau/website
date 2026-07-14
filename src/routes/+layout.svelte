@@ -50,7 +50,7 @@
             class="z-30 flex w-full max-w-full items-center justify-between gap-8">
             <Button href="/" variant="link" class="p-0"
               ><img
-                class="h-15 w-auto max-w-max rounded-2xl"
+                class="h-14 w-auto max-w-max rounded-2xl"
                 src="https://assets.ayerin.at/logos/ayerin-wordmark_green.svg"
                 alt="Ayerin Logo" /></Button>
             <div class="h-full grow">
@@ -156,7 +156,7 @@
 
 <main class:opacity-50={hamburgerOpen}>{@render children()}</main>
 <footer class="flex flex-col">
-  <div class="container flex flex-col gap-12 py-12">
+  <div class="container flex flex-col gap-6 py-10">
     <nav class="flex flex-col items-start justify-between gap-2 md:flex-row">
       <Button
         size="none"
@@ -180,6 +180,17 @@
         variant="link"
         class="titillium-web-bold text-[1.0625rem] leading-6">Contact</Button>
     </nav>
-    <div class="flex items-center justify-between gap-5"></div>
+    <div class="flex items-center justify-between gap-5">
+      <Button
+        href="https://xapx.ayerin.at"
+        target="_blank"
+        variant="ghost"
+        class="h-12"
+        ><img
+          class="h-12"
+          src="https://xapx-assets.ayerin.at/xapx_logo.png"
+          alt="XAPX logo" />
+      </Button>
+    </div>
   </div>
 </footer>

@@ -165,10 +165,7 @@
               alt="" />
             <p class="mt-1.25">Forza 1</p>
           </Card.Title>
-          <Card.Description>
-            using Forza Horizon 5 telemetry with a desktop app and Asseto Corsa
-            using a server plugin.
-          </Card.Description>
+          <Card.Description>private drivers' championship</Card.Description>
         </Card.Header>
         <Card.Content>
           <p class="my-2">
