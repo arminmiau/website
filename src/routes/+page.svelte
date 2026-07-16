@@ -51,9 +51,9 @@
 <div class="h-[calc(100vh-300px)] bg-accent">
   <Fullpage>
     <FullpageSection
-      style="background: url('{MaturaballFoto}') no-repeat left center">
+      style="background: url('{MaturaballFoto}') no-repeat calc(50% - clamp(150px, 25vw, 800px)) bottom / auto 100%">
       <div>
-        <div class="p-5 bg-black bg-opacity-50 rounded-lg max-w-[80ch]">
+        <div class="p-5 bg-black/25 2xl:bg-black/75 rounded-lg max-w-[80ch]">
           <h2 class="text-2xl mt-5 mb-1">I am...</h2>
           <h1 lang="de" class="text-4xl mb-5">
             Armin Bade
@@ -70,9 +70,9 @@
       </div>
     </FullpageSection>
     <FullpageSection
-      style="background: url('{Schulfoto22_23}') no-repeat right center">
+      style="background: url('{Schulfoto22_23}') no-repeat calc(50% + clamp(150px, 25vw, 800px)) bottom / auto 100%">
       <div>
-        <div class="p-5 bg-black bg-opacity-50 rounded-lg max-w-[80ch]">
+        <div class="p-5 bg-black/25 2xl:bg-black/75 rounded-lg max-w-[80ch]">
           <h2 class="text-2xl mt-5 mb-1">I am...</h2>
           <h1 class="text-4xl mb-5">a graduate</h1>
           <p>
@@ -92,9 +92,9 @@
       </div>
     </FullpageSection>
     <FullpageSection
-      style="background: url('{FeuerwehrmannFoto}') no-repeat left center">
+      style="background: url('{FeuerwehrmannFoto}') no-repeat calc(50% - clamp(150px, 25vw, 800px)) bottom / auto 100%">
       <div>
-        <div class="p-5 bg-black bg-opacity-50 rounded-lg max-w-[80ch]">
+        <div class="p-5 bg-black/25 2xl:bg-black/75 rounded-lg max-w-[80ch]">
           <h2 class="text-2xl mt-5 mb-1">I am...</h2>
           <h1 class="text-4xl mb-5">a firefighter.</h1>
           <p>
@@ -130,9 +130,9 @@
       </div>
     </FullpageSection>
     <FullpageSection
-      style="background: url('{KaligraphieFoto}') no-repeat right center">
+      style="background: url('{KaligraphieFoto}') no-repeat calc(50% + clamp(150px, 25vw, 800px)) bottom / auto 100%">
       <div>
-        <div class="p-5 bg-black bg-opacity-50 rounded-lg max-w-[80ch]">
+        <div class="p-5 bg-black/25 2xl:bg-black/75 rounded-lg max-w-[80ch]">
           <h2 class="text-2xl mt-5 mb-1">I am...</h2>
           <h1 class="text-4xl mb-5">a hobby game designer</h1>
           <p>and I have been planning my own game for a long time.</p>
